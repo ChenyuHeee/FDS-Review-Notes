@@ -1,0 +1,4 @@
+.DS_Store
+converted/
+*.tmp
+converted_tmp/
