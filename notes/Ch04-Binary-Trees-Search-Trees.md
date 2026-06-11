@@ -1,31 +1,31 @@
-# Chapter 4: Binary Trees and Search Trees 复习笔记
+# 第4章：二叉树与搜索树 复习笔记 (Chapter 4: Binary Trees & Search Trees)
 
 ---
 
-## §1 Preliminaries (预备知识)
+## §1 预备知识 (Preliminaries)
 
-### 1. Terminology (术语)
+### 1. 术语 (Terminology)
 
-#### 树的定义 (Definition of a Tree)
+#### 树的定义 (Tree Definition)
 
-**【Definition】** A **tree** is a collection of nodes. The collection can be empty; otherwise, a tree consists of:
-1. A distinguished node **r**, called the **root** (根);
-2. And zero or more nonempty **(sub)trees** $T_1, T_2, \dots, T_k$, each of whose roots are connected by a **directed edge** (有向边) from **r**.
+**【定义】** **树（tree）** 是一个节点的集合。该集合可以为空；否则，一棵树由以下部分组成：
+1. 一个特殊的节点 **r**，称为 **根（root）**；
+2. 以及零个或多个非空的**（子）树** $T_1, T_2, \dots, T_k$，每棵子树的根通过一条从 **r** 出发的**有向边（directed edge）** 相连。
 
-> **Note:**
-> - Subtrees must **not** connect together. Therefore every node in the tree is the root of some subtree.
-> - There are **$N - 1$ edges** in a tree with $N$ nodes.
-> - Normally the root is drawn at the **top**.
+> **注意：**
+> - 子树之间**不能**互相连接。因此，树中的每个节点都是某棵子树的根。
+> - 一棵具有 $N$ 个节点的树有 **$N - 1$ 条边**。
+> - 通常根被绘制在**顶部**。
 
-> **Diagram description:** The two classic examples introduced are:
-> - **Pedigree Tree (族谱树)**: A binary tree representing family genealogy.
-> - **Lineal Tree (谱系树)**: Shows ancestral lineage.
+> **图示说明：** 介绍了两个经典例子：
+> - **族谱树 (Pedigree Tree)**：表示家族谱系的二叉树。
+> - **谱系树 (Lineal Tree)**：显示祖先世系。
 
 ---
 
 #### 基本术语 (Basic Terminology)
 
-Let's use the following example tree for illustration:
+以下面的示例树进行说明：
 
 ```
         A
@@ -37,41 +37,41 @@ Let's use the following example tree for illustration:
  K   L    M
 ```
 
-- **degree of a node (节点的度)**: number of subtrees of the node.
-  - Example: degree(A) = 3, degree(F) = 0.
-- **degree of a tree (树的度)**: the maximum degree among all nodes.
-  - Example: degree of the tree above = 3.
-- **parent (父节点)**: a node that has subtrees.
-- **children (子节点)**: the roots of the subtrees of a parent.
-- **siblings (兄弟节点)**: children of the same parent.
-- **leaf / terminal node (叶子/终端节点)**: a node with degree 0 (no children).
+- **节点的度 (degree of a node)**：节点拥有的子树个数。
+  - 例如：degree(A) = 3，degree(F) = 0。
+- **树的度 (degree of a tree)**：所有节点中最大的度。
+  - 例如：上面这棵树的度 = 3。
+- **父节点 (parent)**：拥有子树的节点。
+- **子节点 (children)**：父节点的子树的根。
+- **兄弟节点 (siblings)**：具有相同父节点的子节点。
+- **叶子节点/终端节点 (leaf / terminal node)**：度为 0（没有子节点）的节点。
 
 ---
 
-#### 路径与度量 (Path and Measurements)
+#### 路径与度量 (Path and Measurement)
 
-- **path from $n_1$ to $n_k$**: a (unique) sequence of nodes $n_1, n_2, \dots, n_k$ such that $n_i$ is the parent of $n_{i+1}$ for $1 \le i < k$.
-- **length of path (路径长度)**: number of edges on the path.
-- **depth of $n_i$ (深度)**: length of the unique path from the root to $n_i$.
-  - Depth(root) = 0.
-- **height of $n_i$ (高度)**: length of the longest path from $n_i$ to a leaf.
-  - Height(leaf) = 0.
-  - Example: height(D) = 2.
-- **height (depth) of a tree (树的高度/深度)**: height(root) = depth(deepest leaf).
-- **ancestors (祖先) of a node**: all the nodes along the path from the node up to the root.
-- **descendants (后代) of a node**: all the nodes in its subtrees.
+- **从 $n_1$ 到 $n_k$ 的路径（path）**：一个（唯一的）节点序列 $n_1, n_2, \dots, n_k$，其中对于 $1 \le i < k$，$n_i$ 是 $n_{i+1}$ 的父节点。
+- **路径长度 (length of path)**：路径上的边的数量。
+- **$n_i$ 的深度 (depth)**：从根到 $n_i$ 的唯一路径的长度。
+  - Depth(root) = 0。
+- **$n_i$ 的高度 (height)**：从 $n_i$ 到某个叶子节点的最长路径的长度。
+  - Height(leaf) = 0。
+  - 例如：height(D) = 2。
+- **树的高度/深度 (height/depth of a tree)**：height(root) = depth(最深的叶子节点)。
+- **节点的祖先 (ancestors)**：从该节点向上到根节点的路径上的所有节点。
+- **节点的后代 (descendants)**：其子树中的所有节点。
 
 ---
 
-### 2. Implementation (树的实现)
+### 2. 树的实现 (Implementation)
 
-#### List Representation (列表表示)
+#### 列表表示 (List Representation)
 
-Represent a tree using nested lists:
-- The root is the first element.
-- Its subtrees follow as subsequent elements.
+使用嵌套列表表示树：
+- 第一个元素为根。
+- 其后的元素为子树。
 
-For the example tree:
+对于示例树：
 ```
 (A)
 (A (B, C, D))
@@ -79,22 +79,22 @@ For the example tree:
 (A (B (E (K, L), F), C (G), D (H (M), I, J)))
 ```
 
-> **Problem:** The size of each node depends on the number of branches -- that's not good for a fixed-size representation.
+> **问题：** 每个节点的大小取决于分支的数量——这对于固定大小的表示方式来说是不利的。
 
 ---
 
-#### FirstChild-NextSibling Representation (左孩子右兄弟表示法)
+#### 左孩子右兄弟表示法 (FirstChild-NextSibling Representation)
 
-Each node stores:
-- **Element**: the data
-- **FirstChild**: pointer to its first child
-- **NextSibling**: pointer to its next sibling
+每个节点存储：
+- **Element**：数据
+- **FirstChild**：指向第一个孩子的指针
+- **NextSibling**：指向下一个兄弟的指针
 
 ```
 Element | FirstChild | NextSibling
 ```
 
-For the example tree structure:
+对于示例树的结构：
 ```
 A -> B -> C -> D -> NULL
 |         |    |
@@ -103,28 +103,28 @@ E->F NULL G  H->I->J NULL
 K->L NULL   NULL  M NULL
 ```
 
-> **Note:** The representation is **not unique** since the children in a tree can be of any order.
+> **注意：** 由于树中孩子的顺序可以是任意的，因此这种表示方式**不唯一**。
 
 ---
 
-## §2 Binary Trees (二叉树)
+## §2 二叉树 (Binary Trees)
 
 ### 定义 (Definition)
 
-**【Definition】** A **binary tree** is a tree in which **no node can have more than two children**.
+**【定义】** **二叉树（binary tree）** 是一棵树，其中**每个节点的孩子数不能超过两个**。
 
-> **Key difference from general trees:** In a tree, the order of children does not matter. But in a binary tree, **left child** and **right child** are distinct -- they are two different binary trees:
+> **与一般树的关键区别：** 在树中，孩子的顺序无关紧要。但在二叉树中，**左孩子**和**右孩子**是有区别的——它们是两种不同的二叉树：
 ```
   A        A
  /    vs    \
 B            B
 ```
 
-#### Relationship with FirstChild-NextSibling
+#### 与左孩子右兄弟表示法的关系
 
-A binary tree can be obtained by **rotating the FirstChild-NextSibling tree clockwise by 45 degrees**:
-- **Left** pointer = original FirstChild pointer
-- **Right** pointer = original NextSibling pointer
+将左孩子右兄弟树**顺时针旋转 45 度**即可得到一棵二叉树：
+- **Left** 指针 = 原来的 FirstChild 指针
+- **Right** 指针 = 原来的 NextSibling 指针
 
 ```
         A                      A
@@ -140,15 +140,15 @@ A binary tree can be obtained by **rotating the FirstChild-NextSibling tree cloc
       J                              J
 ```
 
-After the 45-degree rotation, the tree structure is reinterpreted so that the first child becomes the **left child** and the next sibling becomes the **right child**, creating a strict binary tree representation.
+经过 45 度旋转后，树的结构被重新解释：第一个孩子变为**左孩子**，下一个兄弟变为**右孩子**，从而形成严格的二叉树表示。
 
 ---
 
 ### 二叉树的类型 (Types of Binary Trees)
 
-- **Skewed Binary Trees (斜二叉树)**: All nodes have only left children or only right children.
+- **斜二叉树 (Skewed Binary Trees)**：所有节点只有左孩子或只有右孩子。
   ```
-  Skewed to the left:    Skewed to the right:
+  向左倾斜：            向右倾斜：
        A                     A
       /                       \
      B                         B
@@ -158,7 +158,7 @@ After the 45-degree rotation, the tree structure is reinterpreted so that the fi
   D                                 D
   ```
 
-- **Complete Binary Tree (完全二叉树)**: All leaf nodes are on two adjacent levels, and all nodes at the bottom level are as far left as possible.
+- **完全二叉树 (Complete Binary Tree)**：所有叶子节点位于两个相邻的层上，且底层所有节点都尽可能靠左排列。
   ```
         A
       /   \
@@ -173,38 +173,38 @@ After the 45-degree rotation, the tree structure is reinterpreted so that the fi
 
 ### 二叉树的性质 (Properties of Binary Trees)
 
-1. **Maximum number of nodes on level $i$** is $2^{i-1}$, for $i \ge 1$.
-   - Level 1: $2^{0} = 1$ node (the root)
-   - Level 2: $2^{1} = 2$ nodes
-   - Level $i$: $2^{i-1}$ nodes
+1. **第 $i$ 层上最多节点数**为 $2^{i-1}$，其中 $i \ge 1$。
+   - 第 1 层：$2^{0} = 1$ 个节点（根）
+   - 第 2 层：$2^{1} = 2$ 个节点
+   - 第 $i$ 层：$2^{i-1}$ 个节点
 
-2. **Maximum number of nodes in a binary tree of depth $k$** is $2^{k} - 1$, for $k \ge 1$.
+2. **深度为 $k$ 的二叉树中最多节点数**为 $2^{k} - 1$，其中 $k \ge 1$。
 
-3. **For any nonempty binary tree:**
+3. **对于任何非空二叉树：**
    $$n_0 = n_2 + 1$$
-   where $n_0$ is the number of **leaf nodes** (degree 0) and $n_2$ is the number of **nodes of degree 2**.
+   其中 $n_0$ 是**叶子节点**（度为 0）的数量，$n_2$ 是**度为 2 的节点**的数量。
 
-   **Proof:**
-   - Let $n_1$ be the number of nodes of degree 1, and $n$ the total number of nodes.
-   - Then $n = n_0 + n_1 + n_2$.
-   - Let $B$ be the number of branches (edges). For a tree, $n = B + 1$.
-   - All branches come from nodes of degree 1 or 2: $B = n_1 + 2n_2$.
-   - Substituting: $n_0 + n_1 + n_2 = (n_1 + 2n_2) + 1$.
-   - Therefore: $n_0 = n_2 + 1$.
+   **证明：**
+   - 设 $n_1$ 为度为 1 的节点数，$n$ 为总节点数。
+   - 则 $n = n_0 + n_1 + n_2$。
+   - 设 $B$ 为分支（边）的数量。对于树，$n = B + 1$。
+   - 所有分支来自度为 1 或 2 的节点：$B = n_1 + 2n_2$。
+   - 代入：$n_0 + n_1 + n_2 = (n_1 + 2n_2) + 1$。
+   - 因此：$n_0 = n_2 + 1$。
 
 ---
 
-### Expression Trees / Syntax Trees (表达式树/语法树)
+### 表达式树/语法树 (Expression Trees / Syntax Trees)
 
-An **expression tree** is a binary tree where:
-- **Leaf nodes** are operands (e.g., A, B, C, D).
-- **Internal nodes** are operators (e.g., +, *, /).
+**表达式树（expression tree）** 是一种二叉树，其中：
+- **叶子节点**为操作数 (operands)（例如 A, B, C, D）。
+- **内部节点 (internal nodes)** 为运算符 (operators)（例如 +, *, /）。
 
-#### Example: Constructing an Expression Tree
+#### 示例：构造表达式树 (Example: Building an Expression Tree)
 
-Given infix expression: $A + B * C / D$
+给定中缀表达式 (infix expression)：$A + B * C / D$
 
-The expression tree:
+表达式树：
 ```
       +
      / \
@@ -215,24 +215,24 @@ The expression tree:
     B   C
 ```
 
-#### Constructing from Postfix Expression
+#### 从后缀表达式构造 (Constructing from Postfix Expression)
 
-Given postfix expression: `a b + c d e + * *`
+给定后缀表达式 (postfix expression)：`a b + c d e + * *`
 
-For expression: $(a + b) * (c * (d + e))$
+对应表达式：$(a + b) * (c * (d + e))$
 
-Steps:
-1. Read `a` -- push node(a)
-2. Read `b` -- push node(b)
-3. Read `+` -- pop b, pop a, create `+` node with left=a, right=b, push it
-4. Read `c` -- push node(c)
-5. Read `d` -- push node(d)
-6. Read `e` -- push node(e)
-7. Read `+` -- pop e, pop d, create `+` node with left=d, right=e, push
-8. Read `*` -- pop (d+e), pop c, create `*` node with left=c, right=(d+e), push
-9. Read `*` -- pop c*(d+e), pop (a+b), create `*` node with left=(a+b), right=c*(d+e)
+步骤：
+1. 读取 `a` —— 压入 node(a)
+2. 读取 `b` —— 压入 node(b)
+3. 读取 `+` —— 弹出 b，弹出 a，创建 `+` 节点（左=a，右=b），压入
+4. 读取 `c` —— 压入 node(c)
+5. 读取 `d` —— 压入 node(d)
+6. 读取 `e` —— 压入 node(e)
+7. 读取 `+` —— 弹出 e，弹出 d，创建 `+` 节点（左=d，右=e），压入
+8. 读取 `*` —— 弹出 (d+e)，弹出 c，创建 `*` 节点（左=c，右=(d+e)），压入
+9. 读取 `*` —— 弹出 c*(d+e)，弹出 (a+b)，创建 `*` 节点（左=(a+b)，右=c*(d+e)）
 
-Final tree:
+最终树：
 ```
         *
        / \
@@ -245,11 +245,11 @@ Final tree:
 
 ---
 
-### Tree Traversals (树的遍历)
+### 树的遍历 (Tree Traversals)
 
-Traversal means visiting **each node exactly once**.
+遍历是指**恰好访问每个节点一次**。
 
-#### Preorder Traversal (先序遍历)
+#### 先序遍历 (Preorder Traversal)
 
 ```c
 void preorder(tree_ptr tree) {
@@ -261,7 +261,7 @@ void preorder(tree_ptr tree) {
 }
 ```
 
-Order: **Root -> Left -> Right**
+顺序：**根 -> 左 -> 右**
 ```
     1
    / \
@@ -271,11 +271,11 @@ Order: **Root -> Left -> Right**
          \
           7
 ```
-Preorder: 1, 2, 3, 4, 5, 6, 7
+先序遍历结果：1, 2, 3, 4, 5, 6, 7
 
 ---
 
-#### Postorder Traversal (后序遍历)
+#### 后序遍历 (Postorder Traversal)
 
 ```c
 void postorder(tree_ptr tree) {
@@ -287,7 +287,7 @@ void postorder(tree_ptr tree) {
 }
 ```
 
-Order: **Left -> Right -> Root**
+顺序：**左 -> 右 -> 根**
 ```
     7
    / \
@@ -297,13 +297,13 @@ Order: **Left -> Right -> Root**
          \
           4
 ```
-Postorder: 1, 2, 3, 4, 5, 6, 7 (numbered by visit order)
+后序遍历结果：1, 2, 3, 4, 5, 6, 7（按访问顺序编号）
 
-Wait, let me re-check the diagram from the slides. The slide shows nodes numbered in visit order:
+幻灯片中的图示，节点按访问顺序编号：
 
-For postorder:
+后序遍历：
 ```
-    7         (visited last)
+    7         （最后访问）
    / \
   3   6
  / \   \
@@ -311,11 +311,11 @@ For postorder:
          \
           4
 ```
-Postorder visit order: 1, 2, 3, 4, 5, 6, 7
+后序访问顺序：1, 2, 3, 4, 5, 6, 7
 
 ---
 
-#### Levelorder Traversal (层序遍历)
+#### 层序遍历 (Levelorder Traversal)
 
 ```c
 void levelorder(tree_ptr tree) {
@@ -328,7 +328,7 @@ void levelorder(tree_ptr tree) {
 }
 ```
 
-Order: visit level by level, from top to bottom, left to right.
+顺序：逐层访问，从上到下，从左到右。
 ```
     1
    / \
@@ -338,13 +338,13 @@ Order: visit level by level, from top to bottom, left to right.
          \
           7
 ```
-Levelorder: 1, 2, 3, 4, 5, 6, 7
+层序遍历结果：1, 2, 3, 4, 5, 6, 7
 
 ---
 
-#### Inorder Traversal (中序遍历) -- for Binary Trees
+#### 中序遍历 (Inorder Traversal) —— 针对二叉树
 
-**Recursive version:**
+**递归版本 (Recursive Version)：**
 ```c
 void inorder(tree_ptr tree) {
     if (tree) {
@@ -355,7 +355,7 @@ void inorder(tree_ptr tree) {
 }
 ```
 
-**Iterative version (using stack):**
+**迭代版本 (Iterative Version)（使用栈, stack）：**
 ```c
 void iter_inorder(tree_ptr tree) {
     Stack S = CreateStack(MAX_SIZE);
@@ -371,13 +371,13 @@ void iter_inorder(tree_ptr tree) {
 }
 ```
 
-Order: **Left -> Root -> Right**
+顺序：**左 -> 根 -> 右**
 
-#### Example: Traversals of Expression Tree
+#### 示例：表达式树的遍历 (Example: Traversing an Expression Tree)
 
-Given infix expression: $A + B * C / D$
+给定中缀表达式 (infix expression)：$A + B * C / D$
 
-Expression tree:
+表达式树：
 ```
       +
      / \
@@ -388,17 +388,17 @@ Expression tree:
     B   C
 ```
 
-- **Inorder traversal** $\Rightarrow$ $A + B * C / D$ (infix expression)
-- **Postorder traversal** $\Rightarrow$ $A \; B \; C * D / +$ (postfix expression)
-- **Preorder traversal** $\Rightarrow$ $+ \; A / * \; B \; C \; D$ (prefix expression)
+- **中序遍历** $\Rightarrow$ $A + B * C / D$（中缀表达式, infix expression）
+- **后序遍历** $\Rightarrow$ $A \; B \; C * D / +$（后缀表达式, postfix expression）
+- **先序遍历** $\Rightarrow$ $+ \; A / * \; B \; C \; D$（前缀表达式, prefix expression）
 
 ---
 
 ### 实际应用示例 (Practical Examples)
 
-#### Example: Directory Listing in a Hierarchical File System
+#### 示例：层次化文件系统中的目录列表 (Example: Directory Listing in a Hierarchical File System)
 
-Unix directory structure:
+Unix 目录结构：
 ```
 /usr
   |-- mark
@@ -422,7 +422,7 @@ Unix directory structure:
                     |-- fall97 (p2.r, p1.r, grades)
 ```
 
-**Listing format:** Files at depth $d_i$ will have their names indented by $d_i$ tabs.
+**列出格式：** 深度为 $d_i$ 的文件，其名称缩进 $d_i$ 个制表符。
 
 ```c
 static void ListDir(DirOrFile D, int Depth) {
@@ -435,7 +435,7 @@ static void ListDir(DirOrFile D, int Depth) {
 }
 ```
 - $T(N) = O(N)$
-- **Note:** `Depth` is an internal variable and must not be seen by the user. Solution: define an interface function:
+- **注意：** `Depth` 是一个内部变量，不能暴露给用户。解决方法：定义一个接口函数：
 ```c
 void ListDirectory(DirOrFile D) {
     ListDir(D, 0);
@@ -444,9 +444,9 @@ void ListDirectory(DirOrFile D) {
 
 ---
 
-#### Example: Calculating the Size of a Directory
+#### 示例：计算目录大小 (Example: Computing Directory Size)
 
-For the same directory structure, each file has a size. The size of a directory is the sum of all file sizes in its subtree.
+对于同样的目录结构，每个文件都有大小。目录的大小是其子树中所有文件大小的总和。
 
 ```c
 static int SizeDir(DirOrFile D) {
@@ -465,53 +465,53 @@ static int SizeDir(DirOrFile D) {
 
 ---
 
-### Threaded Binary Trees (线索二叉树)
+### 线索二叉树 (Threaded Binary Trees)
 
-#### Motivation
+#### 动机 (Motivation)
 
-Consider a **full binary tree** with $n$ nodes:
-- How many links are there? **$2n$** (each node has left and right pointers).
-- How many of them are NULL? **$n + 1$** (in a binary tree with $n$ nodes, there are $n+1$ null links).
+考虑一棵具有 $n$ 个节点的**满二叉树 (Full Binary Tree)**：
+- 共有多少条链接？**$2n$**（每个节点有左、右两个指针）。
+- 其中有多少是 NULL？**$n + 1$**（在具有 $n$ 个节点的二叉树中，有 $n+1$ 个空链接 (null links)）。
 
-We can replace the **null links** by **"threads"** (线索), which will make traversals easier.
+我们可以用**"线索"（threads）** 替代这些**空链接**，这将使遍历变得更加容易。
 
-> Credits: **A. J. Perlis** and **C. Thornton**
+> 提出者：**A. J. Perlis** 和 **C. Thornton**
 
-#### Rules for Threaded Binary Trees
+#### 线索二叉树的规则 (Rules for Threaded Binary Trees)
 
-**Rule 1:** If `Tree->Left` is null, replace it with a pointer to the **inorder predecessor** of `Tree`.
+**规则 1 (Rule 1)：** 如果 `Tree->Left` 为空，则将其替换为指向 `Tree` 的**中序前驱 (inorder predecessor)** 的指针。
 
-**Rule 2:** If `Tree->Right` is null, replace it with a pointer to the **inorder successor** of `Tree`.
+**规则 2 (Rule 2)：** 如果 `Tree->Right` 为空，则将其替换为指向 `Tree` 的**中序后继 (inorder successor)** 的指针。
 
-**Rule 3:** There must not be any loose threads. Therefore a threaded binary tree must have a **head node** (头节点) of which the left child points to the first node.
+**规则 3 (Rule 3)：** 不能有"悬空 (dangling)"的线索。因此，线索二叉树必须有一个**头节点（head node）**，其左孩子指向第一个节点。
 
-#### Data Structure
+#### 数据结构
 
 ```c
 typedef struct ThreadedTreeNode *PtrToThreadedNode;
 typedef struct PtrToThreadedNode ThreadedTree;
 typedef struct ThreadedTreeNode {
-    int           LeftThread;   /* if TRUE, then Left is a thread, not a child ptr */
-    ThreadedTree  Left;         /* left child or thread */
+    int           LeftThread;   /* 若为 TRUE，则 Left 是线索，而非孩子指针 */
+    ThreadedTree  Left;         /* 左孩子或线索 */
     ElementType   Element;
-    int           RightThread;  /* if TRUE, then Right is a thread, not a child ptr */
-    ThreadedTree  Right;        /* right child or thread */
+    int           RightThread;  /* 若为 TRUE，则 Right 是线索，而非孩子指针 */
+    ThreadedTree  Right;        /* 右孩子或线索 */
 };
 ```
 
-- `LeftThread = TRUE`: `Left` is a thread (inorder predecessor)
-- `LeftThread = FALSE`: `Left` is a child pointer
-- `RightThread = TRUE`: `Right` is a thread (inorder successor)
-- `RightThread = FALSE`: `Right` is a child pointer
+- `LeftThread = TRUE`：`Left` 是线索（中序前驱）
+- `LeftThread = FALSE`：`Left` 是孩子指针
+- `RightThread = TRUE`：`Right` 是线索（中序后继）
+- `RightThread = FALSE`：`Right` 是孩子指针
 
-#### Example: Threaded Binary Tree for $A + B * C / D$
+#### 示例：$A + B * C / D$ 的线索二叉树 (Example: Threaded Binary Tree of $A + B * C / D$)
 
-Syntax tree (infix: $A + B * C / D$) threaded version:
+语法树（中缀：$A + B * C / D$）的线索化版本：
 
 ```
              Head
             /    \
-          ...    (points to first node)
+          ...    (指向第一个节点)
          /
         +
        / \
@@ -522,34 +522,34 @@ Syntax tree (infix: $A + B * C / D$) threaded version:
       B   C
 ```
 
-Thread details:
-- Nodes with `F` (False) for the thread flag: actual child pointer
-- Nodes with `T` (True) for the thread flag: thread pointer
-- `A.Left` (thread) -> inorder predecessor (Head or NULL context)
-- `A.Right` (thread) -> `+` (inorder successor of A)
-- `C.Left` (thread) -> `*` (inorder predecessor of C)
-- `C.Right` (thread) -> `/` (inorder successor of C)
-- `D.Left` (thread) -> `/` (inorder predecessor of D)
-- `D.Right` (thread) -> Head (inorder successor of D is the end of traversal)
+线索细节：
+- 线程标志为 `F`（False）的节点：实际的孩子指针
+- 线程标志为 `T`（True）的节点：线索指针
+- `A.Left`（线索）-> 中序前驱（Head 或 NULL 上下文）
+- `A.Right`（线索）-> `+`（A 的中序后继）
+- `C.Left`（线索）-> `*`（C 的中序前驱）
+- `C.Right`（线索）-> `/`（C 的中序后继）
+- `D.Left`（线索）-> `/`（D 的中序前驱）
+- `D.Right`（线索）-> Head（D 的中序后继即遍历的终点）
 
-These threads allow inorder traversal without using a stack.
+这些线索使得无需使用栈即可进行中序遍历。
 
 ---
 
-## §3 The Search Tree ADT -- Binary Search Trees (二叉搜索树)
+## §3 搜索树 ADT——二叉搜索树 (Binary Search Trees)
 
-### 1. Definition (定义)
+### 1. 定义 (Definition)
 
-**【Definition】** A **binary search tree (BST)** is a binary tree. It may be empty. If it is not empty, it satisfies the following properties:
+**【定义】** **二叉搜索树（binary search tree，BST）** 是一种二叉树。它可以为空。若非空，则满足以下性质：
 
-1. Every node has a **key** which is an integer, and the keys are **distinct** (互不相同).
-2. The keys in a **nonempty left subtree** must be **smaller** than the key in the root of the subtree.
-3. The keys in a **nonempty right subtree** must be **larger** than the key in the root of the subtree.
-4. The left and right subtrees are also **binary search trees**.
+1. 每个节点都有一个**关键字（key）**，关键字为整数，且**互不相同（distinct）**。
+2. **非空左子树 (non-empty left subtree)** 中的所有关键字**小于**子树根节点的关键字。
+3. **非空右子树 (non-empty right subtree)** 中的所有关键字**大于**子树根节点的关键字。
+4. 左子树和右子树也都是**二叉搜索树**。
 
-**Examples:**
+**示例：**
 ```
-Valid BST:                    Invalid (not BST):
+有效的 BST：                    无效的（不是 BST）：
       30                          20
     /    \                      /    \
    5     40                   10      30
@@ -563,100 +563,100 @@ Valid BST:                    Invalid (not BST):
 
 ---
 
-### 2. ADT (抽象数据类型)
+### 2. ADT（抽象数据类型，Abstract Data Type）
 
-**Objects:** A finite ordered list with zero or more elements.
+**对象 (Object)：** 一个包含零个或多个元素的有序列表。
 
-**Operations:**
-| Operation | Signature | Description |
+**操作：**
+| 操作 | 签名 | 说明 |
 |-----------|-----------|-------------|
-| `MakeEmpty` | `SearchTree MakeEmpty(SearchTree T)` | Empty the tree |
-| `Find` | `Position Find(ElementType X, SearchTree T)` | Find element X |
-| `FindMin` | `Position FindMin(SearchTree T)` | Find minimum element |
-| `FindMax` | `Position FindMax(SearchTree T)` | Find maximum element |
-| `Insert` | `SearchTree Insert(ElementType X, SearchTree T)` | Insert element X |
-| `Delete` | `SearchTree Delete(ElementType X, SearchTree T)` | Delete element X |
-| `Retrieve` | `ElementType Retrieve(Position P)` | Retrieve element at position P |
+| `MakeEmpty` | `SearchTree MakeEmpty(SearchTree T)` | 清空树 |
+| `Find` | `Position Find(ElementType X, SearchTree T)` | 查找元素 X |
+| `FindMin` | `Position FindMin(SearchTree T)` | 查找最小元素 |
+| `FindMax` | `Position FindMax(SearchTree T)` | 查找最大元素 |
+| `Insert` | `SearchTree Insert(ElementType X, SearchTree T)` | 插入元素 X |
+| `Delete` | `SearchTree Delete(ElementType X, SearchTree T)` | 删除元素 X |
+| `Retrieve` | `ElementType Retrieve(Position P)` | 获取位置 P 处的元素 |
 
 ---
 
-### 3. Implementations (实现)
+### 3. 实现 (Implementations)
 
-#### Find (查找)
+#### 查找 (Find)
 
-**Recursive version:**
+**递归版本：**
 ```c
 Position Find(ElementType X, SearchTree T) {
     if (T == NULL)
-        return NULL;           /* not found in an empty tree */
-    if (X < T->Element)        /* if smaller than root */
-        return Find(X, T->Left);   /* search left subtree */
-    else if (X > T->Element)   /* if larger than root */
-        return Find(X, T->Right);  /* search right subtree */
-    else                       /* if X == root */
-        return T;              /* found */
+        return NULL;           /* 空树中未找到 */
+    if (X < T->Element)        /* 若小于根节点 */
+        return Find(X, T->Left);   /* 在左子树中搜索 */
+    else if (X > T->Element)   /* 若大于根节点 */
+        return Find(X, T->Right);  /* 在右子树中搜索 */
+    else                       /* 若 X == 根节点 */
+        return T;              /* 找到 */
 }
 ```
 
-> These are **tail recursions** (尾递归) -- easily converted to iteration.
+> 这些都是**尾递归（tail recursion）**——很容易转化为迭代。
 >
-> $T(N) = S(N) = O(d)$ where $d$ is the depth of $X$.
+> $T(N) = S(N) = O(d)$，其中 $d$ 是 $X$ 的深度。
 
-**Iterative version:**
+**迭代版本：**
 ```c
 Position Iter_Find(ElementType X, SearchTree T) {
-    /* iterative version of Find */
+    /* Find 的迭代版本 */
     while (T) {
         if (X == T->Element)
-            return T;          /* found */
+            return T;          /* 找到 */
         if (X < T->Element)
-            T = T->Left;       /* move down along left path */
+            T = T->Left;       /* 沿左路径向下移动 */
         else
-            T = T->Right;      /* move down along right path */
+            T = T->Right;      /* 沿右路径向下移动 */
     }
-    return NULL;               /* not found */
+    return NULL;               /* 未找到 */
 }
 ```
 
 ---
 
-#### FindMin (找最小值)
+#### 找最小值 (FindMin)
 
-**Recursive version:**
+**递归版本：**
 ```c
 Position FindMin(SearchTree T) {
     if (T == NULL)
-        return NULL;               /* not found in an empty tree */
+        return NULL;               /* 空树中未找到 */
     else if (T->Left == NULL)
-        return T;                  /* found left most */
+        return T;                  /* 找到最左节点 */
     else
-        return FindMin(T->Left);   /* keep moving to left */
+        return FindMin(T->Left);   /* 继续向左移动 */
 }
 ```
 $T(N) = O(d)$
 
 ---
 
-#### FindMax (找最大值)
+#### 找最大值 (FindMax)
 
-**Iterative version:**
+**迭代版本：**
 ```c
 Position FindMax(SearchTree T) {
     if (T != NULL)
         while (T->Right != NULL)
-            T = T->Right;          /* keep moving to find right most */
-    return T;                      /* return NULL or the right most */
+            T = T->Right;          /* 继续向右移动找到最右节点 */
+    return T;                      /* 返回 NULL 或最右节点 */
 }
 ```
 $T(N) = O(d)$
 
 ---
 
-#### Insert (插入)
+#### 插入 (Insert)
 
-**Sketch of the idea:**
+**思路概要：**
 
-Starting BST:
+初始 BST：
 ```
       30
      /  \
@@ -665,28 +665,28 @@ Starting BST:
   2
 ```
 
-- **Insert 80:**
-  1. Check if 80 is already in the tree.
-  2. 80 > 30, go right; 80 > 40, go right -> NULL.
-  3. Insert 80 as the right child of 40.
+- **插入 80：**
+  1. 检查 80 是否已在树中。
+  2. 80 > 30，向右；80 > 40，向右 -> NULL。
+  3. 将 80 插入为 40 的右孩子。
 
-- **Insert 35:**
-  1. Check if 35 is already in the tree.
-  2. 35 > 30, go right; 35 < 40, go left -> NULL.
-  3. Insert 35 as the left child of 40.
+- **插入 35：**
+  1. 检查 35 是否已在树中。
+  2. 35 > 30，向右；35 < 40，向左 -> NULL。
+  3. 将 35 插入为 40 的左孩子。
 
-- **Insert 25:**
-  1. Check if 25 is already in the tree.
-  2. 25 < 30, go left; 25 > 5, go right -> NULL.
-  3. Insert 25 as the right child of 5.
+- **插入 25：**
+  1. 检查 25 是否已在树中。
+  2. 25 < 30，向左；25 > 5，向右 -> NULL。
+  3. 将 25 插入为 5 的右孩子。
 
-> The last node we encounter when searching for the key number will be the **parent** of the new node.
+> 搜索关键字时遇到的最后一个节点将是新节点的**父节点**。
 
-**Implementation:**
+**实现：**
 ```c
 SearchTree Insert(ElementType X, SearchTree T) {
     if (T == NULL) {
-        /* Create and return a one-node tree */
+        /* 创建并返回一个单节点树 */
         T = malloc(sizeof(struct TreeNode));
         if (T == NULL)
             FatalError("Out of space!!!");
@@ -695,35 +695,35 @@ SearchTree Insert(ElementType X, SearchTree T) {
             T->Left = T->Right = NULL;
         }
     }
-    /* If there is a tree */
+    /* 若树存在 */
     else if (X < T->Element)
         T->Left = Insert(X, T->Left);
     else if (X > T->Element)
         T->Right = Insert(X, T->Right);
-    /* Else X is in the tree already; we'll do nothing */
+    /* 否则 X 已在树中，不执行任何操作 */
 
-    return T;   /* Do not forget this line!! */
+    return T;   /* 不要忘记这行！！ */
 }
 ```
 $T(N) = O(d)$
 
-> **Question:** How would you handle duplicated keys?
-> - **Answer:** One approach is to add a counter field in each node, or store them in the left/right subtree consistently.
+> **问题：** 如何处理重复的关键字 (duplicate keys)？
+> - **答案：** 一种方法是在每个节点中添加一个计数字段，或者一致地将它们存储在左子树或右子树中。
 
 ---
 
-#### Delete (删除)
+#### 删除 (Delete)
 
-Three cases based on the degree of the node to be deleted:
+根据待删除节点的度分为三种情况 (three cases based on degree)：
 
-##### Case 1: Delete a leaf node (度为0)
-**Reset its parent link to NULL** and free the node.
+##### 情况 1：删除叶子节点（度为 0）(Case 1: Delete a Leaf Node)
+**将其父节点链接重置为 NULL**，然后释放该节点。
 
-##### Case 2: Delete a degree 1 node (度为1)
-**Replace the node by its single child.**
+##### 情况 2：删除度为 1 的节点 (Case 2: Delete a Node with One Child)
+**用该节点的唯一孩子替换该节点。**
 
 ```
-Before:          After:
+删除前：          删除后：
    P               P
     \               \
      X               C
@@ -731,11 +731,11 @@ Before:          After:
    C
 ```
 
-##### Case 3: Delete a degree 2 node (度为2)
-1. **Replace the node's element** by the largest element in its **left subtree** (the rightmost node of the left subtree), or the **smallest** element in its **right subtree** (the leftmost node of the right subtree).
-2. **Delete the replacing node** from the subtree (which will be either Case 1 or Case 2).
+##### 情况 3：删除度为 2 的节点 (Case 3: Delete a Node with Two Children)
+1. **用其左子树中的最大元素**（左子树的最右节点）或**右子树中的最小元素**（右子树的最左节点）**替换该节点的元素**。
+2. **从子树中删除替换节点**（这将属于情况 1 或情况 2）。
 
-**Example: Delete 60 from BST**
+**示例：从 BST 中删除 60**
 ```
         40
        /  \
@@ -748,10 +748,10 @@ Before:          After:
           52
 ```
 
-- **Solution 1 (use left subtree):** Replace 60 with 55 (largest in left subtree), then delete 55 from left subtree.
-- **Solution 2 (use right subtree):** Replace 60 with the smallest element in its right subtree (which is 70), then delete the original 70 from the right subtree.
+- **方案 1（使用左子树）：** 用 55（左子树中的最大值）替换 60，然后从左子树中删除 55。
+- **方案 2（使用右子树）：** 用右子树中的最小元素（即 70）替换 60，然后从右子树中删除原来的 70。
 
-More detailed example with the tree:
+更详细的示例树：
 ```
       40
      /  \
@@ -764,37 +764,37 @@ More detailed example with the tree:
        52
 ```
 
-Delete 60:
-- Find the smallest in the right subtree of 60: FindMin(60's right subtree = 70) -> 70 (the leftmost node).
-- Replace 60's element with 70.
-- Delete the original 70 from the right subtree.
+删除 60：
+- 在 60 的右子树中找最小值：FindMin(60 的右子树 = 70) -> 70（最左节点）。
+- 用 70 替换 60 的元素。
+- 从右子树中删除原来的 70。
 
-OR:
-- Find the largest in the left subtree of 60: FindMax(60's left subtree = 50's right) -> 55.
-- Replace 60's element with 55.
-- Delete 55 from the left subtree (which is a degree 1 node, so replace it with 52).
+或者：
+- 在 60 的左子树中找最大值：FindMax(60 的左子树 = 50 的右子树) -> 55。
+- 用 55 替换 60 的元素。
+- 从左子树中删除 55（55 是度为 1 的节点，因此用 52 替换它）。
 
-**Implementation:**
+**实现：**
 ```c
 SearchTree Delete(ElementType X, SearchTree T) {
     Position TmpCell;
 
     if (T == NULL)
         Error("Element not found");
-    else if (X < T->Element)        /* Go left */
+    else if (X < T->Element)        /* 向左 */
         T->Left = Delete(X, T->Left);
-    else if (X > T->Element)        /* Go right */
+    else if (X > T->Element)        /* 向右 */
         T->Right = Delete(X, T->Right);
-    else {                          /* Found element to be deleted */
-        if (T->Left && T->Right) {  /* Two children */
-            /* Replace with smallest in right subtree */
+    else {                          /* 找到待删除元素 */
+        if (T->Left && T->Right) {  /* 两个孩子 */
+            /* 用右子树中的最小元素替换 */
             TmpCell = FindMin(T->Right);
             T->Element = TmpCell->Element;
             T->Right = Delete(T->Element, T->Right);
         }
-        else {                      /* One or zero child */
+        else {                      /* 一个或零个孩子 */
             TmpCell = T;
-            if (T->Left == NULL)    /* Also handles 0 child */
+            if (T->Left == NULL)    /* 同时也处理了零个孩子的情况 */
                 T = T->Right;
             else if (T->Right == NULL)
                 T = T->Left;
@@ -804,30 +804,30 @@ SearchTree Delete(ElementType X, SearchTree T) {
     return T;
 }
 ```
-$T(N) = O(h)$ where $h$ is the height of the tree.
+$T(N) = O(h)$，其中 $h$ 是树的高度。
 
 ---
 
-### Lazy Deletion (懒惰删除)
+### 懒惰删除 (Lazy Deletion)
 
-**Idea:** If there are not many deletions, add a **flag field** to each node, to mark if a node is **active** or is **deleted**.
+**思想：** 如果删除操作不多，可以在每个节点中添加一个**标志位（flag）**，用于标记节点是**有效的（active）** 还是**已删除的（deleted）**。
 
-- We can "delete" a node without actually freeing the space of that node.
-- If a deleted key is reinserted, we won't have to call `malloc` again.
+- 我们可以"删除"一个节点而不实际释放该节点的空间。
+- 如果删除的关键字被重新插入，则无需再次调用 `malloc`。
 
-**Trade-off:** If the number of deleted nodes is the same as the number of active nodes, the tree's height may increase, potentially affecting efficiency of operations (since the tree can become filled with "dead" nodes).
+**权衡：** 如果删除节点的数量与有效节点的数量相当，树的高度可能会增加，从而可能影响操作的效率（因为树中会充满"死"节点）。
 
 ---
 
-### 4. Average-Case Analysis (平均情况分析)
+### 4. 平均情况分析 (Average-Case Analysis)
 
-**Question:** Place $n$ elements in a binary search tree. How high can this tree be?
+**问题：** 将 $n$ 个元素放入一个二叉搜索树中，这棵树能有多高？
 
-**Answer:** The height depends on the **order of insertion**.
+**答案：** 高度取决于**插入的顺序 (insertion order)**。
 
-#### Example: Inserting 1, 2, 3, 4, 5, 6, 7
+#### 示例：插入 1, 2, 3, 4, 5, 6, 7
 
-**Order 1:** `4, 2, 1, 3, 6, 5, 7`
+**顺序 1：** `4, 2, 1, 3, 6, 5, 7`
 ```
         4
       /   \
@@ -835,9 +835,9 @@ $T(N) = O(h)$ where $h$ is the height of the tree.
     / \   / \
    1   3 5   7
 ```
-Height $h = 2$ (best case -- balanced tree)
+高度 $h = 2$（最佳情况——平衡树, balanced tree）
 
-**Order 2:** `1, 2, 3, 4, 5, 6, 7`
+**顺序 2：** `1, 2, 3, 4, 5, 6, 7`
 ```
 1
  \
@@ -853,32 +853,32 @@ Height $h = 2$ (best case -- balanced tree)
            \
             7
 ```
-Height $h = 6$ (worst case -- skewed tree)
+高度 $h = 6$（最坏情况——斜树）
 
-#### Key Insight:
-- **Average depth** of a BST node is $O(\log N)$ if insertions are random.
-- **Worst-case depth** is $O(N)$ (when elements are inserted in sorted/nearly-sorted order).
-- The expected height of a randomly built BST is $O(\log N)$.
+#### 关键结论 (Key Conclusions)：
+- 如果插入是随机的，BST 节点的**平均深度 (average depth)** 为 $O(\log N)$。
+- **最坏情况深度 (worst-case depth)** 为 $O(N)$（当元素按有序或近似有序的顺序插入时）。
+- 随机构建的 BST 的期望高度 (expected height) 为 $O(\log N)$。
 
 ---
 
-## Summary of Key Formulas
+## 关键公式总结 (Key Formula Summary)
 
-| Property | Formula |
+| 性质 (Property) | 公式 (Formula) |
 |----------|---------|
-| Max nodes on level $i$ | $2^{i-1}$ |
-| Max nodes in tree of depth $k$ | $2^k - 1$ |
-| Leaf nodes vs degree-2 nodes | $n_0 = n_2 + 1$ |
-| Edges in tree with $N$ nodes | $N - 1$ |
-| Null links in binary tree with $n$ nodes | $n + 1$ |
-| BST Find/Insert time (average) | $O(\log N)$ |
-| BST Find/Insert time (worst case) | $O(N)$ |
+| 第 $i$ 层最多节点数 | $2^{i-1}$ |
+| 深度为 $k$ 的树中最多节点数 | $2^k - 1$ |
+| 叶子节点与度为 2 的节点关系 | $n_0 = n_2 + 1$ |
+| $N$ 个节点的树中的边数 | $N - 1$ |
+| $n$ 个节点的二叉树中的空链接数 | $n + 1$ |
+| BST 查找/插入时间（平均） | $O(\log N)$ |
+| BST 查找/插入时间（最坏情况） | $O(N)$ |
 
-## Summary of Traversal Orders
+## 遍历顺序总结 (Summary of Traversal Orders)
 
-| Traversal | Order | Visit Pattern |
+| 遍历方式 (Traversal) | 顺序 (Order) | 访问模式 (Visit Pattern) |
 |-----------|-------|---------------|
-| Preorder | Root -> Left -> Right | Visit before children |
-| Inorder | Left -> Root -> Right | Visit between children |
-| Postorder | Left -> Right -> Root | Visit after children |
-| Levelorder | Top level to bottom, left to right | BFS using queue |
+| 先序遍历 | 根 -> 左 -> 右 | 在孩子之前访问 |
+| 中序遍历 | 左 -> 根 -> 右 | 在孩子之间访问 |
+| 后序遍历 | 左 -> 右 -> 根 | 在孩子之后访问 |
+| 层序遍历 | 从上到下，从左到右 | 使用队列的 BFS |

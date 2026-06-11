@@ -71,10 +71,8 @@ void InsertionSort(ElementType A[], int N)
 
 ### 逆序 (Inversion)
 
-**【Definition】**
-An inversion in an array of numbers is any ordered pair $(i, j)$ having the property that $i < j$ but $A[i] > A[j]$.
-
-> 在数组中，一个逆序对是指满足 $i < j$ 但 $A[i] > A[j]$ 的有序对 $(i, j)$。
+> **Definition**: An inversion in an array of numbers is any ordered pair $(i, j)$ having the property that $i < j$ but $A[i] > A[j]$.
+> **定义**: **逆序对 (Inversion)** 在数组中是指满足 $i < j$ 但 $A[i] > A[j]$ 的有序对 $(i, j)$。
 
 **Example** 输入列表 `34, 8, 64, 51, 32, 21` 有 **9** 个逆序对：
 
@@ -90,13 +88,11 @@ $(34,8), (34,32), (34,21), (64,51), (64,32), (64,21), (51,32), (51,21), (32,21)$
 
 ### 重要定理
 
-**【Theorem 1】** The average number of inversions in an array of $N$ distinct numbers is $N(N - 1) / 4$.
+> **Theorem 1**: The average number of inversions in an array of $N$ distinct numbers is $N(N - 1) / 4$.
+> **定理 1**: 在 $N$ 个不同元素的数组中，**逆序 (Inversion)** 数量的平均值为 $N(N-1)/4$。
 
-> 在 $N$ 个不同元素的数组中，逆序数的平均值为 $N(N-1)/4$。
-
-**【Theorem 2】** Any algorithm that sorts by exchanging adjacent elements requires $\Omega(N^2)$ time on average.
-
-> 任何通过交换相邻元素来排序的算法，平均情况下需要 $\Omega(N^2)$ 时间。
+> **Theorem 2**: Any algorithm that sorts by exchanging adjacent elements requires $\Omega(N^2)$ time on average.
+> **定理 2**: 任何通过交换**相邻元素 (adjacent elements)** 来排序的算法，平均情况下需要 $\Omega(N^2)$ 时间。
 
 ### 启发
 
@@ -162,9 +158,8 @@ void Shellsort(ElementType A[], int N)
 
 ### 最坏情况分析 (Worst-Case Analysis)
 
-**【Theorem】** The worst-case running time of Shellsort, using Shell's increments, is $\Theta(N^2)$.
-
-> 使用希尔原始增量序列的 Shellsort 最坏运行时间为 $\Theta(N^2)$。
+> **Theorem**: The worst-case running time of Shellsort, using Shell's increments, is $\Theta(N^2)$.
+> **定理**: 使用**希尔原始增量序列 (Shell's increments)** 的 **希尔排序 (Shellsort)** 最坏运行时间为 $\Theta(N^2)$。
 
 **Example of a bad case** (N = 16):
 输入: `1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15, 8, 16`
@@ -184,9 +179,8 @@ $$h_k = 2^k - 1$$
 
 - 连续的增量没有公因子 (consecutive increments have no common factors)
 
-**【Theorem】** The worst-case running time of Shellsort, using Hibbard's increments, is $\Theta(N^{3/2})$.
-
-> 使用希巴德增量序列的 Shellsort 最坏运行时间为 $\Theta(N^{3/2})$。
+> **Theorem**: The worst-case running time of Shellsort, using Hibbard's increments, is $\Theta(N^{3/2})$.
+> **定理**: 使用**希巴德增量序列 (Hibbard's increments)** 的 Shellsort 最坏运行时间为 $\Theta(N^{3/2})$。
 
 ### 其他结论
 
@@ -240,7 +234,8 @@ void Heapsort(ElementType A[], int N)
 
 ### 定理
 
-**【Theorem】** The average number of comparisons used to heapsort a random permutation of $N$ distinct items is $2N \log N - O(N \log \log N)$.
+> **Theorem**: The average number of comparisons used to heapsort a random permutation of $N$ distinct items is $2N \log N - O(N \log \log N)$.
+> **定理**: 对 $N$ 个不同元素的随机排列进行**堆排序 (Heapsort)**，平均比较次数为 $2N \log N - O(N \log \log N)$。
 
 ### 注意
 
@@ -558,13 +553,12 @@ $$T = O(mN)$$
 
 ## §9 A General Lower Bound for Sorting 排序的一般下界
 
-**【Theorem】** Any algorithm that sorts by comparisons only must have a worst case computing time of $\Omega(N \log N)$.
-
-> 任何仅通过比较进行排序的算法，最坏情况计算时间至少为 $\Omega(N \log N)$。
+> **Theorem**: Any algorithm that sorts by comparisons only must have a worst case computing time of $\Omega(N \log N)$.
+> **定理**: 任何仅通过**比较 (comparisons)** 进行排序的算法，最坏情况计算时间至少为 $\Omega(N \log N)$。
 
 ### 证明 (通过决策树)
 
-**决策树示例** — 对 R0, R1, R2 进行插入排序的决策树:
+**决策树 (Decision Tree) 示例** — 对 R0, R1, R2 进行插入排序的决策树:
 
 ```
                     K0 <= K1?
@@ -584,7 +578,7 @@ $$T = O(mN)$$
 
 **推理过程**:
 1. 排序 $N$ 个不同元素时，有 $N!$ 种不同的可能结果 (When sorting N distinct elements, there are N! different possible results.)
-2. 因此任何决策树必须至少有 $N!$ 个叶子 (any decision tree must have at least N! leaves)
+2. 因此任何**决策树 (decision tree)** 必须至少有 $N!$ 个**叶子 (leaves)** (any decision tree must have at least N! leaves)
 3. 如果树的高度为 $k$，则 $N! \leq 2^{k-1}$（完全二叉树的最大叶子数）
 4. $\Rightarrow k \geq \log(N!) + 1$
 5. 由于 $N! \geq (N/2)^{N/2}$，有 $\log_2 N! \geq (N/2)\log_2(N/2) = \Theta(N \log_2 N)$
