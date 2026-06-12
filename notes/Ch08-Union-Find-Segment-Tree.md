@@ -1,4 +1,4 @@
-# Chapter 8: Union and Find + Segment Tree（并查集与线段树）
+# 第8章：并查集与线段树 (Chapter 8: Union-Find & Segment Tree)
 
 ## Part 1: Union and Find（并查集 / 不相交集 ADT）
 

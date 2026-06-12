@@ -1,0 +1,786 @@
+[
+  {
+    "id": "2053812627035332608",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Supposed that the time complexity of function B(n) is O(n), the",
+    "content": "Supposed that the time complexity of function B(n) is $\\Theta (n)$.  Then the time complexity of the following program is $$\\Theta (n^2)$$.\n```\nfor ( i=n; i>0; i=i/2) \n    B(n);\n```",
+    "type": "TRUE_OR_FALSE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1744726919154929664",
+    "description": "Supposed that the time complexity of function B(n) is $\\Theta (n)$.  Then the time complexity of the following program is $$\\Theta (n^2)$$.\n```\nfor ( i=n; i>0; i=i/2) \n    B(n);\n```",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788195192838",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Linear list is a data structure that represents many-to-1 relati",
+    "content": "Linear list is a data structure that represents many-to-1 relations.",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1591648842490175488",
+    "description": "Linear list is a data structure that represents many-to-1 relations.",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 3,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788199387137",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For a binary search tree, if its pre-order travel sequence is { ",
+    "content": "For a binary search tree, if its pre-order travel sequence is { 56, 28, 12, 35, 77, 64, 68, 72 }, then 68 is the parent of 72.",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1591668447430438912",
+    "description": "For a binary search tree, if its pre-order travel sequence is { 56, 28, 12, 35, 77, 64, 68, 72 }, then 68 is the parent of 72.",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788195192840",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given two algorithms A1 and A2, with time complexities being",
+    "content": "Given two algorithms $$A_1$$ and $$A_2$$, with time complexities being $$T_1 = O(n^2)$$ and $$T_2 = O(n\\log n)$$, respectively.  Then $$A_2$$ must be faster than $$A_1$$.",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1591688826773434368",
+    "description": "Given two algorithms $$A_1$$ and $$A_2$$, with time complexities being $$T_1 = O(n^2)$$ and $$T_2 = O(n\\log n)$$, respectively.  Then $$A_2$$ must be faster than $$A_1$$.",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053818051981684736",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In an undirected acyclic graph G with 4 connected components, th",
+    "content": "In an undirected acyclic graph G with 4 connected components, the number of edges will be 4 less than the number of vertices. ",
+    "type": "TRUE_OR_FALSE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1476205710629994496",
+    "description": "In an undirected acyclic graph G with 4 connected components, the number of edges will be 4 less than the number of vertices. ",
+    "problemPoolIndex": 8,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053814357571612672",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a min-heap with unique keys, if `i < j`, then the element ",
+    "content": "这是一个判断题的样例。答案为T，分值为5分。",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈超超",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1933496312787849216",
+    "description": "Given a min-heap with unique keys, if $i < j$, then the element $p$ in level $i$ must be smaller than $q$ in level $ j$.",
+    "problemPoolIndex": 7,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788195192832",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "An algorithm may or may not require input, but each algorithm is",
+    "content": "An algorithm may or may not produce output, but each algorithm is expected to accept at least one input.",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1591631667524128768",
+    "description": "An algorithm may or may not produce output, but each algorithm is expected to accept at least one input.",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053813587396734977",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a complete binary tree has n+1 nodes in the last level and n ",
+    "content": "这是一个判断题的样例。答案为T，分值为5分。",
+    "type": "TRUE_OR_FALSE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1934268155702497280",
+    "description": "If a complete binary tree has $n+1$ nodes in the last level and n nodes in the second last level, then the total number of nodes in the tree must be $3n$.",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053819090466185216",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(\\log n)$$",
+          "$$O(n)$$",
+          "$$O(n \\log n)$$",
+          "$$O(n^2)$$"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The time complexity of the following piece of code is:",
+    "content": "The time complexity of the following piece of code is:\n```\nint  sum = 0;\nfor(int i=1;i<n;i*=2)\n\tfor(int j=0;j<i;j++)\n\t\tsum++;\n```",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1497791840048300032",
+    "description": "The time complexity of the following piece of code is:\n```\nint  sum = 0;\nfor(int i=1;i<n;i*=2)\n\tfor(int j=0;j<i;j++)\n\t\tsum++;\n```",
+    "problemPoolIndex": 10,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788207775745",
+    "label": "2-33",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "87",
+          "88",
+          "94",
+          "95"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A graph with 100 vertices and 12 edges must have at most ____ co",
+    "content": "A graph with 100 vertices and 12 edges must have at most ____ connected component(s). @[](2)\n\nA. 87\nB. 88\nC. 94\nD. 95\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1084381293191045120",
+    "description": "A graph with 100 vertices and 12 edges must have at most ____ connected component(s).",
+    "problemPoolIndex": 8,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053822210214686720",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "5 7 4 6 2 1 0 3",
+          "7 5 4 1 6 2 0 3",
+          "6 0 3 1 4 2 7 5",
+          "7 5 2 1 0 3 4 6"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "We represent a directed graph as an adjacency list:",
+    "content": "We represent a directed graph as an adjacency list:\n```\nv0: -> null\nv1: -> v0 -> v3 -> null\nv2: -> v1 -> null\nv3: -> null\nv4: -> v1 -> v6 -> null\nv5: -> v2 -> v4 -> null\nv6: -> null\nv7: -> v1 -> v2 -> null\n```\nWhich one below is a topological order of the given graph?\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1801798536409985024",
+    "description": "We represent a directed graph as an adjacency list:\n```\nv0: -> null\nv1: -> v0 -> v3 -> null\nv2: -> v1 -> null\nv3: -> null\nv4: -> v1 -> v6 -> null\nv5: -> v2 -> v4 -> null\nv6: -> null\nv7: -> v1 -> v2 -> null\n```\nWhich one below is a topological order of the given graph?\n",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788203581451",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "S[1] = 9",
+          "S[2] = 4",
+          "S[10] = 9",
+          "S[6] = 10"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The array representation of the disjoint sets is given by S = { ",
+    "content": "The array representation of the disjoint sets is given by S = { 4, 1, 1, -4, 9, 10, -1, 9, -5, 8 }. Keep in mind that the elements are numbered from 1 to 10. After invoking Union(Find(2), Find(10)) with union-by-size and path compression, which of the following statements is FALSE?",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1591711550371655680",
+    "description": "The array representation of the disjoint sets is given by S = { 4, 1, 1, -4, 9, 10, -1, 9, -5, 8 }. Keep in mind that the elements are numbered from 1 to 10. After invoking Union(Find(2), Find(10)) with union-by-size and path compression, which of the following statements is FALSE?",
+    "problemPoolIndex": 7,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788203581441",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "8, 17, 12, 26, 65, 82",
+          "8, 26, 82, 65, 12, 17",
+          "26, 65, 17, 82, 12, 8",
+          "8, 17, 26, 65, 12, 82"
+        ],
+        "maxDisplayChoicesPerLine": 2
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Suppose that the level-order traversal sequence of a max-heap is",
+    "content": "Suppose that the level-order traversal sequence of a max-heap is { 82, 65, 17, 26, 8, 12, 3 }. Use the linear algorithm to adjust this max-heap into a min-heap, and then call DeleteMin. The preorder traversal sequence of the resulting tree is:",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1592075213561524224",
+    "description": "Suppose that the level-order traversal sequence of a max-heap is { 82, 65, 17, 26, 8, 12, 3 }. Use the linear algorithm to adjust this max-heap into a min-heap, and then call DeleteMin. The preorder traversal sequence of the resulting tree is:",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053823169451995136",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "The length of the shortest path from `v2` to `v0` must be no greater than 11.",
+          "The length of the shortest path from `v2` to `v0` must be no less than 11.",
+          "The length of the shortest path from `v2` to `v0` must be less than 15.",
+          "The length of the shortest path from `v2` to `v0` must be greater than 15."
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a weighted undirected graph, if the length of the shortest pa",
+    "content": "In a weighted undirected graph, if the length of the shortest path from `v1` to `v0` is 13, and there exists an edge of weight 2 between `v2` and `v1`, then which one of the following is correct?\n@[](3)\n\nA. The length of the shortest path from `v2` to `v0` must be no greater than 11.\nB. The length of the shortest path from `v2` to `v0` must be no less than 11.\nC. The length of the shortest path from `v2` to `v0` must be less than 15.\nD. The length of the shortest path from `v2` to `v0` must be greater than 15.",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈翔",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1351057381068374016",
+    "description": "In a weighted undirected graph, if the length of the shortest path from `v1` to `v0` is 13, and there exists an edge of weight 2 between `v2` and `v1`, then which one of the following is correct?",
+    "problemPoolIndex": 12,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788199387140",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "16 42 21 36 63",
+          "42 21 36 16 63",
+          "36 21 42 63 16",
+          "21 16 42 63 36"
+        ],
+        "maxDisplayChoicesPerLine": 2
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Consider a special queue which is a linear structure that allows",
+    "content": "Consider a special queue which is a linear structure that allows insertions at one end, yet deletions at both ends.  Given an insertion sequence { 42, 36, 21, 63, 16 }.  Which of the following is NOT a possible deletion sequence?\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1591760246085902336",
+    "description": "Consider a special queue which is a linear structure that allows insertions at one end, yet deletions at both ends.  Given an insertion sequence { 42, 36, 21, 63, 16 }.  Which of the following is NOT a possible deletion sequence?\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788203581444",
+    "label": "2-12",
+    "score": 6,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "C and G",
+          "B",
+          "H",
+          "A and G"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the shape of a binary tree shown by the figure below. If i",
+    "content": "Given the shape of a binary tree shown by the figure below. If its preorder traversal sequence is { E, D, A, F, H, C, B, G }, then the node on the same level of F must be:\n\n\n![未标题-2.jpg](~/19185355-2b08-4b74-9bb7-8262720437bd.jpg)\n\n\n\n\n@[](3)\n\nA. C and G\nB. B\nC. H\nD. A and G",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1276117656921436160",
+    "description": "Given the shape of a binary tree shown by the figure below. If its preorder traversal sequence is { E, D, A, F, H, C, B, G }, then the node on the same level of F must be:\n\n\n![未标题-2.jpg](~/19185355-2b08-4b74-9bb7-8262720437bd.jpg)\n\n\n\n\n",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 3,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788207775747",
+    "label": "2-30",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$S_{in}$$ == $$S_{out}$$",
+          "$$S_{in} \\ge S_{out}$$",
+          "$$S_{in} \\le S_{out}$$",
+          "cannot be determined"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a directed graph, the relation between the sums of in-degrees",
+    "content": "In a directed graph, the relation between the sums of in-degrees $$S_{in}$$ and out-degrees $$S_{out}$$ of all the vertices is: @[](1)\n\nA. $$S_{in}$$ == $$S_{out}$$\nB. $$S_{in} \\ge S_{out}$$\nC. $$S_{in} \\le S_{out}$$\nD. cannot be determined",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "827",
+    "description": "In a directed graph, the relation between the sums of in-degrees $$S_{in}$$ and out-degrees $$S_{out}$$ of all the vertices is:",
+    "problemPoolIndex": 9,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053820408069042177",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2, 6, 5, 4, 7, 3, 1",
+          "1, 2, 3, 6, 7, 4, 5",
+          "3, 6, 5, 4, 7, 1, 2",
+          "1, 4, 7, 6, 5, 3, 2"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out",
+    "content": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible?  **Note: making 4 consecutive pops are NOT allowed in this stack.**",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1806234697832620032",
+    "description": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible?  **Note: making 4 consecutive pops are NOT allowed in this stack.**",
+    "problemPoolIndex": 11,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053821542972207104",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "E and G.",
+          "B and G.",
+          "C and D.",
+          "D and E."
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For an in-order threaded binary tree, if the post-order and in-or",
+    "content": "这是一个单选题的样例。答案为C，分值为2分。",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1933699029904871424",
+    "description": "For an in-order threaded binary tree, if the post-order and in-order traversal sequences are FDEBGCA and FDBEACG, respectively. Which pair of nodes' left links are both threads?",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053823299047600128",
+    "label": "",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "3 and 7",
+          "12 and 12",
+          "12 and 14",
+          "15 and 15"
+        ],
+        "maxDisplayChoicesPerLine": 2
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The following figure shows the AOE network of a project with 8 a",
+    "content": "The following figure shows the AOE network of a project with 8 activities.  The earliest and the latest start times of the activity `d` are __, respectively.\n\n![GRE19-5.jpg](~/28de33de-076f-4f94-b856-445865994fb0.jpg)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1085196139918729216",
+    "description": "The following figure shows the AOE network of a project with 8 activities.  The earliest and the latest start times of the activity `d` are __, respectively.\n\n![GRE19-5.jpg](~/28de33de-076f-4f94-b856-445865994fb0.jpg)",
+    "problemPoolIndex": 13,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2051906788203581448",
+    "label": "2-17",
+    "score": 5,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "510",
+          "511",
+          "766",
+          "767"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a complete binary tree with 1534 nodes, there must be \\_\\_\\_\\",
+    "content": "In a complete binary tree with 1534 nodes, there must be \\_\\_\\_\\_ leaf nodes.\n\n@[](3)\n\nA. 510\nB. 511\nC. 766\nD. 767",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "1277218367882600448",
+    "description": "In a complete binary tree with 1534 nodes, there must be \\_\\_\\_\\_ leaf nodes.\n\n",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 2,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053828454799323136",
+    "label": "",
+    "score": 9,
+    "problemConfig": {
+      "fillInTheBlankForProgrammingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "blankLength": 17,
+        "scores": [
+          2,
+          2,
+          3,
+          2
+        ],
+        "cases": {
+          "test_1": {
+            "hint": "",
+            "showHint": false,
+            "score": 0,
+            "isPublic": false
+          }
+        },
+        "blanks": [
+          {
+            "index": 754,
+            "multipleLine": false,
+            "length": 17,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 1
+          },
+          {
+            "index": 760,
+            "multipleLine": false,
+            "length": 11,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 1
+          },
+          {
+            "index": 1133,
+            "multipleLine": false,
+            "length": 15,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 1
+          },
+          {
+            "index": 1185,
+            "multipleLine": false,
+            "length": 15,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 1
+          }
+        ],
+        "tools": []
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Function Call Simulation with Linked Stack",
+    "content": "这是程序填空题模板。\n在这里填写题目要求，例如：本题目要求打印“Hello World!”。\n\n在代码中设置填空并填写正确答案，选择一段代码，点击上方编辑器的 **[添加填空]** 按钮或 **[添加多行填空]** 按钮即可成功添加填空，可在下方设置填空答案及分数。\n\n[添加填空]：![add-blank-inline.png](https://static.pintia.cn/assets/problems/add-blank-inline.png)\n[添加多行填空]：![add-blank-block.png](https://static.pintia.cn/assets/problems/add-blank-block.png)\n\n样例程序：\n```c++\n#include <stdio.h>\n\nint main()\n{\n  printf(\"\");\n\n}\n```\n上方是一段具有两个代码填空的程序代码，点击 **[复制内容]** 按钮（所见即所得），或选中全部代码后点击 **[生成评测代码]** 按钮（Markdown），即可得到一段用于评测的代码，并填入下方评测代码中使用。\n [生成评测代码]: ![file-conversion.png](https://static.pintia.cn/assets/problems/file-conversion.png)\n***注：***创建题目后需自行设置与评测代码对应的测试数据*（默认无）*\n",
+    "type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+    "author": "李松",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "PENDING_REVIEW",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "2047622091897405440",
+    "description": "There are $n$ functions numbered from $1$ to $n$. Function $1$ is the main entry of the program.\n\n- $cnt[i]$ represents the total number of child functions directly invoked by function $i$.\n- $call[i][j]$ represents the ID of the $j$-th child function called by function $i$. All child functions are invoked strictly in the given order.\n\nYou need to use a **linked stack with a head node** to simulate the execution of nested function calls. Print `Enter x `when starting to execute function $x$, and print `Exit x` when function $x$ finishes and exits.\n\n```c\ntypedef struct node {\n    int data;\n    struct node *next;\n} StackNode, *Stack;\n\nvoid Push(Stack S, int data) {\n    StackNode *p = (StackNode*)malloc(sizeof(StackNode));\n    p->data = data;\n    ;\n    ;\n}\n\nint Pop(Stack S) {\n    StackNode *p = S->next;\n    int data = p->data;\n    S->next = p->next;\n    free(p);\n    return data;\n}\n\nint GetTop(Stack S) {\n    return S->next->data;\n}\n\nvoid Simulate(int call[][MAXN], int cnt[]) {\n    int ptr[MAXN] = {0};\n    \n    StackNode head;\n    Stack S = &head;\n    S->next = NULL;\n\n    Push(S, 1);\n    printf(\"Enter 1\\n\");\n\n    while () {\n        int u = GetTop(S);\n        \n        if () {\n            int v = call[u][ptr[u]++];\n            Push(S, v);\n            printf(\"Enter %d\\n\", v);\n        } else {\n            Pop(S);\n            printf(\"Exit %d\\n\", u);\n        }\n    }\n}\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053829022594838528",
+    "label": "",
+    "score": 9,
+    "problemConfig": {
+      "fillInTheBlankForProgrammingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "blankLength": 41,
+        "scores": [
+          3,
+          3,
+          3
+        ],
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 10,
+            "isPublic": false
+          }
+        },
+        "blanks": [
+          {
+            "index": 369,
+            "multipleLine": false,
+            "length": 33,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          },
+          {
+            "index": 487,
+            "multipleLine": false,
+            "length": 41,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          },
+          {
+            "index": 526,
+            "multipleLine": false,
+            "length": 25,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          }
+        ],
+        "tools": []
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "MinHeap Deletion",
+    "content": "Please fill in the blanks in the program which deletes a given element at position `p` from a min-heap `H`.\n\n```c++\nDeletion ( PriorityQueue H,  int p )  /* delete the element H->Elements[p] */\n{\n   ElementType temp;\n   int child;\n\n   temp = H-> Elements[ H->Size-- ];\n   if ( temp < H->Elements[p] ) {\n      while ( (p != 1) && (temp < H->Elements[p/2]) ) { \n         @@[](3);\n         p /= 2;\n      } \n   }\n   else {\n      while( (child = 2*p) <= H->Size) {\n         if ( child != H->Size && @@[](3) )\n            child ++;\n         if ( @@[](3) ) {\n            H->Elements[p] = H->Elements[child];\n            p = child;\n         }\n         else\n            break;\n      }\n   }\n   H->Elements[p] = temp;\n}\n```",
+    "type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2051906788157444096",
+    "problemId": "472",
+    "description": "Please fill in the blanks in the program which deletes a given element at position `p` from a min-heap `H`.\n\n```c++\nDeletion ( PriorityQueue H,  int p )  /* delete the element H->Elements[p] */\n{\n   ElementType temp;\n   int child;\n\n   temp = H-> Elements[ H->Size-- ];\n   if ( temp < H->Elements[p] ) {\n      while ( (p != 1) && (temp < H->Elements[p/2]) ) { \n         ;\n         p /= 2;\n      } \n   }\n   else {\n      while( (child = 2*p) <= H->Size) {\n         if ( child != H->Size &&  )\n            child ++;\n         if (  ) {\n            H->Elements[p] = H->Elements[child];\n            p = child;\n         }\n         else\n            break;\n      }\n   }\n   H->Elements[p] = temp;\n}\n```",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

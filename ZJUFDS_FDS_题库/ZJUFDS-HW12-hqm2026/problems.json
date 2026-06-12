@@ -1,0 +1,353 @@
+[
+  {
+    "id": "2058932904799932416",
+    "label": "1-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Shell sort is stable.",
+    "content": "Shell sort is stable.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "687",
+    "description": "Shell sort is stable.\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932417",
+    "label": "1-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Mergesort is stable.  ",
+    "content": "Mergesort is stable.  ~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "fengyan",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "1081099420608167936",
+    "description": "Mergesort is stable.  ",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932418",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "During the Merge Sort process, the order of magnitude of the number of ",
+    "content": "这是一个判断题的样例。答案为T，分值为5分。",
+    "type": "TRUE_OR_FALSE",
+    "author": "杨子祺",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "1933909690253524992",
+    "description": "During the Merge Sort process, the order of magnitude of the number of comparisons is independent of the initial state of the sequence.",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932419",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "When sorting the array `{1, 13, 19, 10, 2, 5, 7, 4, 8, 20, 0, 15",
+    "content": "When sorting the array ```{1, 13, 19, 10, 2, 5, 7, 4, 8, 20, 0, 15, 3, 11, 17}``` in ascending order by Shell Sort using Hibbard’s increments ($h_k=2^k-1)$, the sorting result after the first run is ```{1, 8, 19, 0, 2, 3, 7, 4, 13, 20, 10, 15, 5, 11, 17}``` and that after the second run is ```{0, 2, 3, 1, 4, 13, 5, 8, 15, 7, 10, 17, 20, 11, 19}``` .",
+    "type": "TRUE_OR_FALSE",
+    "author": "干红华",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "1800167267980877824",
+    "description": "When sorting the array ```{1, 13, 19, 10, 2, 5, 7, 4, 8, 20, 0, 15, 3, 11, 17}``` in ascending order by Shell Sort using Hibbard’s increments ($h_k=2^k-1)$, the sorting result after the first run is ```{1, 8, 19, 0, 2, 3, 7, 4, 13, 20, 10, 15, 5, 11, 17}``` and that after the second run is ```{0, 2, 3, 1, 4, 13, 5, 8, 15, 7, 10, 17, 20, 11, 19}``` .",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932420",
+    "label": "2-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "3 and 1",
+          "3 and 2",
+          "5 and 2",
+          "5 and 3"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To sort { 8, 3, 9, 11, 2, 1, 4, 7, 5, 10, 6 } by Shell Sort, if ",
+    "content": "To sort { 8, 3, 9, 11, 2, 1, 4, 7, 5, 10, 6 } by Shell Sort, if we obtain ( 4, 2, 1, 8, 3, 5, 10, 6, 9, 11, 7 ) after the first run, and ( 1, 2, 3, 5, 4, 6, 7, 8, 9, 11, 10 ) after the second run, then the increments of these two runs must be __ , respectively.  @[](3)\n\nA. 3 and 1\nB. 3 and 2\nC. 5 and 2\nD. 5 and 3\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "954634496899026944",
+    "description": "To sort { 8, 3, 9, 11, 2, 1, 4, 7, 5, 10, 6 } by Shell Sort, if we obtain ( 4, 2, 1, 8, 3, 5, 10, 6, 9, 11, 7 ) after the first run, and ( 1, 2, 3, 5, 4, 6, 7, 8, 9, 11, 10 ) after the second run, then the increments of these two runs must be __ , respectively.",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932421",
+    "label": "2-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(1)$$",
+          "$$O(logN)$$",
+          "$$O(N)$$",
+          "$$O(NlogN)$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To sort $$N$$ elements by heap sort, the extra space complexity ",
+    "content": "To sort $$N$$ elements by heap sort, the extra space complexity is: @[](1)\n\nA. $$O(1)$$\nB. $$O(logN)$$\nC. $$O(N)$$\nD. $$O(NlogN)$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "889",
+    "description": "To sort $$N$$ elements by heap sort, the extra space complexity is:",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932422",
+    "label": "2-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(logN)$$",
+          "$$O(N)$$",
+          "$$O(NlogN)$$",
+          "$$O(N^2)$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To sort $$N$$ records by merge sort, the worst-case time complex",
+    "content": "To sort $$N$$ records by merge sort, the worst-case time complexity is: @[](1)\n\nA. $$O(logN)$$\nB. $$O(N)$$\nC. $$O(NlogN)$$\nD. $$O(N^2)$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "870",
+    "description": "To sort $$N$$ records by merge sort, the worst-case time complexity is:",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932423",
+    "label": "6-1",
+    "score": 8,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Iterative Mergesort",
+    "content": "How would you implement mergesort without using recursion?\n\nThe idea of iterative mergesort is to start from N sorted sublists of length 1, and each time to merge a pair of adjacent sublists until one sorted list is obtained.  You are supposed to implement the key function of merging.\n\n### Format of functions:\n```c++\nvoid merge_pass( ElementType list[], ElementType sorted[], int N, int length );\n```\nThe function `merge_pass` performs one pass of the merge sort that merges adjacent pairs of sublists from `list` into `sorted`.  `N` is the number of elements in the `list` and  `length` is the length of the sublists.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n\n#define ElementType int\n#define MAXN 100\n\nvoid merge_pass( ElementType list[], ElementType sorted[], int N, int length );\n\nvoid output( ElementType list[], int N )\n{\n    int i;\n    for (i=0; i<N; i++) printf(\"%d \", list[i]);\n    printf(\"\\n\");\n}\n\nvoid  merge_sort( ElementType list[],  int N )\n{\n    ElementType extra[MAXN];  /* the extra space required */\n    int  length = 1;  /* current length of sublist being merged */\n    while( length < N ) { \n        merge_pass( list, extra, N, length ); /* merge list into extra */\n        output( extra, N );\n        length *= 2;\n        merge_pass( extra, list, N, length ); /* merge extra back to list */\n        output( list, N );\n        length *= 2;\n    }\n} \n\n\nint main()\n{\n    int N, i;\n    ElementType A[MAXN];\n\n    scanf(\"%d\", &N);\n    for (i=0; i<N; i++) scanf(\"%d\", &A[i]);\n    merge_sort(A, N);\n    output(A, N);\n\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n10\n8 7 9 2 3 5 1 6 4 0\n```\n\n### Sample Output:\n```out\n7 8 2 9 3 5 1 6 0 4 \n2 7 8 9 1 3 5 6 0 4 \n1 2 3 5 6 7 8 9 0 4 \n0 1 2 3 4 5 6 7 8 9 \n0 1 2 3 4 5 6 7 8 9 \n```",
+    "type": "CODE_COMPLETION",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "951",
+    "description": "How would you implement mergesort without using recursion?\n\nThe idea of iterative mergesort is to start from N sorted sublists of length 1, and each time to merge a pair of adjacent sublists until one sorted list is obtained.  You are supposed to implement the key function of merging.\n\n### Format of functions:\n```c++\nvoid merge_pass( ElementType list[], ElementType sorted[], int N, int length );\n```\nThe function `merge_pass` performs one pass of the merge sort that merges adjacent pairs of sublists from `list` into `sorted`.  `N` is the number of elements in the `list` and  `length` is the length of the sublists.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n\n#define ElementType int\n#define MAXN 100\n\nvoid merge_pass( ElementType list[], ElementType sorted[], int N, int length );\n\nvoid output( ElementType list[], int N )\n{\n    int i;\n    for (i=0; i<N; i++) printf(\"%d \", list[i]);\n    printf(\"\\n\");\n}\n\nvoid  merge_sort( ElementType list[],  int N )\n{\n    ElementType extra[MAXN];  /* the extra space required */\n    int  length = 1;  /* current length of sublist being merged */\n    while( length < N ) { \n        merge_pass( list, extra, N, length ); /* merge list into extra */\n        output( extra, N );\n        length *= 2;\n        merge_pass( extra, list, N, length ); /* merge extra back to list */\n        output( list, N );\n        length *= 2;\n    }\n} \n\n\nint main()\n{\n    int N, i;\n    ElementType A[MAXN];\n\n    scanf(\"%d\", &N);\n    for (i=0; i<N; i++) scanf(\"%d\", &A[i]);\n    merge_sort(A, N);\n    output(A, N);\n\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n10\n8 7 9 2 3 5 1 6 4 0\n```\n\n### Sample Output:\n```out\n7 8 2 9 3 5 1 6 0 4 \n2 7 8 9 1 3 5 6 0 4 \n1 2 3 5 6 7 8 9 0 4 \n0 1 2 3 4 5 6 7 8 9 \n0 1 2 3 4 5 6 7 8 9 \n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2058932904799932424",
+    "label": "7-1",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "10\n3 1 2 8 7 5 9 4 6 0\n1 2 3 7 8 5 9 4 6 0",
+            "output": "Insertion Sort\n1 2 3 5 7 8 9 4 6 0"
+          },
+          {
+            "name": "",
+            "input": "10\n3 1 2 8 7 5 9 4 6 0\n1 2 3 7 8 5 9 4 6 0",
+            "output": "Insertion Sort\n1 2 3 5 7 8 9 4 6 0"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Insertion or Heap Sort",
+    "content": "According to Wikipedia:\n\n<b>Insertion sort</b> iterates, consuming one input element each repetition, and growing a sorted output list. Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.\n\n<b>Heap sort</b> divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. it involves the use of a heap data structure rather than a linear-time search to find the maximum.\n\nNow given the initial sequence of integers, together with a sequence which is a result of several iterations of some sorting method, can you tell which sorting method we are using?\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line gives a positive integer $$N$$ ($$\\le 100$$).  Then in the next line, $$N$$ integers are given as the initial sequence.  The last line contains the partially sorted sequence of the $$N$$ numbers.  It is assumed that the target sequence is always non-decreasing.  All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print in the first line either \"Insertion Sort\" or \"Heap Sort\" to indicate the method used to obtain the partial result.  Then run this method for one more iteration and output in the second line the resulting sequence.  It is guaranteed that the answer is unique for each test case.  All the numbers in a line must be separated by a space, and there must be no extra space at the end of the line.\n\n### Sample Input 1:\n```in\n10\n3 1 2 8 7 5 9 4 6 0\n1 2 3 7 8 5 9 4 6 0\n```\n\n### Sample Output 1:\n```out\nInsertion Sort\n1 2 3 5 7 8 9 4 6 0\n```\n\n### Sample Input 2:\n```\n10\n3 1 2 8 7 5 9 4 6 0\n6 4 5 1 0 3 2 7 8 9\n```\n\n### Sample Output 2:\n```\nHeap Sort\n5 4 3 1 0 2 6 7 8 9\n```\n\n**鸣谢徐杨锦晖同学修正题面！**",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2058932904783155200",
+    "problemId": "325",
+    "description": "According to Wikipedia:\n\n<b>Insertion sort</b> iterates, consuming one input element each repetition, and growing a sorted output list. Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.\n\n<b>Heap sort</b> divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region. it involves the use of a heap data structure rather than a linear-time search to find the maximum.\n\nNow given the initial sequence of integers, together with a sequence which is a result of several iterations of some sorting method, can you tell which sorting method we are using?\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line gives a positive integer $$N$$ ($$\\le 100$$).  Then in the next line, $$N$$ integers are given as the initial sequence.  The last line contains the partially sorted sequence of the $$N$$ numbers.  It is assumed that the target sequence is always non-decreasing.  All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print in the first line either \"Insertion Sort\" or \"Heap Sort\" to indicate the method used to obtain the partial result.  Then run this method for one more iteration and output in the second line the resulting sequence.  It is guaranteed that the answer is unique for each test case.  All the numbers in a line must be separated by a space, and there must be no extra space at the end of the line.\n\n### Sample Input 1:\n```in\n10\n3 1 2 8 7 5 9 4 6 0\n1 2 3 7 8 5 9 4 6 0\n```\n\n### Sample Output 1:\n```out\nInsertion Sort\n1 2 3 5 7 8 9 4 6 0\n```\n\n### Sample Input 2:\n```\n10\n3 1 2 8 7 5 9 4 6 0\n6 4 5 1 0 3 2 7 8 9\n```\n\n### Sample Output 2:\n```\nHeap Sort\n5 4 3 1 0 2 6 7 8 9\n```\n\n**鸣谢徐杨锦晖同学修正题面！**",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

@@ -1,4 +1,4 @@
-# 第2章：算法分析 (Algorithm Analysis)
+# 第2章：算法分析 (Chapter 2: Algorithm Analysis)
 
 ---
 

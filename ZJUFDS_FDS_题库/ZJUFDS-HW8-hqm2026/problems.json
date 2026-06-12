@@ -1,0 +1,321 @@
+[
+  {
+    "id": "2046113418820403201",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If graph G is NOT connected and has 35 edges, then it must have ",
+    "content": "If graph G is NOT connected and has 35 edges, then it must have at least ____ vertices. @[](3)\n\nA. 7\nB. 8\nC. 9\nD. 10\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "1198582826129584128",
+    "description": "If graph G is NOT connected and has 35 edges, then it must have at least ____ vertices.",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2046113418820403202",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "69",
+          "70",
+          "84",
+          "85"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A graph with 90 vertices and 20 edges must have at most __ conne",
+    "content": "A graph with 90 vertices and 20 edges must have at most __ connected component(s). @[](2)\n\nA. 69\nB. 70\nC. 84\nD. 85\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈翔",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "1213729940661805056",
+    "description": "A graph with 90 vertices and 20 edges must have at most __ connected component(s).",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2046113418820403203",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "4 {{0, 1, 5}, {2}, {3}, {4}}",
+          "3 {{2}, {4}, {0, 1, 3, 5}}",
+          "1 {0, 1, 2, 3, 4, 5}",
+          "1 {0, 5, 1, 3}"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the adjacency list of a directed graph as shown by the fig",
+    "content": "Given the adjacency list of a directed graph as shown by the figure.  There is(are) __ strongly connected component(s). @[](3)\n\n![](~/119)\n\nA. 4 {{0, 1, 5}, {2}, {3}, {4}}\nB. 3 {{2}, {4}, {0, 1, 3, 5}}\nC. 1 {0, 1, 2, 3, 4, 5}\nD. 1 {0, 5, 1, 3}",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "2410",
+    "description": "Given the adjacency list of a directed graph as shown by the figure.  There is(are) __ strongly connected component(s).\n\n![](~/119)",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2046113418820403204",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "10",
+          "11",
+          "13",
+          "15"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given an undirected graph G with 16 edges, where 3 vertices are ",
+    "content": "Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3.  Then G must have at least __ vertices. @[](4)\n\nA. 10\nB. 11\nC. 13\nD. 15",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研试卷",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "4961",
+    "description": "Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3.  Then G must have at least __ vertices.",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2046113418820403205",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1, 5, 2, 3, 6, 4",
+          "5, 1, 2, 6, 3, 4",
+          "5, 1, 2, 3, 6, 4",
+          "5, 2, 1, 6, 3, 4"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Which one of the following is NOT a topological order of the giv",
+    "content": "Which one of the following is NOT a topological order of the given directed graph shown by the figure?  @[](3)\n\n![fGRE17-7.JPG](~/eac326c4-0a02-4f69-a5df-e3ced3ac7e08.JPG)\n\nA. 1, 5, 2, 3, 6, 4\nB. 5, 1, 2, 6, 3, 4\nC. 5, 1, 2, 3, 6, 4\nD. 5, 2, 1, 6, 3, 4\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "954571563729932288",
+    "description": "Which one of the following is NOT a topological order of the given directed graph shown by the figure?\n\n![fGRE17-7.JPG](~/eac326c4-0a02-4f69-a5df-e3ced3ac7e08.JPG)",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2046113418820403206",
+    "label": "6-1",
+    "score": 7,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Is Topological Order",
+    "content": "Write a program to test if a give sequence `Seq` is a topological order of a given graph `Graph`.\n\n### Format of functions:\n```c++\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n```\nwhere `LGraph` is defined as the following:\n\n```c++\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n```\n\nThe function `IsTopSeq` must return `true` if `Seq` does correspond to a topological order; otherwise return `false`.\n\n**Note:** Although the vertices are numbered from 1 to MaxVertexNum, they are **indexed from 0** in the LGraph structure.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef enum {false, true} bool;\n#define MaxVertexNum 10  /* maximum number of vertices */\ntypedef int Vertex;      /* vertices are numbered from 1 to MaxVertexNum */\n\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n\nLGraph ReadG(); /* details omitted */\n\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n\nint main()\n{\n    int i, j, N;\n    Vertex Seq[MaxVertexNum];\n    LGraph G = ReadG();\n    scanf(\"%d\", &N);\n    for (i=0; i<N; i++) {\n        for (j=0; j<G->Nv; j++)\n            scanf(\"%d\", &Seq[j]);\n        if ( IsTopSeq(G, Seq)==true ) printf(\"yes\\n\");\n        else printf(\"no\\n\");\n    }\n\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input (for the graph shown in the figure): \n\n![topord.JPG](~/5373e878-196d-45dd-a82f-555b1fea6929.JPG)\n\n```in\n6 8\n1 2\n1 3\n5 2\n5 4\n2 3\n2 6\n3 4\n6 4\n5\n1 5 2 3 6 4\n5 1 2 6 3 4\n5 1 2 3 6 4\n5 2 1 6 3 4\n1 2 3 4 5 6\n```\n\n### Sample Output:\n```out\nyes\nyes\nyes\nno\nno\n```\n",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "1081934415547531264",
+    "description": "Write a program to test if a give sequence `Seq` is a topological order of a given graph `Graph`.\n\n### Format of functions:\n```c++\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n```\nwhere `LGraph` is defined as the following:\n\n```c++\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n```\n\nThe function `IsTopSeq` must return `true` if `Seq` does correspond to a topological order; otherwise return `false`.\n\n**Note:** Although the vertices are numbered from 1 to MaxVertexNum, they are **indexed from 0** in the LGraph structure.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef enum {false, true} bool;\n#define MaxVertexNum 10  /* maximum number of vertices */\ntypedef int Vertex;      /* vertices are numbered from 1 to MaxVertexNum */\n\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n\nLGraph ReadG(); /* details omitted */\n\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n\nint main()\n{\n    int i, j, N;\n    Vertex Seq[MaxVertexNum];\n    LGraph G = ReadG();\n    scanf(\"%d\", &N);\n    for (i=0; i<N; i++) {\n        for (j=0; j<G->Nv; j++)\n            scanf(\"%d\", &Seq[j]);\n        if ( IsTopSeq(G, Seq)==true ) printf(\"yes\\n\");\n        else printf(\"no\\n\");\n    }\n\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input (for the graph shown in the figure): \n\n![topord.JPG](~/5373e878-196d-45dd-a82f-555b1fea6929.JPG)\n\n```in\n6 8\n1 2\n1 3\n5 2\n5 4\n2 3\n2 6\n3 4\n6 4\n5\n1 5 2 3 6 4\n5 1 2 6 3 4\n5 1 2 3 6 4\n5 2 1 6 3 4\n1 2 3 4 5 6\n```\n\n### Sample Output:\n```out\nyes\nyes\nyes\nno\nno\n```\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2046113418820403207",
+    "label": "7-1",
+    "score": 7,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 300,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n",
+            "output": "YES\nNO\nNO\nNO\nYES\nNO\n"
+          },
+          {
+            "name": "",
+            "input": "6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n",
+            "output": "YES\nNO\nNO\nNO\nYES\nNO\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Hamiltonian Cycle",
+    "content": "The \"Hamilton cycle problem\" is to find a simple cycle that contains every vertex in a graph. Such a cycle is called a \"Hamiltonian cycle\".\n\nIn this problem, you are supposed to tell if a given cycle is a Hamiltonian cycle.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line contains 2 positive integers $$N$$ ($$2< N \\le 200$$), the number of vertices, and $$M$$, the number of edges in an undirected graph. Then $$M$$ lines follow, each describes an edge in the format `Vertex1 Vertex2`, where the vertices are numbered from 1 to $$N$$. The next line gives a positive integer $$K$$ which is the number of queries, followed by $$K$$ lines of queries, each in the format:\n\n$$n$$ $$V_1$$ $$V_2$$ ... $$V_n$$\n\nwhere $$n$$ is the number of vertices in the list, and $$V_i$$'s are the vertices on a path.\n\n### Output Specification:\n\nFor each query, print in a line `YES` if the path does form a Hamiltonian cycle, or `NO` if not.\n\n### Sample Input:\n```in\n6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n```\n\n### Sample Output:\n```out\nYES\nNO\nNO\nNO\nYES\nNO\n```\n",
+    "type": "PROGRAMMING",
+    "author": "CHEN, Yue",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2046113418774265856",
+    "problemId": "10656",
+    "description": "The \"Hamilton cycle problem\" is to find a simple cycle that contains every vertex in a graph. Such a cycle is called a \"Hamiltonian cycle\".\n\nIn this problem, you are supposed to tell if a given cycle is a Hamiltonian cycle.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line contains 2 positive integers $$N$$ ($$2< N \\le 200$$), the number of vertices, and $$M$$, the number of edges in an undirected graph. Then $$M$$ lines follow, each describes an edge in the format `Vertex1 Vertex2`, where the vertices are numbered from 1 to $$N$$. The next line gives a positive integer $$K$$ which is the number of queries, followed by $$K$$ lines of queries, each in the format:\n\n$$n$$ $$V_1$$ $$V_2$$ ... $$V_n$$\n\nwhere $$n$$ is the number of vertices in the list, and $$V_i$$'s are the vertices on a path.\n\n### Output Specification:\n\nFor each query, print in a line `YES` if the path does form a Hamiltonian cycle, or `NO` if not.\n\n### Sample Input:\n```in\n6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n```\n\n### Sample Output:\n```out\nYES\nNO\nNO\nNO\nYES\nNO\n```\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

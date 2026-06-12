@@ -1,0 +1,3102 @@
+[
+  {
+    "id": "2049365770455924736",
+    "label": "1-1",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The major task of algorithm analysis is to analyze the time comp",
+    "content": "The major task of algorithm analysis is to analyze the time complexity and the space complexity.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "651",
+    "description": "The major task of algorithm analysis is to analyze the time complexity and the space complexity.\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770455924737",
+    "label": "1-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The Fibonacci number sequence {$$F_N$$} is defined as: $$F_0=0$$",
+    "content": "The Fibonacci number sequence {$$F_N$$} is defined as: $$F_0=0$$, $$F_1=1$$, $$F_N=F_{N-1}+F_{N-2}$$, $$N$$=2, 3, ....  The time complexity of the function which calculates $$F_N$$ recursively is $$\\Theta (N!)$$.\n\n~@[](3)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "648",
+    "description": "The Fibonacci number sequence {$$F_N$$} is defined as: $$F_0=0$$, $$F_1=1$$, $$F_N=F_{N-1}+F_{N-2}$$, $$N$$=2, 3, ....  The time complexity of the function which calculates $$F_N$$ recursively is $$\\Theta (N!)$$.\n",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770455924738",
+    "label": "1-3",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "$$O(N^2)$$ is the same as $$O(1+2+3+\\cdots+N)$$.  ",
+    "content": "$$O(N^2)$$ is the same as $$O(1+2+3+\\cdots+N)$$.  ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "干红华",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "953524474644262912",
+    "description": "$$O(N^2)$$ is the same as $$O(1+2+3+\\cdots+N)$$.  ",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770455924739",
+    "label": "1-4",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For the following piece of code",
+    "content": "For the following piece of code \n\n```C++\n\nif ( A > B ){     \n  for ( i=0; i<N*2; i++ )         \n    for ( j=N*N; j>i; j-- )             \n      C += A; \n}\nelse {     \n  for ( i=0; i<N*N/100; i++ )         \n    for ( j=N; j>i; j-- ) \n      for ( k=0; k<N*3; k++)\n        C += B; \n} \n```\nthe lowest upper bound of the time complexity is $$O(N^3)$$.\n  ~@[](3)",
+    "type": "TRUE_OR_FALSE",
+    "author": "Martin Ester",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "4702",
+    "description": "For the following piece of code \n\n```C++\n\nif ( A > B ){     \n  for ( i=0; i<N*2; i++ )         \n    for ( j=N*N; j>i; j-- )             \n      C += A; \n}\nelse {     \n  for ( i=0; i<N*N/100; i++ )         \n    for ( j=N; j>i; j-- ) \n      for ( k=0; k<N*3; k++)\n        C += B; \n} \n```\nthe lowest upper bound of the time complexity is $$O(N^3)$$.\n  ",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770455924740",
+    "label": "1-5",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "$$(\\log n)^{100}$$ is $$O(n^{0.01})$$.",
+    "content": "$$(\\log n)^{100}$$ is $$O(n^{0.01})$$.~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1275782299382181888",
+    "description": "$$(\\log n)^{100}$$ is $$O(n^{0.01})$$.",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632128",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For a sequentially stored linear list of length $$N$$, the time ",
+    "content": "For a sequentially stored linear list of length $$N$$, the time complexities for deleting the first element and inserting the last element are $$O(1)$$ and $$O(N)$$, respectively.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2121",
+    "description": "For a sequentially stored linear list of length $$N$$, the time complexities for deleting the first element and inserting the last element are $$O(1)$$ and $$O(N)$$, respectively.\n",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632129",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a linear list is represented by a linked list, the addresses ",
+    "content": "If a linear list is represented by a linked list, the addresses of the elements in the memory must be consecutive.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2390",
+    "description": "If a linear list is represented by a linked list, the addresses of the elements in the memory must be consecutive.\n",
+    "problemPoolIndex": 7,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064512",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In most restaurants, we follow one principle called \"First come,",
+    "content": "In most restaurants, we follow one principle called \"First come, first served\". This principle can be implemented by a stack.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "fengyan",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1350008230308077568",
+    "description": "In most restaurants, we follow one principle called \"First come, first served\". This principle can be implemented by a stack.",
+    "problemPoolIndex": 8,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064513",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "When $$n$$ elements are pushed into a stack, they may be popped ",
+    "content": "When $$n$$ elements are pushed into a stack, they may be popped in a different order.  But if they are inserted into a queue, they will always be deleted in the same order as the insertions.",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1410249445595127808",
+    "description": "When $$n$$ elements are pushed into a stack, they may be popped in a different order.  But if they are inserted into a queue, they will always be deleted in the same order as the insertions.",
+    "problemPoolIndex": 9,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967744",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "It is always possible to represent a tree by a one-dimensional i",
+    "content": "It is always possible to represent a tree by a one-dimensional integer array.  ~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1214200391167066112",
+    "description": "It is always possible to represent a tree by a one-dimensional integer array.  ",
+    "problemPoolIndex": 10,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967745",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "There exists a binary tree with 2016 nodes in total, and with 16",
+    "content": "There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.\n~@[](3)",
+    "type": "TRUE_OR_FALSE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2123",
+    "description": "There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.\n",
+    "problemPoolIndex": 11,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831671791616",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a binary search tree, the keys on the same level from left to",
+    "content": "In a binary search tree, the keys on the same level from left to right must be in sorted (non-decreasing) order.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "662",
+    "description": "In a binary search tree, the keys on the same level from left to right must be in sorted (non-decreasing) order.\n",
+    "problemPoolIndex": 12,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831671791617",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a binary search tree with 20 integer keys which include 4,",
+    "content": "Given a binary search tree with 20 integer keys which include 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent. ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "干红华",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1081054305688641536",
+    "description": "Given a binary search tree with 20 integer keys which include 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent. ",
+    "problemPoolIndex": 13,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831671791618",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The time complexity of searching in a binary search tree is the ",
+    "content": "The time complexity of searching in a binary search tree is the same as that of binary search.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1119",
+    "description": "The time complexity of searching in a binary search tree is the same as that of binary search.\n",
+    "problemPoolIndex": 14,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670208",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The inorder traversal sequence of any min-heap must be in sorted",
+    "content": "The inorder traversal sequence of any min-heap must be in sorted order.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1352273181329117184",
+    "description": "The inorder traversal sequence of any min-heap must be in sorted order.",
+    "problemPoolIndex": 15,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670209",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a complete binary tree with 136 nodes is stored in an array (",
+    "content": "If a complete binary tree with 136 nodes is stored in an array (root at position 1), then the node at position 12  precedes the node at position 95 in its preorder traversal sequence.  ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "4696",
+    "description": "If a complete binary tree with 136 nodes is stored in an array (root at position 1), then the node at position 12  precedes the node at position 95 in its preorder traversal sequence.  ",
+    "problemPoolIndex": 16,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263488",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A segment tree can be used to find the greatest common divisor (",
+    "content": "这是一个判断题的样例。答案为T，分值为5分。",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2025857194270560256",
+    "description": "A segment tree can be used to find the greatest common divisor (GCD) of any index range.",
+    "problemPoolIndex": 17,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263489",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In *Union/Find* algorithm, if *Unions* are done by size, the dep",
+    "content": "In *Union/Find* algorithm, if *Unions* are done by size, the depth of any node must be no more than $$N/2$$, but not $$O(logN)$$. ~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1198508276830334976",
+    "description": "In *Union/Find* algorithm, if *Unions* are done by size, the depth of any node must be no more than $$N/2$$, but not $$O(logN)$$. ",
+    "problemPoolIndex": 18,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871169552384",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a connected graph, the number of edges must be greater than t",
+    "content": "In a connected graph, the number of edges must be greater than the number of vertices minus 1.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "674",
+    "description": "In a connected graph, the number of edges must be greater than the number of vertices minus 1.\n",
+    "problemPoolIndex": 19,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746688",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a directed graph, the sum of the in-degrees must be equal to ",
+    "content": "In a directed graph, the sum of the in-degrees must be equal to the sum of the out-degrees of all the vertices.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "679",
+    "description": "In a directed graph, the sum of the in-degrees must be equal to the sum of the out-degrees of all the vertices.\n",
+    "problemPoolIndex": 20,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746689",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a directed graph G=(V, E) is weakly connected, then there mus",
+    "content": "If a directed graph G=(V, E) is weakly connected, then there must be at least |V| edges in G.~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1276166859710255104",
+    "description": "If a directed graph G=(V, E) is weakly connected, then there must be at least |V| edges in G.",
+    "problemPoolIndex": 21,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240512",
+    "label": "",
+    "score": 3,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a weighted undirected graph, if the length of the shortest pa",
+    "content": "In a weighted undirected graph, if the length of the shortest path from `b` to `a` is 12, and there exists an edge of weight 2 between `c` and `b`, then the length of the shortest path from `c` to `a` must be no less than 10.\n~@[](3)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2394",
+    "description": "In a weighted undirected graph, if the length of the shortest path from `b` to `a` is 12, and there exists an edge of weight 2 between `c` and `b`, then the length of the shortest path from `c` to `a` must be no less than 10.\n",
+    "problemPoolIndex": 22,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240513",
+    "label": "",
+    "score": 3,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Let P be the shortest path from S to T. If the weight of every e",
+    "content": "Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.  ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈翔",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1213721275368161280",
+    "description": "Let P be the shortest path from S to T. If the weight of every edge in the graph is incremented by 2, P will still be the shortest path from S to T.  ",
+    "problemPoolIndex": 23,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119040",
+    "label": "2-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(log n)$$",
+          "$$O(n^{1/2})$$",
+          "$$O(n)$$",
+          "$$O(n^2)$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Let $$n$$ be a non-negative integer representing the size of inp",
+    "content": "Let $$n$$ be a non-negative integer representing the size of input.  The time complexity of the following piece of code is:  @[](2)\n```\nx = 0;\nwhile ( n >= (x+1)*(x+1) )\n    x = x+1;\n```\n\nA. $$O(log n)$$\nB. $$O(n^{1/2})$$\nC. $$O(n)$$\nD. $$O(n^2)$$\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1085193654026051584",
+    "description": "Let $$n$$ be a non-negative integer representing the size of input.  The time complexity of the following piece of code is:\n```\nx = 0;\nwhile ( n >= (x+1)*(x+1) )\n    x = x+1;\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119041",
+    "label": "2-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "they are both $$O(\\log N)$$",
+          "$$O(\\log N)$$ for P1, $$O(N)$$ for P2",
+          "they are both $$O(N)$$",
+          "$$O(\\log N)$$ for P1, $$O(N\\log N)$$ for P2"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The recurrent equations for the time complexities of programs P1",
+    "content": "The recurrent equations for the time complexities of programs P1 and P2 are:\n\n* P1: $$T(1)=1, T(N)=T(N/3)+1$$\n* P2: $$T(1)=1, T(N)=3T(N/3)+1$$\n\nThen the correct conclusion about their time complexities is:  @[](3)\n\nA. they are both $$O(\\log N)$$\nB. $$O(\\log N)$$ for P1, $$O(N)$$ for P2\nC. they are both $$O(N)$$\nD. $$O(\\log N)$$ for P1, $$O(N\\log N)$$ for P2\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈翔",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1215271119878569984",
+    "description": "The recurrent equations for the time complexities of programs P1 and P2 are:\n\n* P1: $$T(1)=1, T(N)=T(N/3)+1$$\n* P2: $$T(1)=1, T(N)=3T(N/3)+1$$\n\nThen the correct conclusion about their time complexities is:",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119042",
+    "label": "2-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$2^N$$ and $$N^N$$",
+          "$$N$$ and $$2/N$$",
+          "$$N^2 logN$$ and $$NlogN^2$$",
+          "$$NlogN^2$$ and $$NlogN$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Which of the following pairs of functions has the same speed of ",
+    "content": "Which of the following pairs of functions has the same speed of growth: @[](2)\n\nA. $$2^N$$ and $$N^N$$\nB. $$N$$ and $$2/N$$\nC. $$N^2 logN$$ and $$NlogN^2$$\nD. $$NlogN^2$$ and $$NlogN$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "699",
+    "description": "Which of the following pairs of functions has the same speed of growth:",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119043",
+    "label": "2-4",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(N/2)$$",
+          "$$O(\\sqrt{N})$$",
+          "$$O(\\sqrt{N}logN)$$",
+          "$$O(0.5logN)$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To judge an integer $$N$$ ($$>10$$) is prime or not, we need to ",
+    "content": "To judge an integer $$N$$ ($$>10$$) is prime or not, we need to check if it is divisible by any odd number from 3 to $$\\sqrt{N}$$.  The time complexity of this algorithm is __. @[](2)\n\nA. $$O(N/2)$$\nB. $$O(\\sqrt{N})$$\nC. $$O(\\sqrt{N}logN)$$\nD. $$O(0.5logN)$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2125",
+    "description": "To judge an integer $$N$$ ($$>10$$) is prime or not, we need to check if it is divisible by any odd number from 3 to $$\\sqrt{N}$$.  The time complexity of this algorithm is __.",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119044",
+    "label": "2-5",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(logN)$$",
+          "$$O(N)$$",
+          "$$O(F_N)$$",
+          "$$O(N!)$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The Fibonacci number sequence {$$F_N$$} is defined as: $$F_0=0$$",
+    "content": "The Fibonacci number sequence {$$F_N$$} is defined as: $$F_0=0$$, $$F_1=1$$, $$F_N=F_{N-1}+F_{N-2}$$, $$N$$=2, 3, ....  The space complexity of the function which calculates $$F_N$$ recursively is: @[](2)\n\nA. $$O(logN)$$\nB. $$O(N)$$\nC. $$O(F_N)$$\nD. $$O(N!)$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "710",
+    "description": "The Fibonacci number sequence {$$F_N$$} is defined as: $$F_0=0$$, $$F_1=1$$, $$F_N=F_{N-1}+F_{N-2}$$, $$N$$=2, 3, ....  The space complexity of the function which calculates $$F_N$$ recursively is:",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119045",
+    "label": "2-6",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the following four algorithms with their runtimes for prob",
+    "content": "Given the following four algorithms with their runtimes for problem size 100 and their time complexities:\n\n| Algorithm      | Runtime      |Time Complexity   |\n|:-----------: |:--------:|:------:|\n| A | 100 | $$O(N)$$ |\n| B | 30 | $$O(N^2)$$ |\n| C | 30 | $$O(N^3)$$ |\n| D | 10 | $$O(N^4)$$ |\nWhich algorithm is the fastest for problem size 200?\n   @[](2)\n\nA. A\nB. B\nC. C\nD. D",
+    "type": "MULTIPLE_CHOICE",
+    "author": "Martin Ester",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "4710",
+    "description": "Given the following four algorithms with their runtimes for problem size 100 and their time complexities:\n\n| Algorithm      | Runtime      |Time Complexity   |\n|:-----------: |:--------:|:------:|\n| A | 100 | $$O(N)$$ |\n| B | 30 | $$O(N^2)$$ |\n| C | 30 | $$O(N^3)$$ |\n| D | 10 | $$O(N^4)$$ |\nWhich algorithm is the fastest for problem size 200?",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632130",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "doubly linked list",
+          "singly linked circular list",
+          "doubly linked circular list with a dummy head node",
+          "sequential list"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If the most commonly used operations are to visit a random posit",
+    "content": "If the most commonly used operations are to visit a random position and to insert and delete the last element in a linear list, then which of the following data structures is the most efficient?  @[](2)\n\nA. doubly linked list     \nB. singly linked circular list\nC. doubly linked circular list with a dummy head node \nD. sequential list",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "714",
+    "description": "If the most commonly used operations are to visit a random position and to insert and delete the last element in a linear list, then which of the following data structures is the most efficient?",
+    "problemPoolIndex": 7,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632131",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$1$$",
+          "$$N$$",
+          "$$2N$$",
+          "$$NlogN$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To merge two singly linked ascending lists, both with $$N$$ node",
+    "content": "To merge two singly linked ascending lists, both with $$N$$ nodes, into one singly linked ascending list, the minimum possible number of comparisons is: @[](2)\n\nA. $$1$$\nB. $$N$$\nC. $$2N$$\nD. $$NlogN$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "730",
+    "description": "To merge two singly linked ascending lists, both with $$N$$ nodes, into one singly linked ascending list, the minimum possible number of comparisons is:",
+    "problemPoolIndex": 8,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632132",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "```\nwhile(cu!=NULL){cu->p2=cu->p1->p1; cu=cu->p1;}\n```",
+          "```\nwhile(cu!=NULL&&cu->p2!=NULL){cu->p2=cu->p1->p1; cu=cu->p1;}\n```",
+          "```\nwhile(cu!=NULL){if(cu->p1!=NULL){cu->p2=cu->p1->p1; cu=cu->p1;}}\n```",
+          "```\nwhile(cu!=NULL){if(cu->p1!=NULL) cu->p2=cu->p1->p1; else cu->p2=NULL; cu=cu->p1;}\n```"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a doubly linked list $L$ with $n$ ($n ≥ 3$) nodes and a du",
+    "content": "这是一个单选题的样例。答案为C，分值为2分。",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2014512726223560704",
+    "description": "Given a doubly linked list $L$ with $n$ ($n\\ge 3$) nodes and a dummy header.  Each node has the structure  ![捕获.JPG](~/795963fe-d8a0-41f9-aab6-c80f48746f78.JPG) where $p_2$ and $p_1$ are pointers to its immediate predecessor and immediate successor, respectively.  The pointer `head` points to the head node, and the pointer `cu = head`.  Now you are supposed to change $p_2$ of every node in $L$ to the immediate successor of $p_1$.  If the node does not exist, the pointer must be NULL.  Then among the following statements, which one can get the job done correctly?\n",
+    "problemPoolIndex": 9,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064514",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1",
+          "3",
+          "5",
+          "6"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Push 5 characters `ooops` onto a stack.  In how many different w",
+    "content": "Push 5 characters `ooops` onto a stack.  In how many different ways that we can pop these characters and still obtain `ooops`? @[](2)\n\nA. 1\nB. 3 \nC. 5\nD. 6",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "738",
+    "description": "Push 5 characters `ooops` onto a stack.  In how many different ways that we can pop these characters and still obtain `ooops`?",
+    "problemPoolIndex": 10,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064515",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "`1->2->3`",
+          "`2->3->4`",
+          "`4->1->2`",
+          "the solution is not unique"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Represent a queue by a singly linked list.  Given the current st",
+    "content": "Represent a queue by a singly linked list.  Given the current status of the linked list as `1->2->3` where `x->y` means `y` is linked after `x`.  Now if `4` is enqueued and then a dequeue is done, the resulting status must be: @[](1)\n\nA. `1->2->3`\nB. `2->3->4`\nC. `4->1->2`\nD. the solution is not unique",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "751",
+    "description": "Represent a queue by a singly linked list.  Given the current status of the linked list as `1->2->3` where `x->y` means `y` is linked after `x`.  Now if `4` is enqueued and then a dequeue is done, the resulting status must be:",
+    "problemPoolIndex": 11,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064516",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2 and 0",
+          "2 and 2",
+          "2 and 4",
+          "2 and 6"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Suppose that an array of size 6 is used to store a circular queu",
+    "content": "Suppose that an array of size 6 is used to store a circular queue, and the values of `front` and `rear` are 0 and 4, respectively.  Now after 2 dequeues and 2 enqueues, what will the values of `front` and `rear` be?\n @[](2)\n\nA. 2 and 0\nB. 2 and 2\nC. 2 and 4\nD. 2 and 6",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "753",
+    "description": "Suppose that an array of size 6 is used to store a circular queue, and the values of `front` and `rear` are 0 and 4, respectively.  Now after 2 dequeues and 2 enqueues, what will the values of `front` and `rear` be?",
+    "problemPoolIndex": 12,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064517",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "-15",
+          "15",
+          "-20",
+          "20"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Suppose that all the integer operands are stored in the stack $$",
+    "content": "Suppose that all the integer operands are stored in the stack $$S_1$$, and all the operators in the other stack $$S_2$$.  The function `F()` does the following operations sequentially:\n\n- (1) Pop two operands `a` and `b` from $$S_1$$;\n- (2) Pop one operator `op` from $$S_2$$;\n- (3) Calculate `b op a`; and\n- (4) Push the result back to $$S_1$$.\n\nNow given { 5, 8, 3, 2 } in $$S_1$$ (where 2 is at the top), and { `*`, `-`, `+` } in $$S_2$$ (where `+` is at the top).  What is remained at the top of $$S_1$$ after `F()` is executed 3 times? @[](2)\n\nA. -15\nB. 15\nC. -20\nD. 20\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "954570235872014336",
+    "description": "Suppose that all the integer operands are stored in the stack $$S_1$$, and all the operators in the other stack $$S_2$$.  The function `F()` does the following operations sequentially:\n\n- (1) Pop two operands `a` and `b` from $$S_1$$;\n- (2) Pop one operator `op` from $$S_2$$;\n- (3) Calculate `b op a`; and\n- (4) Push the result back to $$S_1$$.\n\nNow given { 5, 8, 3, 2 } in $$S_1$$ (where 2 is at the top), and { `*`, `-`, `+` } in $$S_2$$ (where `+` is at the top).  What is remained at the top of $$S_1$$ after `F()` is executed 3 times?",
+    "problemPoolIndex": 13,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064518",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2, 6, 5, 4, 7, 3, 1",
+          "1, 2, 3, 6, 7, 4, 5",
+          "3, 6, 5, 4, 7, 1, 2",
+          "1, 4, 7, 6, 5, 3, 2"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out",
+    "content": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible?  **Note: making 4 consecutive pops are NOT allowed in this stack.**",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1806234697832620032",
+    "description": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible?  **Note: making 4 consecutive pops are NOT allowed in this stack.**",
+    "problemPoolIndex": 14,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967746",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a tree of degree 3. Suppose that there are 3 nodes of degr",
+    "content": "Given a tree of degree 3. Suppose that there are 3 nodes of degree 2 and 2 nodes of degree 3. Then the number of leaf nodes must be \\_\\_\\_\\_.\n\n\n@[](3)\n\nA. 5\nB. 6\nC. 7\nD. 8",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1276070620947795968",
+    "description": "Given a tree of degree 3. Suppose that there are 3 nodes of degree 2 and 2 nodes of degree 3. Then the number of leaf nodes must be \\_\\_\\_\\_.\n\n\n",
+    "problemPoolIndex": 15,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967747",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "Pre-order traversal",
+          "In-order traversal",
+          "Post-order traversal",
+          "Level-order traversal"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a general tree $$T$$ is converted into a binary tree $$BT$$, ",
+    "content": "If a general tree $$T$$ is converted into a binary tree $$BT$$, then which of the following $$BT$$ traversals gives the same sequence as that of the post-order traversal of $$T$$?  @[](2)\n\nA. Pre-order traversal\nB. In-order traversal\nC. Post-order traversal\nD. Level-order traversal\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1085194100983660544",
+    "description": "If a general tree $$T$$ is converted into a binary tree $$BT$$, then which of the following $$BT$$ traversals gives the same sequence as that of the post-order traversal of $$T$$?",
+    "problemPoolIndex": 16,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967748",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "D and G",
+          "E",
+          "B",
+          "A and H"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the shape of a binary tree shown by the figure below. If i",
+    "content": "Given the shape of a binary tree shown by the figure below. If its inorder traversal sequence is { E, A, D, B, F, H, C, G }, then the node on the same level of C must be:\n\n\n![未标题-2.jpg](~/19185355-2b08-4b74-9bb7-8262720437bd.jpg)\n\n\n@[](3)\n\nA. D and G\nB. E\nC. B\nD. A and H",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1276118603043172352",
+    "description": "Given the shape of a binary tree shown by the figure below. If its inorder traversal sequence is { E, A, D, B, F, H, C, G }, then the node on the same level of C must be:\n\n\n![未标题-2.jpg](~/19185355-2b08-4b74-9bb7-8262720437bd.jpg)\n\n\n",
+    "problemPoolIndex": 17,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967749",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "\n![](~/64)",
+          "\n![](~/65)",
+          "\n![](~/66)",
+          "\n![](~/67)"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Among the following threaded binary trees (the threads are repre",
+    "content": "Among the following threaded binary trees (the threads are represented by dotted curves), which one is the postorder threaded tree? @[](2)\n\nA. \n![](~/64)\nB. \n![](~/65)\nC. \n![](~/66)\nD. \n![](~/67)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "799",
+    "description": "Among the following threaded binary trees (the threads are represented by dotted curves), which one is the postorder threaded tree?",
+    "problemPoolIndex": 18,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831671791619",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$x_1 < x_2 < x_5$$",
+          "$$x_1 < x_4 < x_5$$",
+          "$$x_3 < x_5 < x_4$$",
+          "$$x_4 < x_3 < x_5$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a binary search tree as shown in the following figure.  Wh",
+    "content": "Given a binary search tree as shown in the following figure.  Which of the following relationships is correct with respect to the given tree? @[](2)\n![fGRE17-6.JPG](~/c303e1c2-3dff-4e7b-8386-b2af45a52e02.JPG)\n\nA. $$x_1 < x_2 < x_5$$\nB. $$x_1 < x_4 < x_5$$\nC. $$x_3 < x_5 < x_4$$\nD. $$x_4 < x_3 < x_5$$\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "954571338651004928",
+    "description": "Given a binary search tree as shown in the following figure.  Which of the following relationships is correct with respect to the given tree?\n![fGRE17-6.JPG](~/c303e1c2-3dff-4e7b-8386-b2af45a52e02.JPG)",
+    "problemPoolIndex": 19,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831675985920",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "`83 67 91 98 20 75`",
+          "`83 67 75 91 20 98`",
+          "`83 91 75 67 20 98`",
+          "`83 91 98 67 75 20`"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the structure of a binary search tree (as shown in the fig",
+    "content": "Given the structure of a binary search tree (as shown in the figure), which one of the following insertion sequences is impossible? @[](3)\n\n![206.jpg](~/84984823-130d-462a-ad9e-ee6457b1ce56.jpg)\n\nA. `83 67 91 98 20 75`\nB. `83 67 75 91 20 98`\nC. `83 91 75 67 20 98`\nD. `83 91 98 67 75 20`\n\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "干红华",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1081588095834071040",
+    "description": "Given the structure of a binary search tree (as shown in the figure), which one of the following insertion sequences is impossible?\n\n![206.jpg](~/84984823-130d-462a-ad9e-ee6457b1ce56.jpg)",
+    "problemPoolIndex": 20,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831675985921",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "One possible preorder traversal sequence of the resulting tree may be { 2, 15, 10, 12, 21 }",
+          "One possible preorder traversal sequence of the resulting tree may be { 10, 2, 15, 12, 21 }",
+          "One possible preorder traversal sequence of the resulting tree may be { 15, 10, 2, 12, 21 }",
+          "It is possible that the new root may have 2 children"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a binary search tree with its preorder traversal sequence ",
+    "content": "Given a binary search tree with its preorder traversal sequence { 8, 2, 15, 10, 12, 21 }.  If 8 is deleted from the tree, which one of the following statements is FALSE?   @[](2)\n\nA. One possible preprder traversal sequence of the resulting tree may be { 2, 15, 10, 12, 21 }\nB. One possible preprder traversal sequence of the resulting tree may be { 10, 2, 15, 12, 21 }\nC. One possible preprder traversal sequence of the resulting tree may be { 15, 10, 2, 12, 21 }\nD. It is possible that the new root may have 2 children\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1214174301123985408",
+    "description": "Given a binary search tree with its preorder traversal sequence { 8, 2, 15, 10, 12, 21 }.  If 8 is deleted from the tree, which one of the following statements is FALSE?",
+    "problemPoolIndex": 21,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831675985922",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "![](~/282)",
+          "![](~/283)",
+          "![](~/284)",
+          "![](~/285)"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Among the following binary trees, which one can possibly be the ",
+    "content": "Among the following binary trees, which one can possibly be the decision tree (the external nodes are excluded) for binary search? @[](4)\n\nA.  ![](~/282)\nB.  ![](~/283)\nC.  ![](~/284)\nD.  ![](~/285)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研试卷",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "4967",
+    "description": "Among the following binary trees, which one can possibly be the decision tree (the external nodes are excluded) for binary search?",
+    "problemPoolIndex": 22,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831675985923",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "preorder traversal",
+          "postorder traversal",
+          "inorder traversal",
+          "level-order traversal"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For a binary search tree, in which order of traversal that we ca",
+    "content": "For a binary search tree, in which order of traversal that we can obtain a non-decreasing sequence? @[](1)\n\nA. preorder traversal\nB. postorder traversal\nC. inorder traversal\nD. level-order traversal",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "777",
+    "description": "For a binary search tree, in which order of traversal that we can obtain a non-decreasing sequence?",
+    "problemPoolIndex": 23,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831675985924",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "125.",
+          "110.",
+          "50.",
+          "The in-order successor does not exist for 75."
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Consider the following operations performed on an initially empt",
+    "content": "这是一个单选题的样例。答案为C，分值为2分。",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1933704950982852608",
+    "description": "Consider the following operations performed on an initially empty Binary Search Tree (BST):\nInsert: 100, 50, 150, 25, 75, 125, 175\nDelete: 100 (replaced with its in-order successor) \nInsert: 110\nAfter these operations, which node will be the in-order successor of 75 in the final BST?",
+    "problemPoolIndex": 24,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365831675985925",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "x < k1",
+          "x > k2",
+          "k1 < x < k3",
+          "k3 < x < k2"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The following figure shows a binary search tree, with k1, k2 and",
+    "content": "The following figure shows a binary search tree, with k1, k2 and k3 being the keys saved at the corresponding nodes.  In the subtree T, the key x of any node must satisfy the inequality \n\n![插图7.jpg](~/1b0e6d01-0205-4f49-8f63-024797be79e7.jpg)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1749096968862990336",
+    "description": "The following figure shows a binary search tree, with k1, k2 and k3 being the keys saved at the corresponding nodes.  In the subtree T, the key x of any node must satisfy the inequality \n\n![插图7.jpg](~/1b0e6d01-0205-4f49-8f63-024797be79e7.jpg)",
+    "problemPoolIndex": 25,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670210",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1",
+          "$$\\lfloor n/2\\rfloor -1$$",
+          "$$\\lfloor n/2\\rfloor$$",
+          "$$\\lfloor n/2\\rfloor +2$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a max-heap with $$n$$ ($$>1$$) elements, the array index of t",
+    "content": "In a max-heap with $$n$$ ($$>1$$) elements, the array index of the minimum key may be __.   @[](3)\n\nA. 1\nB. $$\\lfloor n/2\\rfloor -1$$\nC. $$\\lfloor n/2\\rfloor$$\nD. $$\\lfloor n/2\\rfloor +2$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "冯雁",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2134",
+    "description": "In a max-heap with $$n$$ ($$>1$$) elements, the array index of the minimum key may be __.",
+    "problemPoolIndex": 26,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670211",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "The root is 5",
+          "The path from the root to 26 is {5, 6, 8, 26}",
+          "32 is the left child of 12",
+          "7 is the parent of 19 and 15"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Using the linear algorithm to build a min-heap from the sequence",
+    "content": "Using the linear algorithm to build a min-heap from the sequence {15, 26, 32, 8, 7, 20, 12, 13, 5, 19}, and then insert 6.  Which one of the following statements is FALSE? @[](3)\n\nA. The root is 5\nB. The path from the root to 26 is {5, 6, 8, 26}\nC. 32 is the left child of 12\nD. 7 is the parent of 19 and 15",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2404",
+    "description": "Using the linear algorithm to build a min-heap from the sequence {15, 26, 32, 8, 7, 20, 12, 13, 5, 19}, and then insert 6.  Which one of the following statements is FALSE?",
+    "problemPoolIndex": 27,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670212",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$\\lceil (i+d-2)/d \\rceil$$, $$(i-2)d+2$$, and $$(i-1)d+1$$",
+          "$$\\lceil (i+d-1)/d \\rceil$$, $$(i-2)d+1$$, and $$(i-1)d$$",
+          "$$\\lfloor (i+d-2)/d \\rfloor$$, $$(i-1)d+2$$, and $$id+1$$",
+          "$$\\lfloor (i+d-1)/d \\rfloor$$, $$(i-1)d+1$$, and $$id$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a $$d$$-heap is stored as an array, for an entry located in p",
+    "content": "If a $$d$$-heap is stored as an array, for an entry located in position $$i$$, the parent, the first child and the last child are at: @[](3)\n\nA. $$\\lceil (i+d-2)/d \\rceil$$, $$(i-2)d+2$$, and $$(i-1)d+1$$\nB. $$\\lceil (i+d-1)/d \\rceil$$, $$(i-2)d+1$$, and $$(i-1)d$$\nC. $$\\lfloor (i+d-2)/d \\rfloor$$, $$(i-1)d+2$$, and $$id+1$$\nD. $$\\lfloor (i+d-1)/d \\rfloor$$, $$(i-1)d+1$$, and $$id$$",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "945",
+    "description": "If a $$d$$-heap is stored as an array, for an entry located in position $$i$$, the parent, the first child and the last child are at:",
+    "problemPoolIndex": 28,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670213",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "5, 18, 15, 28, 22, 42, 40",
+          "5, 15, 18, 22, 28, 42, 40",
+          "5, 18, 28, 22, 15, 42, 40",
+          "5, 15, 28, 18, 22, 42, 40"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Insert {28, 15, 42, 18, 22, 5, 40} one by one into an initially ",
+    "content": "Insert {28, 15, 42, 18, 22, 5, 40} one by one into an initially empty min-heap.  The preorder traversal sequence of the resulting tree is: @[](3)\n\nA. 5, 18, 15, 28, 22, 42, 40\nB. 5, 15, 18, 22, 28, 42, 40\nC. 5, 18, 28, 22, 15, 42, 40\nD. 5, 15, 28, 18, 22, 42, 40",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1306",
+    "description": "Insert {28, 15, 42, 18, 22, 5, 40} one by one into an initially empty min-heap.  The preorder traversal sequence of the resulting tree is:",
+    "problemPoolIndex": 29,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670214",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "This is a complete binary tree.",
+          "4 is the parent of 3.",
+          "All the odd numbers are at leaf nodes.",
+          "This is a binary search tree."
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For a binary tree, if its pre-order travel sequence is { 4, 2, 1",
+    "content": "For a binary tree, if its pre-order travel sequence is { 4, 2, 1, 3, 6, 5, 7 }, and its in-order travel sequence is { 1, 2, 3, 4, 5, 6, 7 }, then which of the following statement is FALSE? @[](3)\n\nA. This is a complete binary tree.\nB. 4 is the parent of 3.\nC. All the odd numbers are at leaf nodes.\nD. This is a binary search tree.",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2196",
+    "description": "For a binary tree, if its pre-order travel sequence is { 4, 2, 1, 3, 6, 5, 7 }, and its in-order travel sequence is { 1, 2, 3, 4, 5, 6, 7 }, then which of the following statement is FALSE?",
+    "problemPoolIndex": 30,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670215",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "the average search time for all nodes is $$O(\\log N)$$",
+          "the minimum key must be at a leaf node",
+          "the maximum key must be at a leaf node",
+          "the median node must either be the root or in the left subtree"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a binary search tree of $$N$$ nodes is complete, which one of",
+    "content": "If a binary search tree of $$N$$ nodes is complete, which one of the following statements is FALSE?",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2422",
+    "description": "If a binary search tree of $$N$$ nodes is complete, which one of the following statements is FALSE?",
+    "problemPoolIndex": 31,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263490",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1 and -6",
+          "4 and -5",
+          "8 and -5",
+          "8 and -6"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The array representation of a disjoint set containing numbers 0 ",
+    "content": "The array representation of a disjoint set containing numbers 0 to 8 is given by { 1, -4, 1, 1, -3, 4, 4, 8, -2 }.  Then to union the two sets which contain 6 and 8 (with union-by-size), the index of the resulting root and the value stored at the root are: @[](2)\n\nA. 1 and -6\nB. 4 and -5\nC. 8 and -5\nD. 8 and -6",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "808",
+    "description": "The array representation of a disjoint set containing numbers 0 to 8 is given by { 1, -4, 1, 1, -3, 4, 4, 8, -2 }.  Then to union the two sets which contain 6 and 8 (with union-by-size), the index of the resulting root and the value stored at the root are:",
+    "problemPoolIndex": 32,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263491",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "consistent",
+          "symmetric",
+          "transitive",
+          "reflexive"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A relation $$R$$ is defined on a set $$S$$.  If for every elemen",
+    "content": "A relation $$R$$ is defined on a set $$S$$.  If for every element $$e$$ in $$S$$, \"$$e$$ $$R$$ $$e$$\" is always true, then $$R$$ is said to be  __ over $$S$$.  @[](1)\n\nA. consistent\nB. symmetric\nC. transitive\nD. reflexive\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "954573409949315072",
+    "description": "A relation $$R$$ is defined on a set $$S$$.  If for every element $$e$$ in $$S$$, \"$$e$$ $$R$$ $$e$$\" is always true, then $$R$$ is said to be  __ over $$S$$.",
+    "problemPoolIndex": 33,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263492",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "at most $$log_2(N)+1$$",
+          "at least $$log_2(N)+1$$",
+          "as large as $$N$$",
+          "anything that is greater than 1"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Let $$T$$ be a tree created by union-by-size with $$N$$ nodes, t",
+    "content": "Let $$T$$ be a tree created by union-by-size with $$N$$ nodes, then the height of $$T$$ can be  .  @[](3)\nA. at most $$log_2(N)+1$$\nB. at least $$log_2(N)+1$$\nC. as large as $$N$$\nD. anything that is greater than 1\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1081031261582680064",
+    "description": "Let $$T$$ be a tree created by union-by-size with $$N$$ nodes, then the height of $$T$$ can be  .",
+    "problemPoolIndex": 34,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263493",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "Sorting elements",
+          "Finding minimum/maximum in a range",
+          "Finding the sum of a given set of integers",
+          "Finding a given string from a set of strings"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "What is a segment tree primarily used for?",
+    "content": "这是一个单选题的样例。答案为C，分值为2分。",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2025853677602512896",
+    "description": "What is a segment tree primarily used for?",
+    "problemPoolIndex": 35,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746690",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If graph G is NOT connected and has 35 edges, then it must have ",
+    "content": "If graph G is NOT connected and has 35 edges, then it must have at least ____ vertices. @[](3)\n\nA. 7\nB. 8\nC. 9\nD. 10\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1198582826129584128",
+    "description": "If graph G is NOT connected and has 35 edges, then it must have at least ____ vertices.",
+    "problemPoolIndex": 36,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746691",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "69",
+          "70",
+          "84",
+          "85"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A graph with 90 vertices and 20 edges must have at most __ conne",
+    "content": "A graph with 90 vertices and 20 edges must have at most __ connected component(s). @[](2)\n\nA. 69\nB. 70\nC. 84\nD. 85\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈翔",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1213729940661805056",
+    "description": "A graph with 90 vertices and 20 edges must have at most __ connected component(s).",
+    "problemPoolIndex": 37,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746692",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "4 {{0, 1, 5}, {2}, {3}, {4}}",
+          "3 {{2}, {4}, {0, 1, 3, 5}}",
+          "1 {0, 1, 2, 3, 4, 5}",
+          "1 {0, 5, 1, 3}"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the adjacency list of a directed graph as shown by the fig",
+    "content": "Given the adjacency list of a directed graph as shown by the figure.  There is(are) __ strongly connected component(s). @[](3)\n\n![](~/119)\n\nA. 4 {{0, 1, 5}, {2}, {3}, {4}}\nB. 3 {{2}, {4}, {0, 1, 3, 5}}\nC. 1 {0, 1, 2, 3, 4, 5}\nD. 1 {0, 5, 1, 3}",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2410",
+    "description": "Given the adjacency list of a directed graph as shown by the figure.  There is(are) __ strongly connected component(s).\n\n![](~/119)",
+    "problemPoolIndex": 38,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746693",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "10",
+          "11",
+          "13",
+          "15"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given an undirected graph G with 16 edges, where 3 vertices are ",
+    "content": "Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3.  Then G must have at least __ vertices. @[](4)\n\nA. 10\nB. 11\nC. 13\nD. 15",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研试卷",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "4961",
+    "description": "Given an undirected graph G with 16 edges, where 3 vertices are of degree 4, 4 vertices are of degree 3, and all the other vertices are of degrees less than 3.  Then G must have at least __ vertices.",
+    "problemPoolIndex": 39,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746694",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1, 5, 2, 3, 6, 4",
+          "5, 1, 2, 6, 3, 4",
+          "5, 1, 2, 3, 6, 4",
+          "5, 2, 1, 6, 3, 4"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Which one of the following is NOT a topological order of the giv",
+    "content": "Which one of the following is NOT a topological order of the given directed graph shown by the figure?  @[](3)\n\n![fGRE17-7.JPG](~/eac326c4-0a02-4f69-a5df-e3ced3ac7e08.JPG)\n\nA. 1, 5, 2, 3, 6, 4\nB. 5, 1, 2, 6, 3, 4\nC. 5, 1, 2, 3, 6, 4\nD. 5, 2, 1, 6, 3, 4\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "954571563729932288",
+    "description": "Which one of the following is NOT a topological order of the given directed graph shown by the figure?\n\n![fGRE17-7.JPG](~/eac326c4-0a02-4f69-a5df-e3ced3ac7e08.JPG)",
+    "problemPoolIndex": 40,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240514",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "critical path",
+          "shortest path",
+          "topological sort",
+          "string matching"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "What kind of problems can Dijkstra algorithm solve?",
+    "content": "What kind of problems can Dijkstra algorithm solve? @[](1)\n\nA. critical path\nB. shortest path\nC. topological sort\nD. string matching",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "852",
+    "description": "What kind of problems can Dijkstra algorithm solve?",
+    "problemPoolIndex": 41,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240515",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2, 5, 3, 4, 6, 7",
+          "2, 4, 3, 6, 5, 7",
+          "2, 3, 4, 5, 6, 7",
+          "5, 2, 6, 3, 4, 7"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Use Dijkstra algorithm to find the shortest paths from 1 to ever",
+    "content": "Use Dijkstra algorithm to find the shortest paths from 1 to every other vertices.  In which order that the destinations must be obtained? @[](2)\n\n![Dij1.JPG](~/1f6fb93a-a4ee-4e48-bc0f-b169fe89f890.JPG)\n\n\nA. 2, 5, 3, 4, 6, 7\nB. 2, 4, 3, 6, 5, 7\nC. 2, 3, 4, 5, 6, 7\nD. 5, 2, 6, 3, 4, 7\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1084406738741567488",
+    "description": "Use Dijkstra algorithm to find the shortest paths from 1 to every other vertices.  In which order that the destinations must be obtained?\n\n![Dij1.JPG](~/1f6fb93a-a4ee-4e48-bc0f-b169fe89f890.JPG)",
+    "problemPoolIndex": 42,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240516",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "`count[S]=1; ` and `count[V]=0` for other `V`",
+          "`count[S]=0; ` and `count[V]=1` for other `V`",
+          "`count[V]=1` for all vertices",
+          "`count[V]=0` for all vertices"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If besides finding the shortest path from `S` to every other ver",
+    "content": "If besides finding the shortest path from `S` to every other vertices, we also need to count the number of different shortest paths, we can modify the Dijkstra algorithm in the following way: add an array `count[]` so that `count[V]` records the number of different shortest paths from `S` to `V`.  Then `count[V]` shall be initialized as: @[](3)\n\nA. `count[S]=1; ` and `count[V]=0` for other `V`\nB. `count[S]=0; ` and `count[V]=1` for other `V`\nC. `count[V]=1` for all vertices\nD. `count[V]=0` for all vertices",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "2173",
+    "description": "If besides finding the shortest path from `S` to every other vertices, we also need to count the number of different shortest paths, we can modify the Dijkstra algorithm in the following way: add an array `count[]` so that `count[V]` records the number of different shortest paths from `S` to `V`.  Then `count[V]` shall be initialized as:",
+    "problemPoolIndex": 43,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240517",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Use Dijkstra algorithm to find the shortest paths from v1 to eve",
+    "content": "When Dijkstra's algorithm is used to find the shortest paths from $$v_1$$ to every other vertices in an undirected graph G, a distance set $$dist[v]$$ is maintained for every vertex $$v$$, as the shortest distance from $$v_1$$ to $$v$$, passing through only the vertices whose shortest path to $$v_1$$ has been determined.\n\nSuppose that the destinations are obtained in the order of { $$v_2$$, $$v_3$$, $$\\cdots $$, $$v_n$$ }. If there is a vertex $$w$$ in G so that $$dist[w]$$ is decreased during every iteration (except the last one) of the algorithm, how many statements of the following are **correct**?\n\n(1）$$w$$ is adjacent to every other vertices.\n\n(2）($$v_1$$, $$w$$) (if it exists) is the longest edge among all the edges that are adjacent to $$w$$.\n\n(3)  Such a vertex $$w$$ does not exist.\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1476207975986167808",
+    "description": "When Dijkstra's algorithm is used to find the shortest paths from $$v_1$$ to every other vertices in an undirected graph G, a distance set $$dist[v]$$ is maintained for every vertex $$v$$, as the shortest distance from $$v_1$$ to $$v$$, passing through only the vertices whose shortest path to $$v_1$$ has been determined.\n\nSuppose that the destinations are obtained in the order of { $$v_2$$, $$v_3$$, $$\\cdots $$, $$v_n$$ }. If there is a vertex $$w$$ in G so that $$dist[w]$$ is decreased during every iteration (except the last one) of the algorithm, how many statements of the following are **correct**?\n\n(1）$$w$$ is adjacent to every other vertices.\n\n(2）($$v_1$$, $$w$$) (if it exists) is the longest edge among all the edges that are adjacent to $$w$$.\n\n(3)  Such a vertex $$w$$ does not exist.\n",
+    "problemPoolIndex": 44,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263494",
+    "label": "5-1",
+    "score": 6,
+    "problemConfig": {
+      "fillInTheBlankForProgrammingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "blankLength": 15,
+        "scores": [
+          3,
+          3
+        ],
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 0,
+            "isPublic": false
+          }
+        },
+        "blanks": [
+          {
+            "index": 234,
+            "multipleLine": false,
+            "length": 14,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          },
+          {
+            "index": 326,
+            "multipleLine": false,
+            "length": 15,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          }
+        ],
+        "tools": []
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Find",
+    "content": "Please fill in the blanks in the program which performs `Find` as a Union/Find operation with path compression.\n\n```c++\nSetType Find ( ElementType X, DisjSet S )\n{   \n   ElementType root, trail, lead;\n\n   for ( root = X; S[root] > 0; @@[](3) ) ;  \n   for ( trail = X; trail != root; trail = lead ) {\n      lead = S[trail] ;   \n      @@[](3);   \n   } \n   return root;\n}\n```",
+    "type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "468",
+    "description": "Please fill in the blanks in the program which performs `Find` as a Union/Find operation with path compression.\n\n```c++\nSetType Find ( ElementType X, DisjSet S )\n{   \n   ElementType root, trail, lead;\n\n   for ( root = X; S[root] > 0;  ) ;  \n   for ( trail = X; trail != root; trail = lead ) {\n      lead = S[trail] ;   \n      ;   \n   } \n   return root;\n}\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365882498240518",
+    "label": "",
+    "score": 6,
+    "problemConfig": {
+      "fillInTheBlankForProgrammingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "blankLength": 21,
+        "scores": [
+          3,
+          3
+        ],
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 0,
+            "isPublic": false
+          }
+        },
+        "blanks": [
+          {
+            "index": 770,
+            "multipleLine": false,
+            "length": 21,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          },
+          {
+            "index": 803,
+            "multipleLine": false,
+            "length": 13,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          }
+        ],
+        "tools": []
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Find Unweighted Shortest Paths",
+    "content": "The function `Unweighted` is to find the unweighted shortest path from `Vertex S` to every other vertices in a given `Graph`. The distances are stored in `dist[]`, and `path[]` records the paths. The `Graph` is defined as the following:\n\n```\ntypedef struct GNode *PtrToGNode;\nstruct GNode{\n    int Nv;          /* Number of vertices */\n    int Ne;          /* Number of edges    */\n    AdjList List;    /* adjacency matrix */\n};\ntypedef PtrToGNode Graph;\n```\n\n```\nvoid Unweighted( Graph G, Queue Q, int dist[], int path[], Vertex S )\n{\n  Vertex V, U;\n  NodePtr ptr;\n\n  dist[S] = 0;\n  Enqueue(S, Q);\n  while ( !IsEmpty(Q) ) {\n    V = Dequeue( Q );\n    for ( ptr=G->List[V].FirstEdge; ptr; ptr=ptr->Next) {\n      U = ptr->AdjV;\n      if ( dist[U] == INFINITY ) {\n         @@[](3);\n         path[U] = V;\n         @@[](3);\n      }\n    }\n  }\n}\n```\n",
+    "type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+    "author": "陈翔",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1213810000420872192",
+    "description": "The function `Unweighted` is to find the unweighted shortest path from `Vertex S` to every other vertices in a given `Graph`. The distances are stored in `dist[]`, and `path[]` records the paths. The `Graph` is defined as the following:\n\n```\ntypedef struct GNode *PtrToGNode;\nstruct GNode{\n    int Nv;          /* Number of vertices */\n    int Ne;          /* Number of edges    */\n    AdjList List;    /* adjacency matrix */\n};\ntypedef PtrToGNode Graph;\n```\n\n```\nvoid Unweighted( Graph G, Queue Q, int dist[], int path[], Vertex S )\n{\n  Vertex V, U;\n  NodePtr ptr;\n\n  dist[S] = 0;\n  Enqueue(S, Q);\n  while ( !IsEmpty(Q) ) {\n    V = Dequeue( Q );\n    for ( ptr=G->List[V].FirstEdge; ptr; ptr=ptr->Next) {\n      U = ptr->AdjV;\n      if ( dist[U] == INFINITY ) {\n         ;\n         path[U] = V;\n         ;\n      }\n    }\n  }\n}\n```\n",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632133",
+    "label": "6-1",
+    "score": 10,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Add Two Polynomials",
+    "content": "Write a function to add two polynomials.  Do not destroy the input.  Use a linked list implementation with a dummy head node.\nNote: The zero polynomial is represented by an empty list with only the dummy head node.\n\n### Format of functions:\n```c++\nPolynomial Add( Polynomial a, Polynomial b );\n```\nwhere `Polynomial` is defined as the following:\n\n```c++\ntypedef struct Node *PtrToNode;\nstruct Node {\n    int Coefficient;\n    int Exponent;\n    PtrToNode Next;\n};\ntypedef PtrToNode Polynomial;\n/* Nodes are sorted in decreasing order of exponents.*/  \n```\n\nThe function `Add` is supposed to return a polynomial which is the sum of `a` and `b`.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Node *PtrToNode;\nstruct Node  {\n    int Coefficient;\n    int Exponent;\n    PtrToNode Next;\n};\ntypedef PtrToNode Polynomial;\n\nPolynomial Read(); /* details omitted */\nvoid Print( Polynomial p ); /* details omitted */\nPolynomial Add( Polynomial a, Polynomial b );\n\nint main()\n{\n    Polynomial a, b, s;\n    a = Read();\n    b = Read();\n    s = Add(a, b);\n    Print(s);\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n4\n3 4 -5 2 6 1 -2 0\n3\n5 20 -7 4 3 1\n```\n\n### Sample Output:\n```out\n5 20 -4 4 -5 2 9 1 -2 0\n```",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "335",
+    "description": "Write a function to add two polynomials.  Do not destroy the input.  Use a linked list implementation with a dummy head node.\nNote: The zero polynomial is represented by an empty list with only the dummy head node.\n\n### Format of functions:\n```c++\nPolynomial Add( Polynomial a, Polynomial b );\n```\nwhere `Polynomial` is defined as the following:\n\n```c++\ntypedef struct Node *PtrToNode;\nstruct Node {\n    int Coefficient;\n    int Exponent;\n    PtrToNode Next;\n};\ntypedef PtrToNode Polynomial;\n/* Nodes are sorted in decreasing order of exponents.*/  \n```\n\nThe function `Add` is supposed to return a polynomial which is the sum of `a` and `b`.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Node *PtrToNode;\nstruct Node  {\n    int Coefficient;\n    int Exponent;\n    PtrToNode Next;\n};\ntypedef PtrToNode Polynomial;\n\nPolynomial Read(); /* details omitted */\nvoid Print( Polynomial p ); /* details omitted */\nPolynomial Add( Polynomial a, Polynomial b );\n\nint main()\n{\n    Polynomial a, b, s;\n    a = Read();\n    b = Read();\n    s = Add(a, b);\n    Print(s);\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n4\n3 4 -5 2 6 1 -2 0\n3\n5 20 -7 4 3 1\n```\n\n### Sample Output:\n```out\n5 20 -4 4 -5 2 9 1 -2 0\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365781331632134",
+    "label": "6-2",
+    "score": 10,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Reverse Linked List",
+    "content": "Write a nonrecursive procedure to reverse a singly linked list in $$O(N)$$ time using constant extra space.\n\n### Format of functions:\n```c++\nList Reverse( List L );\n```\nwhere `List` is defined as the following:\n\n```c++\ntypedef struct Node *PtrToNode;\ntypedef PtrToNode List;\ntypedef PtrToNode Position;\nstruct Node {\n    ElementType Element;\n    Position Next;\n};\n```\n\nThe function `Reverse` is supposed to return the reverse linked list of `L`, with a dummy header.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef int ElementType;\ntypedef struct Node *PtrToNode;\ntypedef PtrToNode List;\ntypedef PtrToNode Position;\nstruct Node {\n    ElementType Element;\n    Position Next;\n};\n\nList Read(); /* details omitted */\nvoid Print( List L ); /* details omitted */\nList Reverse( List L );\n\nint main()\n{\n    List L1, L2;\n    L1 = Read();\n    L2 = Reverse(L1);\n    Print(L1);\n    Print(L2);\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n5\n1 3 4 5 2\n```\n\n### Sample Output:\n```out\n2 5 4 3 1\n2 5 4 3 1\n```",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "336",
+    "description": "Write a nonrecursive procedure to reverse a singly linked list in $$O(N)$$ time using constant extra space.\n\n### Format of functions:\n```c++\nList Reverse( List L );\n```\nwhere `List` is defined as the following:\n\n```c++\ntypedef struct Node *PtrToNode;\ntypedef PtrToNode List;\ntypedef PtrToNode Position;\nstruct Node {\n    ElementType Element;\n    Position Next;\n};\n```\n\nThe function `Reverse` is supposed to return the reverse linked list of `L`, with a dummy header.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef int ElementType;\ntypedef struct Node *PtrToNode;\ntypedef PtrToNode List;\ntypedef PtrToNode Position;\nstruct Node {\n    ElementType Element;\n    Position Next;\n};\n\nList Read(); /* details omitted */\nvoid Print( List L ); /* details omitted */\nList Reverse( List L );\n\nint main()\n{\n    List L1, L2;\n    L1 = Read();\n    L2 = Reverse(L1);\n    Print(L1);\n    Print(L2);\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n5\n1 3 4 5 2\n```\n\n### Sample Output:\n```out\n2 5 4 3 1\n2 5 4 3 1\n```",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967750",
+    "label": "",
+    "score": 6,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Isomorphic",
+    "content": "Two trees, `T1` and `T2`, are <b>isomorphic</b> if `T1` can be transformed into `T2` by swapping left and right children of (some of the) nodes in `T1`.  For instance, the two trees in Figure 1 are isomorphic because they are the same if the children of A, B, and G, but not the other nodes, are swapped.\nGive a polynomial time algorithm to decide if two trees are isomorphic.\n<center>\n![](~/37)<br>\nFigure 1</center>\n\n### Format of functions:\n```c++\nint Isomorphic( Tree T1, Tree T2 );\n```\nwhere `Tree` is defined as the following:\n\n```c++\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n```\nThe function is supposed to return 1 if `T1` and `T2` are indeed isomorphic, or 0 if not.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef char ElementType;\n\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n\nTree BuildTree(); /* details omitted */\n\nint Isomorphic( Tree T1, Tree T2 );\n\nint main()\n{\n    Tree T1, T2;\n    T1 = BuildTree();\n    T2 = BuildTree();\n    printf(“%d\\n”, Isomorphic(T1, T2));\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Output 1 (for the trees shown in Figure 1):\n```out\n1\n```\n\n### Sample Output 2 (for the trees shown in Figure 2):\n```\n0\n```\n<center>\n![](~/38)<br>\nFigure2</center>",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "339",
+    "description": "Two trees, `T1` and `T2`, are <b>isomorphic</b> if `T1` can be transformed into `T2` by swapping left and right children of (some of the) nodes in `T1`.  For instance, the two trees in Figure 1 are isomorphic because they are the same if the children of A, B, and G, but not the other nodes, are swapped.\nGive a polynomial time algorithm to decide if two trees are isomorphic.\n<center>\n![](~/37)<br>\nFigure 1</center>\n\n### Format of functions:\n```c++\nint Isomorphic( Tree T1, Tree T2 );\n```\nwhere `Tree` is defined as the following:\n\n```c++\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n```\nThe function is supposed to return 1 if `T1` and `T2` are indeed isomorphic, or 0 if not.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef char ElementType;\n\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n\nTree BuildTree(); /* details omitted */\n\nint Isomorphic( Tree T1, Tree T2 );\n\nint main()\n{\n    Tree T1, T2;\n    T1 = BuildTree();\n    T2 = BuildTree();\n    printf(“%d\\n”, Isomorphic(T1, T2));\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Output 1 (for the trees shown in Figure 1):\n```out\n1\n```\n\n### Sample Output 2 (for the trees shown in Figure 2):\n```\n0\n```\n<center>\n![](~/38)<br>\nFigure2</center>",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670216",
+    "label": "",
+    "score": 6,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Percolate Up and Down",
+    "content": "Write the routines to do a \"percolate up\" and a \"percolate down\" in a binary min-heap.\n\n### Format of functions:\n```c++\nvoid PercolateUp( int p, PriorityQueue H );\nvoid PercolateDown( int p, PriorityQueue H );\n```\nwhere `int p` is the position of the element, and `PriorityQueue` is defined as the following:\n\n```c++\ntypedef struct HeapStruct *PriorityQueue;\nstruct HeapStruct {\n    ElementType  *Elements;\n    int Capacity;\n    int Size;\n};\n```\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef int ElementType;\n#define MinData -1\n\ntypedef struct HeapStruct *PriorityQueue;\nstruct HeapStruct {\n    ElementType  *Elements;\n    int Capacity;\n    int Size;\n};\n\nPriorityQueue Initialize( int MaxElements ); /* details omitted */\n\nvoid PercolateUp( int p, PriorityQueue H );\nvoid PercolateDown( int p, PriorityQueue H );\n\nvoid Insert( ElementType X, PriorityQueue H ) \n{\n    int p = ++H->Size;\n    H->Elements[p] = X;\n    PercolateUp( p, H );\n}\n\nElementType DeleteMin( PriorityQueue H ) \n{ \n    ElementType MinElement; \n    MinElement = H->Elements[1];\n    H->Elements[1] = H->Elements[H->Size--];\n    PercolateDown( 1, H );\n    return MinElement; \n}\n\nint main()\n{\n    int n, i, op, X;\n    PriorityQueue H;\n\n    scanf(\"%d\", &n);\n    H = Initialize(n);\n    for ( i=0; i<n; i++ ) {\n        scanf(\"%d\", &op);\n        switch( op ) {\n        case 1:\n            scanf(\"%d\", &X);\n            Insert(X, H);\n            break;\n        case 0:\n            printf(\"%d \", DeleteMin(H));\n            break;\n        }\n    }\n    printf(\"\\nInside H:\");\n    for ( i=1; i<=H->Size; i++ )\n        printf(\" %d\", H->Elements[i]);\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n9\n1 10\n1 5\n1 2\n0\n1 9\n1 1\n1 4\n0\n0\n```\n\n### Sample Output:\n```out\n2 1 4 \nInside H: 5 10 9\n```",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "340",
+    "description": "Write the routines to do a \"percolate up\" and a \"percolate down\" in a binary min-heap.\n\n### Format of functions:\n```c++\nvoid PercolateUp( int p, PriorityQueue H );\nvoid PercolateDown( int p, PriorityQueue H );\n```\nwhere `int p` is the position of the element, and `PriorityQueue` is defined as the following:\n\n```c++\ntypedef struct HeapStruct *PriorityQueue;\nstruct HeapStruct {\n    ElementType  *Elements;\n    int Capacity;\n    int Size;\n};\n```\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef int ElementType;\n#define MinData -1\n\ntypedef struct HeapStruct *PriorityQueue;\nstruct HeapStruct {\n    ElementType  *Elements;\n    int Capacity;\n    int Size;\n};\n\nPriorityQueue Initialize( int MaxElements ); /* details omitted */\n\nvoid PercolateUp( int p, PriorityQueue H );\nvoid PercolateDown( int p, PriorityQueue H );\n\nvoid Insert( ElementType X, PriorityQueue H ) \n{\n    int p = ++H->Size;\n    H->Elements[p] = X;\n    PercolateUp( p, H );\n}\n\nElementType DeleteMin( PriorityQueue H ) \n{ \n    ElementType MinElement; \n    MinElement = H->Elements[1];\n    H->Elements[1] = H->Elements[H->Size--];\n    PercolateDown( 1, H );\n    return MinElement; \n}\n\nint main()\n{\n    int n, i, op, X;\n    PriorityQueue H;\n\n    scanf(\"%d\", &n);\n    H = Initialize(n);\n    for ( i=0; i<n; i++ ) {\n        scanf(\"%d\", &op);\n        switch( op ) {\n        case 1:\n            scanf(\"%d\", &X);\n            Insert(X, H);\n            break;\n        case 0:\n            printf(\"%d \", DeleteMin(H));\n            break;\n        }\n    }\n    printf(\"\\nInside H:\");\n    for ( i=1; i<=H->Size; i++ )\n        printf(\" %d\", H->Elements[i]);\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input:\n```in\n9\n1 10\n1 5\n1 2\n0\n1 9\n1 1\n1 4\n0\n0\n```\n\n### Sample Output:\n```out\n2 1 4 \nInside H: 5 10 9\n```",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871173746695",
+    "label": "",
+    "score": 7,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Is Topological Order",
+    "content": "Write a program to test if a give sequence `Seq` is a topological order of a given graph `Graph`.\n\n### Format of functions:\n```c++\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n```\nwhere `LGraph` is defined as the following:\n\n```c++\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n```\n\nThe function `IsTopSeq` must return `true` if `Seq` does correspond to a topological order; otherwise return `false`.\n\n**Note:** Although the vertices are numbered from 1 to MaxVertexNum, they are **indexed from 0** in the LGraph structure.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef enum {false, true} bool;\n#define MaxVertexNum 10  /* maximum number of vertices */\ntypedef int Vertex;      /* vertices are numbered from 1 to MaxVertexNum */\n\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n\nLGraph ReadG(); /* details omitted */\n\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n\nint main()\n{\n    int i, j, N;\n    Vertex Seq[MaxVertexNum];\n    LGraph G = ReadG();\n    scanf(\"%d\", &N);\n    for (i=0; i<N; i++) {\n        for (j=0; j<G->Nv; j++)\n            scanf(\"%d\", &Seq[j]);\n        if ( IsTopSeq(G, Seq)==true ) printf(\"yes\\n\");\n        else printf(\"no\\n\");\n    }\n\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input (for the graph shown in the figure): \n\n![topord.JPG](~/5373e878-196d-45dd-a82f-555b1fea6929.JPG)\n\n```in\n6 8\n1 2\n1 3\n5 2\n5 4\n2 3\n2 6\n3 4\n6 4\n5\n1 5 2 3 6 4\n5 1 2 6 3 4\n5 1 2 3 6 4\n5 2 1 6 3 4\n1 2 3 4 5 6\n```\n\n### Sample Output:\n```out\nyes\nyes\nyes\nno\nno\n```\n",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1081934415547531264",
+    "description": "Write a program to test if a give sequence `Seq` is a topological order of a given graph `Graph`.\n\n### Format of functions:\n```c++\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n```\nwhere `LGraph` is defined as the following:\n\n```c++\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n```\n\nThe function `IsTopSeq` must return `true` if `Seq` does correspond to a topological order; otherwise return `false`.\n\n**Note:** Although the vertices are numbered from 1 to MaxVertexNum, they are **indexed from 0** in the LGraph structure.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef enum {false, true} bool;\n#define MaxVertexNum 10  /* maximum number of vertices */\ntypedef int Vertex;      /* vertices are numbered from 1 to MaxVertexNum */\n\ntypedef struct AdjVNode *PtrToAdjVNode; \nstruct AdjVNode{\n    Vertex AdjV;\n    PtrToAdjVNode Next;\n};\n\ntypedef struct Vnode{\n    PtrToAdjVNode FirstEdge;\n} AdjList[MaxVertexNum];\n\ntypedef struct GNode *PtrToGNode;\nstruct GNode{  \n    int Nv;\n    int Ne;\n    AdjList G;\n};\ntypedef PtrToGNode LGraph;\n\nLGraph ReadG(); /* details omitted */\n\nbool IsTopSeq( LGraph Graph, Vertex Seq[] );\n\nint main()\n{\n    int i, j, N;\n    Vertex Seq[MaxVertexNum];\n    LGraph G = ReadG();\n    scanf(\"%d\", &N);\n    for (i=0; i<N; i++) {\n        for (j=0; j<G->Nv; j++)\n            scanf(\"%d\", &Seq[j]);\n        if ( IsTopSeq(G, Seq)==true ) printf(\"yes\\n\");\n        else printf(\"no\\n\");\n    }\n\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input (for the graph shown in the figure): \n\n![topord.JPG](~/5373e878-196d-45dd-a82f-555b1fea6929.JPG)\n\n```in\n6 8\n1 2\n1 3\n5 2\n5 4\n2 3\n2 6\n3 4\n6 4\n5\n1 5 2 3 6 4\n5 1 2 6 3 4\n5 1 2 3 6 4\n5 2 1 6 3 4\n1 2 3 4 5 6\n```\n\n### Sample Output:\n```out\nyes\nyes\nyes\nno\nno\n```\n",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365770460119046",
+    "label": "",
+    "score": 10,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 200,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 4,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "11 120\n-120 -40 0 80 122 140 160 220 240 260 300",
+            "output": "120 5\n"
+          },
+          {
+            "name": "",
+            "input": "11 120\n-120 -40 0 80 122 140 160 220 240 260 300",
+            "output": "120 5\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Balloon Popping",
+    "content": "![pqq.jpg](~/6b53b1a2-7325-4de6-8dd5-bc403552b751.jpg)\n\n\n\nBalloon popping is a fun game for kids.  Now $$n$$ balloons are positioned in a line. The goal of the game is very simple: to pop as many balloons as possible.  Here we add a special rule to this game -- that is, you can only make ONE jump.  Assume that a smart baby covers his/her body by thorns（刺）, jumps to some position and lies down (as shown by the figures below), so that the balloons will be popped as soon as they are touched by any part of the baby's body.  Now it is your job to tell the baby at which position he/she must jump to pop the most number of balloons.\n\n\n![f1.jpg](~/8ac137cc-1253-42d6-ba2f-3da93df331bc.jpg)\n\n![f2.jpg](~/7a0b9adf-ee5a-45ed-81e3-4ad970784ff2.jpg)\n\n\n\n\n### Input Specification:\n\nEach input file contains one test case. For each case, two positive integers are given in the first line: $$n$$ ($$\\le 10^5$$), the number of balloons in a line, and $$h$$ ($$\\le 10^3$$), the height of the baby with his/her arms stretched up.  Then $$n$$ integers are given in the next line, each corresponds to the coordinate of a balloon on the axis of the line.  It is guaranteed that the coordinates are given in ascending order, and are all in the range $$[-10^6, 10^6]$$.\n\n### Output Specification:\n\nOutput in a line the coordinate at which the baby shall jump, so that if the baby jumps at this position and then lie down, the maximum number of the balloons can be popped beneath his/her body.  Then also print the maximum number of balloons that can be popped.  If the coordinate is not unique, output the smallest one.\n\nThe numbers must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.\n\n### Sample Input:\n```in\n11 120\n-120 -40 0 80 122 140 160 220 240 260 300\n```\n\n### Sample Output:\n```out\n120 5\n```\n\n**Note:** jumping at any position from 120 to 140, or from 240 to 260 can pop 5 balloons, hence 120 is printed as the smallest one.\n\n",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1561607220524527616",
+    "description": "![pqq.jpg](~/6b53b1a2-7325-4de6-8dd5-bc403552b751.jpg)\n\n\n\nBalloon popping is a fun game for kids.  Now $$n$$ balloons are positioned in a line. The goal of the game is very simple: to pop as many balloons as possible.  Here we add a special rule to this game -- that is, you can only make ONE jump.  Assume that a smart baby covers his/her body by thorns（刺）, jumps to some position and lies down (as shown by the figures below), so that the balloons will be popped as soon as they are touched by any part of the baby's body.  Now it is your job to tell the baby at which position he/she must jump to pop the most number of balloons.\n\n\n![f1.jpg](~/8ac137cc-1253-42d6-ba2f-3da93df331bc.jpg)\n\n![f2.jpg](~/7a0b9adf-ee5a-45ed-81e3-4ad970784ff2.jpg)\n\n\n\n\n### Input Specification:\n\nEach input file contains one test case. For each case, two positive integers are given in the first line: $$n$$ ($$\\le 10^5$$), the number of balloons in a line, and $$h$$ ($$\\le 10^3$$), the height of the baby with his/her arms stretched up.  Then $$n$$ integers are given in the next line, each corresponds to the coordinate of a balloon on the axis of the line.  It is guaranteed that the coordinates are given in ascending order, and are all in the range $$[-10^6, 10^6]$$.\n\n### Output Specification:\n\nOutput in a line the coordinate at which the baby shall jump, so that if the baby jumps at this position and then lie down, the maximum number of the balloons can be popped beneath his/her body.  Then also print the maximum number of balloons that can be popped.  If the coordinate is not unique, output the smallest one.\n\nThe numbers must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.\n\n### Sample Input:\n```in\n11 120\n-120 -40 0 80 122 140 160 220 240 260 300\n```\n\n### Sample Output:\n```out\n120 5\n```\n\n**Note:** There are many possible solutions.  For example, jumping at any position from 120 to 122 can pop 5 balloons. The solution 120 is printed as the smallest one.\n\n**鸣谢浙江大学何承泽同学修正样例解释。**\n\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365796624064519",
+    "label": "",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO",
+            "output": "20 5\n32 1\n11 3\nERROR\n100 5"
+          },
+          {
+            "name": "",
+            "input": "10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO",
+            "output": "20 5\n32 1\n11 3\nERROR\n100 5"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [
+          {
+            "compiler": "JAVAC",
+            "timeLimit": 600,
+            "memoryLimit": 262144
+          }
+        ],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Queue Using Two Stacks",
+    "content": "A queue (FIFO structure) can be implemented by two stacks (LIFO structure) in the following way:\n\n1. Start from two empty stacks $s_1$ and $s_2$.\n2. When element $e$ is enqueued, it is actually pushed onto $s_1$.\n3. When we are supposed to dequeue, $s_2$ is checked first.  If $s_2$ is empty, everything in $s_1$ will be transferred to $s_2$ by popping from $s_1$ and immediately pushing onto $s_2$.  Then we just pop from $s_2$ -- the top element of $s_2$ must be the first one to enter $s_1$ thus is the first element that was enqueued.\n\nAssume that each operation of push or pop takes 1 unit of time.  You job is to tell the time taken for each dequeue.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line gives a positive integer $N$ ($\\le 10^3$), which are the number of operations. Then $N$ lines follow, each gives an operation in the format\n\n```\nOperation Element\n```\n\nwhere `Operation` being `I` represents enqueue and `O` represents dequeue.  For each `I`, `Element` is a positive integer that is no more than $10^6$.  No `Element` is given for `O` operations.\\\nIt is guaranteed that there is at least one `O` operation.\n\n### Output Specification:\n\nFor each dequeue operation, print in a line the dequeued element and the unites of time taken to do this dequeue.  The numbers in a line must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.\\\nIn case that the queue is empty when dequeue is called, output in a line `ERROR` instead.\n\n### Sample Input:\n\n```in\n10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO\n```\n\n### Sample Output:\n\n```out\n20 5\n32 1\n11 3\nERROR\n100 5\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "1662692810614894592",
+    "description": "A queue (FIFO structure) can be implemented by two stacks (LIFO structure) in the following way:\n\n1. Start from two empty stacks $s_1$ and $s_2$.\n2. When element $e$ is enqueued, it is actually pushed onto $s_1$.\n3. When we are supposed to dequeue, $s_2$ is checked first.  If $s_2$ is empty, everything in $s_1$ will be transferred to $s_2$ by popping from $s_1$ and immediately pushing onto $s_2$.  Then we just pop from $s_2$ -- the top element of $s_2$ must be the first one to enter $s_1$ thus is the first element that was enqueued.\n\nAssume that each operation of push or pop takes 1 unit of time.  You job is to tell the time taken for each dequeue.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line gives a positive integer $N$ ($\\le 10^3$), which are the number of operations. Then $N$ lines follow, each gives an operation in the format\n\n```\nOperation Element\n```\n\nwhere `Operation` being `I` represents enqueue and `O` represents dequeue.  For each `I`, `Element` is a positive integer that is no more than $10^6$.  No `Element` is given for `O` operations.\\\nIt is guaranteed that there is at least one `O` operation.\n\n### Output Specification:\n\nFor each dequeue operation, print in a line the dequeued element and the unites of time taken to do this dequeue.  The numbers in a line must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.\\\nIn case that the queue is empty when dequeue is called, output in a line `ERROR` instead.\n\n### Sample Input:\n\n```in\n10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO\n```\n\n### Sample Output:\n\n```out\n20 5\n32 1\n11 3\nERROR\n100 5\n```",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967751",
+    "label": "7-1",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n",
+            "output": "1 11 5 8 17 12 20 15\n"
+          },
+          {
+            "name": "",
+            "input": "8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n",
+            "output": "1 11 5 8 17 12 20 15\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "ZigZagging on a Tree",
+    "content": "Suppose that all the keys in a binary tree are distinct positive integers.  A unique binary tree can be determined by a given pair of postorder and inorder traversal sequences.  And it is a simple standard routine to print the numbers in level-order.  However, if you think the problem is too simple, then you are too naive.  This time you are supposed to print the numbers in \"zigzagging order\" -- that is, starting from the root, print the numbers level-by-level, alternating between left to right and right to left.  For example, for the following tree you must output: 1 11 5 8 17 12 20 15.\n\n![zigzag.jpg](~/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg)\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line gives a positive integer N ($$\\le$$30), the total number of nodes in the binary tree.  The second line gives the inorder sequence and the third line gives the postorder sequence.  All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print the zigzagging sequence of the tree in a line.  All the numbers in a line must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n```\n\n### Sample Output:\n```out\n1 11 5 8 17 12 20 15\n```\n",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "909743432282505216",
+    "description": "Suppose that all the keys in a binary tree are distinct positive integers.  A unique binary tree can be determined by a given pair of postorder and inorder traversal sequences.  And it is a simple standard routine to print the numbers in level-order.  However, if you think the problem is too simple, then you are too naive.  This time you are supposed to print the numbers in \"zigzagging order\" -- that is, starting from the root, print the numbers level-by-level, alternating between left to right and right to left.  For example, for the following tree you must output: 1 11 5 8 17 12 20 15.\n\n![zigzag.jpg](~/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg)\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line gives a positive integer N ($$\\le$$30), the total number of nodes in the binary tree.  The second line gives the inorder sequence and the third line gives the postorder sequence.  All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print the zigzagging sequence of the tree in a line.  All the numbers in a line must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n```\n\n### Sample Output:\n```out\n1 11 5 8 17 12 20 15\n```\n",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365811127967752",
+    "label": "",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 4,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Tree Traversals Again",
+    "content": "An inorder binary tree traversal can be implemented in a non-recursive way with a stack.  For example, suppose that when a 6-node binary tree (with the keys numbered from 1 to 6) is traversed, the stack operations are: push(1); push(2); push(3); pop(); pop(); push(4); pop(); pop(); push(5); push(6); pop(); pop().  Then a unique binary tree (shown in Figure 1) can be generated from this sequence of operations.  Your task is to give the postorder traversal sequence of this tree.\n\n<center>\n![](~/30)<br>\nFigure 1 </center>\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line contains a positive integer $$N$$ ($$\\le 30$$) which is the total number of nodes in a tree (and hence the nodes are numbered from 1 to $$N$$).  Then $$2N$$ lines follow, each describes a stack operation in the format: \"Push X\" where X is the index of the node being pushed onto the stack; or \"Pop\" meaning to pop one node from the stack.\n\n### Output Specification:\n\nFor each test case, print the postorder traversal sequence of the corresponding tree in one line.  A solution is guaranteed to exist.  All the numbers must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n6\nPush 1\nPush 2\nPush 3\nPop\nPop\nPush 4\nPop\nPop\nPush 5\nPush 6\nPop\nPop\n```\n\n### Sample Output:\n```out\n3 4 2 6 5 1\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "307",
+    "description": "An inorder binary tree traversal can be implemented in a non-recursive way with a stack.  For example, suppose that when a 6-node binary tree (with the keys numbered from 1 to 6) is traversed, the stack operations are: push(1); push(2); push(3); pop(); pop(); push(4); pop(); pop(); push(5); push(6); pop(); pop().  Then a unique binary tree (shown in Figure 1) can be generated from this sequence of operations.  Your task is to give the postorder traversal sequence of this tree.\n\n<center>\n![](~/30)<br>\nFigure 1 </center>\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line contains a positive integer $$N$$ ($$\\le 30$$) which is the total number of nodes in a tree (and hence the nodes are numbered from 1 to $$N$$).  Then $$2N$$ lines follow, each describes a stack operation in the format: \"Push X\" where X is the index of the node being pushed onto the stack; or \"Pop\" meaning to pop one node from the stack.\n\n### Output Specification:\n\nFor each test case, print the postorder traversal sequence of the corresponding tree in one line.  A solution is guaranteed to exist.  All the numbers must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n6\nPush 1\nPush 2\nPush 3\nPop\nPop\nPush 4\nPop\nPop\nPush 5\nPush 6\nPop\nPop\n```\n\n### Sample Output:\n```out\n3 4 2 6 5 1\n```",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365849048670217",
+    "label": "",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Complete Binary Search Tree",
+    "content": "A Binary Search Tree (BST) is recursively defined as a binary tree which has the following properties:\n\n<li>The left subtree of a node contains only nodes with keys less than the node's key. \n<li>The right subtree of a node contains only nodes with keys greater than or equal to the node's key. \n<li>Both the left and right subtrees must also be binary search trees.\n\nA Complete Binary Tree (CBT) is a tree that is completely filled, with the possible exception of the bottom level, which is filled from left to right.\n\nNow given a sequence of distinct non-negative integer keys, a unique BST can be constructed if it is required that the tree must also be a CBT.  You are supposed to output the level order traversal sequence of this BST.\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line contains a positive integer $$N$$ ($$\\le 1000$$).  Then $$N$$ distinct non-negative integer keys are given in the next line.  All the numbers in a line are separated by a space and are no greater than 2000.\n\n### Output Specification:\n\nFor each test case, print in one line the level order traversal sequence of the corresponding complete binary search tree.  All the numbers in a line must be separated by a space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n10\n1 2 3 4 5 6 7 8 9 0\n```\n\n### Sample Output:\n```out\n6 3 8 1 5 7 9 0 2 4\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "310",
+    "description": "A Binary Search Tree (BST) is recursively defined as a binary tree which has the following properties:\n\n<li>The left subtree of a node contains only nodes with keys less than the node's key. \n<li>The right subtree of a node contains only nodes with keys greater than or equal to the node's key. \n<li>Both the left and right subtrees must also be binary search trees.\n\nA Complete Binary Tree (CBT) is a tree that is completely filled, with the possible exception of the bottom level, which is filled from left to right.\n\nNow given a sequence of distinct non-negative integer keys, a unique BST can be constructed if it is required that the tree must also be a CBT.  You are supposed to output the level order traversal sequence of this BST.\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line contains a positive integer $$N$$ ($$\\le 1000$$).  Then $$N$$ distinct non-negative integer keys are given in the next line.  All the numbers in a line are separated by a space and are no greater than 2000.\n\n### Output Specification:\n\nFor each test case, print in one line the level order traversal sequence of the corresponding complete binary search tree.  All the numbers in a line must be separated by a space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n10\n1 2 3 4 5 6 7 8 9 0\n```\n\n### Sample Output:\n```out\n6 3 8 1 5 7 9 0 2 4\n```",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365860243263495",
+    "label": "",
+    "score": 12,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 150,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "6": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n",
+            "output": "no\nno\nyes\nThere are 2 components.\n"
+          },
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n",
+            "output": "no\nno\nyes\nyes\nThe network is connected.\n"
+          },
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n",
+            "output": "no\nno\nyes\nThere are 2 components.\n"
+          },
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n",
+            "output": "no\nno\nyes\nyes\nThe network is connected.\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [
+          {
+            "compiler": "GO",
+            "timeLimit": 400,
+            "memoryLimit": 65536
+          },
+          {
+            "compiler": "JAVAC",
+            "timeLimit": 400,
+            "memoryLimit": 65536
+          },
+          {
+            "compiler": "PYTHON3",
+            "timeLimit": 400,
+            "memoryLimit": 65536
+          }
+        ],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "File Transfer",
+    "content": "We have a network of computers and a list of bi-directional connections. Each of these connections allows a file transfer from one computer to another. Is it possible to send a file from any computer on the network to any other?\n\n### Input Specification:\n\nEach input file contains one test case.  For each test case, the first line contains $$N$$ ($$2\\le N\\le 10^4$$), the total number of computers in a network.  Each computer in the network is then represented by a positive integer between 1 and $$N$$.  Then in the following lines, the input is given in the format:\n```\nI c1 c2  \n```\nwhere `I` stands for inputting a connection between `c1` and `c2`; or\n```\nC c1 c2    \n```\nwhere `C` stands for checking if it is possible to transfer files between `c1` and `c2`; or\n```\nS\n```\nwhere `S` stands for stopping this case. \n\n### Output Specification:\n\nFor each `C` case, print in one line the word \"yes\" or \"no\" if it is possible or impossible to transfer files between `c1` and `c2`, respectively.  At the end of each case, print in one line \"The network is connected.\" if there is a path between any pair of computers; or \"There are `k` components.\" where `k` is the number of connected components in this network.\n\n### Sample Input 1:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n\n```\n\n### Sample Output 1:\n```out\nno\nno\nyes\nThere are 2 components.\n\n```\n\n### Sample Input 2:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n\n```\n\n### Sample Output 2:\n```out\nno\nno\nyes\nyes\nThe network is connected.\n\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "312",
+    "description": "We have a network of computers and a list of bi-directional connections. Each of these connections allows a file transfer from one computer to another. Is it possible to send a file from any computer on the network to any other?\n\n### Input Specification:\n\nEach input file contains one test case.  For each test case, the first line contains $$N$$ ($$2\\le N\\le 10^4$$), the total number of computers in a network.  Each computer in the network is then represented by a positive integer between 1 and $$N$$.  Then in the following lines, the input is given in the format:\n```\nI c1 c2  \n```\nwhere `I` stands for inputting a connection between `c1` and `c2`; or\n```\nC c1 c2    \n```\nwhere `C` stands for checking if it is possible to transfer files between `c1` and `c2`; or\n```\nS\n```\nwhere `S` stands for stopping this case. \n\n### Output Specification:\n\nFor each `C` case, print in one line the word \"yes\" or \"no\" if it is possible or impossible to transfer files between `c1` and `c2`, respectively.  At the end of each case, print in one line \"The network is connected.\" if there is a path between any pair of computers; or \"There are `k` components.\" where `k` is the number of connected components in this network.\n\n### Sample Input 1:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n\n```\n\n### Sample Output 1:\n```out\nno\nno\nyes\nThere are 2 components.\n\n```\n\n### Sample Input 2:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n\n```\n\n### Sample Output 2:\n```out\nno\nno\nyes\nyes\nThe network is connected.\n\n```",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2049365871177940992",
+    "label": "",
+    "score": 7,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 300,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n",
+            "output": "YES\nNO\nNO\nNO\nYES\nNO\n"
+          },
+          {
+            "name": "",
+            "input": "6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n",
+            "output": "YES\nNO\nNO\nNO\nYES\nNO\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Hamiltonian Cycle",
+    "content": "The \"Hamilton cycle problem\" is to find a simple cycle that contains every vertex in a graph. Such a cycle is called a \"Hamiltonian cycle\".\n\nIn this problem, you are supposed to tell if a given cycle is a Hamiltonian cycle.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line contains 2 positive integers $$N$$ ($$2< N \\le 200$$), the number of vertices, and $$M$$, the number of edges in an undirected graph. Then $$M$$ lines follow, each describes an edge in the format `Vertex1 Vertex2`, where the vertices are numbered from 1 to $$N$$. The next line gives a positive integer $$K$$ which is the number of queries, followed by $$K$$ lines of queries, each in the format:\n\n$$n$$ $$V_1$$ $$V_2$$ ... $$V_n$$\n\nwhere $$n$$ is the number of vertices in the list, and $$V_i$$'s are the vertices on a path.\n\n### Output Specification:\n\nFor each query, print in a line `YES` if the path does form a Hamiltonian cycle, or `NO` if not.\n\n### Sample Input:\n```in\n6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n```\n\n### Sample Output:\n```out\nYES\nNO\nNO\nNO\nYES\nNO\n```\n",
+    "type": "PROGRAMMING",
+    "author": "CHEN, Yue",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2049365629392969728",
+    "problemId": "10656",
+    "description": "The \"Hamilton cycle problem\" is to find a simple cycle that contains every vertex in a graph. Such a cycle is called a \"Hamiltonian cycle\".\n\nIn this problem, you are supposed to tell if a given cycle is a Hamiltonian cycle.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line contains 2 positive integers $$N$$ ($$2< N \\le 200$$), the number of vertices, and $$M$$, the number of edges in an undirected graph. Then $$M$$ lines follow, each describes an edge in the format `Vertex1 Vertex2`, where the vertices are numbered from 1 to $$N$$. The next line gives a positive integer $$K$$ which is the number of queries, followed by $$K$$ lines of queries, each in the format:\n\n$$n$$ $$V_1$$ $$V_2$$ ... $$V_n$$\n\nwhere $$n$$ is the number of vertices in the list, and $$V_i$$'s are the vertices on a path.\n\n### Output Specification:\n\nFor each query, print in a line `YES` if the path does form a Hamiltonian cycle, or `NO` if not.\n\n### Sample Input:\n```in\n6 10\n6 2\n3 4\n1 5\n2 5\n3 1\n4 1\n1 6\n6 3\n1 2\n4 5\n6\n7 5 1 4 3 6 2 5\n6 5 1 4 3 6 2\n9 6 2 1 6 3 4 5 2 6\n4 1 2 5 1\n7 6 1 3 4 5 2 6\n7 6 1 2 5 4 3 1\n```\n\n### Sample Output:\n```out\nYES\nNO\nNO\nNO\nYES\nNO\n```\n",
+    "problemPoolIndex": 7,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

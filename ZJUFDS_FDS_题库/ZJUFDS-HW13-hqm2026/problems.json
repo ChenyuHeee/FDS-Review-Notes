@@ -1,0 +1,247 @@
+[
+  {
+    "id": "2061346438865326080",
+    "label": "1-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To sort $$N$$ records by quick sort, the worst-case time complex",
+    "content": "To sort $$N$$ records by quick sort, the worst-case time complexity is $$O(NlogN)$$.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "686",
+    "description": "To sort $$N$$ records by quick sort, the worst-case time complexity is $$O(NlogN)$$.\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326081",
+    "label": "1-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "During the sorting, processing every element which is not yet at",
+    "content": "During the sorting, processing every element which is not yet at its final position is called a \"run\". To sort a list of integers using quick sort,  it may reduce the total number of recursions by processing the small partion first in each run. ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "1212562716282527744",
+    "description": "During the sorting, processing every element which is not yet at its final position is called a \"run\". To sort a list of integers using quick sort,  it may reduce the total number of recursions by processing the small partion first in each run. ",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326082",
+    "label": "1-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If there are less than 20 inversions in an integer array, the Qu",
+    "content": "If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort.  ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "954630192028979200",
+    "description": "If there are less than 20 inversions in an integer array, the Quick Sort will be the best method among Quick Sort, Heap Sort and Insertion Sort.  ",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326083",
+    "label": "2-1",
+    "score": 3,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "5, 2, 16, 12, 28, 60, 32, 72",
+          "2, 16, 5, 28, 12, 60, 32, 72",
+          "2, 12, 16, 5, 28, 32, 72, 60",
+          "5, 2, 12, 28, 16, 32, 72, 60"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "During the sorting, processing every element which is not yet at",
+    "content": "During the sorting, processing every element which is not yet at its final position is called a \"run\".  Which of the following cannot be the result after the second run of quicksort? @[](2)\n\nA. 5, 2, 16, 12, 28, 60, 32, 72\nB. 2, 16, 5, 28, 12, 60, 32, 72\nC. 2, 12, 16, 5, 28, 32, 72, 60\nD. 5, 2, 12, 28, 16, 32, 72, 60\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "1085197943091961856",
+    "description": "During the sorting, processing every element which is not yet at its final position is called a \"run\".  Which of the following cannot be the result after the second run of quicksort?",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326084",
+    "label": "2-2",
+    "score": 3,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "→7→321→28→34→33→331→156→46→57→63",
+          "→7→321→28→331→34→33→46→156→57→63",
+          "→156→28→321→331→33→34→46→57→63→7",
+          "→7→321→28→331→33→34→46→156→57→63"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given input { 321, 156, 57, 46, 28, 7, 331, 33, 34, 63 }. Which ",
+    "content": "Given input { 321, 156, 57, 46, 28, 7, 331, 33, 34, 63 }. Which one of the following is the result after the 2nd run of the Least Signification Digit (LSD) radix sort?  @[](3)\n\nA. →7→321→28→34→33→331→156→46→57→63\nB.  →7→321→28→331→34→33→46→156→57→63\nC. →156→28→321→331→33→34→46→57→63→7\nD. →7→321→28→331→33→34→46→156→57→63",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "1212568346749779968",
+    "description": "Given input { 321, 156, 57, 46, 28, 7, 331, 33, 34, 63 }. Which one of the following is the result after the 2nd run of the Least Signification Digit (LSD) radix sort?",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326085",
+    "label": "2-3",
+    "score": 3,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2 only",
+          "3 only",
+          "1 and 2",
+          "1 and 3"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "When running internal sorting, if merge sort is chosen instead o",
+    "content": "When running internal sorting, if merge sort is chosen instead of insertion sort, the possible reason should be: @[](2)\n\n1. The code of merge sort is shorter\n2. Merge sort takes less space\n3. Merge sort runs faster\n\nA. 2 only\nB. 3 only\nC. 1 and 2\nD. 1 and 3",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研试卷",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "4963",
+    "description": "When running internal sorting, if merge sort is chosen instead of insertion sort, the possible reason should be:\n\n1. The code of merge sort is shorter\n2. Merge sort takes less space\n3. Merge sort runs faster",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326086",
+    "label": "2-4",
+    "score": 3,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1 and 2 only",
+          "2 and 3 only",
+          "3 and 4 only",
+          "4 and 5 only"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Among the following sorting methods, which ones will be slowed d",
+    "content": "Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure? @[](2)\n\n1. Insertion sort;  2. Selection Sort;  3. Bubble sort;  4. Shell sort;  5. Heap sort\n\nA. 1 and 2 only\nB. 2 and 3 only\nC. 3 and 4 only\nD. 4 and 5 only",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研试卷",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "4965",
+    "description": "Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure?\n\n1. Insertion sort;  2. Selection Sort;  3. Bubble sort;  4. Shell sort;  5. Heap sort",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2061346438865326087",
+    "label": "2-5",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "III only",
+          "I and II only",
+          "II, III and IV only",
+          "I, II, III and IV"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "When selecting a sorting algorithm, which of the following facto",
+    "content": "When selecting a sorting algorithm, which of the following factors must be taken into consideration besides the time and space complexities?  @[](1)\n\n- I、the size of input data\n- II、the structure used to store the data\n- III、the stability of the algorithm\n- IV、the initial condition of the data\n\nA. III only\nB. I and II only\nC. II, III and IV only\nD. I, II, III and IV\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2061346438852743168",
+    "problemId": "1085197089945362432",
+    "description": "When selecting a sorting algorithm, which of the following factors must be taken into consideration besides the time and space complexities?\n\n- I、the size of input data\n- II、the structure used to store the data\n- III、the stability of the algorithm\n- IV、the initial condition of the data",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

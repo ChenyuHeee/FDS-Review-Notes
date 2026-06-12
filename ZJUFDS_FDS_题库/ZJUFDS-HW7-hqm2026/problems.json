@@ -1,0 +1,366 @@
+[
+  {
+    "id": "2043675882833362944",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A segment tree can be used to find the greatest common divisor (",
+    "content": "这是一个判断题的样例。答案为T，分值为5分。",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "2025857194270560256",
+    "description": "A segment tree can be used to find the greatest common divisor (GCD) of any index range.",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882833362945",
+    "label": "1-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In *Union/Find* algorithm, if *Unions* are done by size, the dep",
+    "content": "In *Union/Find* algorithm, if *Unions* are done by size, the depth of any node must be no more than $$N/2$$, but not $$O(logN)$$. ~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "1198508276830334976",
+    "description": "In *Union/Find* algorithm, if *Unions* are done by size, the depth of any node must be no more than $$N/2$$, but not $$O(logN)$$. ",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882833362946",
+    "label": "2-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1 and -6",
+          "4 and -5",
+          "8 and -5",
+          "8 and -6"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The array representation of a disjoint set containing numbers 0 ",
+    "content": "The array representation of a disjoint set containing numbers 0 to 8 is given by { 1, -4, 1, 1, -3, 4, 4, 8, -2 }.  Then to union the two sets which contain 6 and 8 (with union-by-size), the index of the resulting root and the value stored at the root are: @[](2)\n\nA. 1 and -6\nB. 4 and -5\nC. 8 and -5\nD. 8 and -6",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "808",
+    "description": "The array representation of a disjoint set containing numbers 0 to 8 is given by { 1, -4, 1, 1, -3, 4, 4, 8, -2 }.  Then to union the two sets which contain 6 and 8 (with union-by-size), the index of the resulting root and the value stored at the root are:",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882833362947",
+    "label": "2-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "consistent",
+          "symmetric",
+          "transitive",
+          "reflexive"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "A relation $$R$$ is defined on a set $$S$$.  If for every elemen",
+    "content": "A relation $$R$$ is defined on a set $$S$$.  If for every element $$e$$ in $$S$$, \"$$e$$ $$R$$ $$e$$\" is always true, then $$R$$ is said to be  __ over $$S$$.  @[](1)\n\nA. consistent\nB. symmetric\nC. transitive\nD. reflexive\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "954573409949315072",
+    "description": "A relation $$R$$ is defined on a set $$S$$.  If for every element $$e$$ in $$S$$, \"$$e$$ $$R$$ $$e$$\" is always true, then $$R$$ is said to be  __ over $$S$$.",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882833362948",
+    "label": "2-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "at most $$log_2(N)+1$$",
+          "at least $$log_2(N)+1$$",
+          "as large as $$N$$",
+          "anything that is greater than 1"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Let $$T$$ be a tree created by union-by-size with $$N$$ nodes, t",
+    "content": "Let $$T$$ be a tree created by union-by-size with $$N$$ nodes, then the height of $$T$$ can be  .  @[](3)\nA. at most $$log_2(N)+1$$\nB. at least $$log_2(N)+1$$\nC. as large as $$N$$\nD. anything that is greater than 1\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "1081031261582680064",
+    "description": "Let $$T$$ be a tree created by union-by-size with $$N$$ nodes, then the height of $$T$$ can be  .",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882833362949",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "Sorting elements",
+          "Finding minimum/maximum in a range",
+          "Finding the sum of a given set of integers",
+          "Finding a given string from a set of strings"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "What is a segment tree primarily used for?",
+    "content": "这是一个单选题的样例。答案为C，分值为2分。",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "2025853677602512896",
+    "description": "What is a segment tree primarily used for?",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882833362950",
+    "label": "5-1",
+    "score": 6,
+    "problemConfig": {
+      "fillInTheBlankForProgrammingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "blankLength": 15,
+        "scores": [
+          3,
+          3
+        ],
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 0,
+            "isPublic": false
+          }
+        },
+        "blanks": [
+          {
+            "index": 234,
+            "multipleLine": false,
+            "length": 14,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          },
+          {
+            "index": 326,
+            "multipleLine": false,
+            "length": 15,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          }
+        ],
+        "tools": []
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Find",
+    "content": "Please fill in the blanks in the program which performs `Find` as a Union/Find operation with path compression.\n\n```c++\nSetType Find ( ElementType X, DisjSet S )\n{   \n   ElementType root, trail, lead;\n\n   for ( root = X; S[root] > 0; @@[](3) ) ;  \n   for ( trail = X; trail != root; trail = lead ) {\n      lead = S[trail] ;   \n      @@[](3);   \n   } \n   return root;\n}\n```",
+    "type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "468",
+    "description": "Please fill in the blanks in the program which performs `Find` as a Union/Find operation with path compression.\n\n```c++\nSetType Find ( ElementType X, DisjSet S )\n{   \n   ElementType root, trail, lead;\n\n   for ( root = X; S[root] > 0;  ) ;  \n   for ( trail = X; trail != root; trail = lead ) {\n      lead = S[trail] ;   \n      ;   \n   } \n   return root;\n}\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2043675882837557248",
+    "label": "7-1",
+    "score": 12,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 150,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "6": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n",
+            "output": "no\nno\nyes\nThere are 2 components.\n"
+          },
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n",
+            "output": "no\nno\nyes\nyes\nThe network is connected.\n"
+          },
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n",
+            "output": "no\nno\nyes\nThere are 2 components.\n"
+          },
+          {
+            "name": "",
+            "input": "5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n",
+            "output": "no\nno\nyes\nyes\nThe network is connected.\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [
+          {
+            "compiler": "GO",
+            "timeLimit": 400,
+            "memoryLimit": 65536
+          },
+          {
+            "compiler": "JAVAC",
+            "timeLimit": 400,
+            "memoryLimit": 65536
+          },
+          {
+            "compiler": "PYTHON3",
+            "timeLimit": 400,
+            "memoryLimit": 65536
+          }
+        ],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "File Transfer",
+    "content": "We have a network of computers and a list of bi-directional connections. Each of these connections allows a file transfer from one computer to another. Is it possible to send a file from any computer on the network to any other?\n\n### Input Specification:\n\nEach input file contains one test case.  For each test case, the first line contains $$N$$ ($$2\\le N\\le 10^4$$), the total number of computers in a network.  Each computer in the network is then represented by a positive integer between 1 and $$N$$.  Then in the following lines, the input is given in the format:\n```\nI c1 c2  \n```\nwhere `I` stands for inputting a connection between `c1` and `c2`; or\n```\nC c1 c2    \n```\nwhere `C` stands for checking if it is possible to transfer files between `c1` and `c2`; or\n```\nS\n```\nwhere `S` stands for stopping this case. \n\n### Output Specification:\n\nFor each `C` case, print in one line the word \"yes\" or \"no\" if it is possible or impossible to transfer files between `c1` and `c2`, respectively.  At the end of each case, print in one line \"The network is connected.\" if there is a path between any pair of computers; or \"There are `k` components.\" where `k` is the number of connected components in this network.\n\n### Sample Input 1:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n\n```\n\n### Sample Output 1:\n```out\nno\nno\nyes\nThere are 2 components.\n\n```\n\n### Sample Input 2:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n\n```\n\n### Sample Output 2:\n```out\nno\nno\nyes\nyes\nThe network is connected.\n\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2043675882816585728",
+    "problemId": "312",
+    "description": "We have a network of computers and a list of bi-directional connections. Each of these connections allows a file transfer from one computer to another. Is it possible to send a file from any computer on the network to any other?\n\n### Input Specification:\n\nEach input file contains one test case.  For each test case, the first line contains $$N$$ ($$2\\le N\\le 10^4$$), the total number of computers in a network.  Each computer in the network is then represented by a positive integer between 1 and $$N$$.  Then in the following lines, the input is given in the format:\n```\nI c1 c2  \n```\nwhere `I` stands for inputting a connection between `c1` and `c2`; or\n```\nC c1 c2    \n```\nwhere `C` stands for checking if it is possible to transfer files between `c1` and `c2`; or\n```\nS\n```\nwhere `S` stands for stopping this case. \n\n### Output Specification:\n\nFor each `C` case, print in one line the word \"yes\" or \"no\" if it is possible or impossible to transfer files between `c1` and `c2`, respectively.  At the end of each case, print in one line \"The network is connected.\" if there is a path between any pair of computers; or \"There are `k` components.\" where `k` is the number of connected components in this network.\n\n### Sample Input 1:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nS\n\n```\n\n### Sample Output 1:\n```out\nno\nno\nyes\nThere are 2 components.\n\n```\n\n### Sample Input 2:\n```in\n5\nC 3 2\nI 3 2\nC 1 5\nI 4 5\nI 2 4\nC 3 5\nI 1 3\nC 1 5\nS\n\n```\n\n### Sample Output 2:\n```out\nno\nno\nyes\nyes\nThe network is connected.\n\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

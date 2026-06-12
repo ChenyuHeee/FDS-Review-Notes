@@ -1,4 +1,4 @@
-# Chapter 6: Sorting 排序
+# 第6章：排序算法 (Chapter 6: Sorting Algorithms)
 
 > **Comparison-based sorting** 基于比较的排序
 

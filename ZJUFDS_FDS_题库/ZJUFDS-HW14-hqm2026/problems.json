@@ -1,0 +1,362 @@
+[
+  {
+    "id": "2064012354846826496",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In hashing, functions \"insert\" and \"find\" have the same time com",
+    "content": "In hashing, functions \"insert\" and \"find\" have the same time complexity.\n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "冯雁",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "2122",
+    "description": "In hashing, functions \"insert\" and \"find\" have the same time complexity.\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826497",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Linear probing isn't equivalent to double hashing with a seconda",
+    "content": "Linear probing isn't equivalent to double hashing with a secondary hash function of $Hash _2(k)$=1.",
+    "type": "TRUE_OR_FALSE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "1476720805417725952",
+    "description": "Linear probing isn't equivalent to double hashing with a secondary hash function of $Hash _2(k)$=1.",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826498",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Store $$M$$ elements in a hash table which is represented by an ",
+    "content": "Store $$M$$ elements in a hash table which is represented by an array of size $$S$$, the loading density is then $$M/S$$. \n~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "693",
+    "description": "Store $$M$$ elements in a hash table which is represented by an array of size $$S$$, the loading density is then $$M/S$$. \n",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826499",
+    "label": "2-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$O(1)$$",
+          "$$O(logN)$$",
+          "$$O(N)$$",
+          "cannot be determined"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The average search time of searching a hash table with $$N$$ ele",
+    "content": "The average search time of searching a hash table with $$N$$ elements is: @[](1)\n\nA. $$O(1)$$\nB. $$O(logN)$$\nC. $$O(N)$$\nD. cannot be determined",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "894",
+    "description": "The average search time of searching a hash table with $$N$$ elements is:",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826500",
+    "label": "2-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "the expected number of probes for insertions is greater than that for successful searches in linear probing method",
+          "if the table size is prime and the table is at least half empty, a new element can always be inserted with quadratic probing",
+          "in separate chaining method, if duplicate elements are allowed in the list, insertions are generally quicker than deletions ",
+          "all of the above"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Which of the following statements about HASH is true?   ",
+    "content": "Which of the following statements about HASH is true?",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "1081037953930231808",
+    "description": "Which of the following statements about HASH is true?",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826501",
+    "label": "2-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1.5",
+          "1.6",
+          "2",
+          "3"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given an initially empty hash table `HT` with length 7, together",
+    "content": "Given an initially empty hash table `HT` with length 7, together with a hash function $$H(k)=k\\% 7$$.  Let us use linear probing to solve collisions.  What is the average search length for successful searches after inserting 22, 43, 15 one by one into `HT`?  @[](2)\n\nA. 1.5\nB. 1.6\nC. 2\nD. 3\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "954571903091068928",
+    "description": "Given an initially empty hash table `HT` with length 7, together with a hash function $$H(k)=k\\% 7$$.  Let us use linear probing to solve collisions.  What is the average search length for successful searches after inserting 22, 43, 15 one by one into `HT`?",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826502",
+    "label": "2-4",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "Everything else are the same for the two elements except their keys",
+          "Two elements have different data but share the same key",
+          "Two elements with different keys share the same hash value",
+          "Two elements with different hash values share the same key"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "What is a collision in hashing?",
+    "content": "What is a collision in hashing? @[](1)\n\nA. Everything else are the same for the two elements except their keys\nB. Two elements have different data but share the same key\nC. Two elements with different keys share the same hash value\nD. Two elements with different hash values share the same key",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "896",
+    "description": "What is a collision in hashing?",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826503",
+    "label": "2-5",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "0.27",
+          "0.45",
+          "0.64",
+          "0.73"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Insert {18, 23, 11, 20, 2, 7, 27, 33, 42, 15} one by one into an",
+    "content": "Insert {18, 23, 11, 20, 2, 7, 27, 33, 42, 15} one by one into an initially empty hash table of size 11 with the hash function $$H(Key) = Key\\%11$$, and linear probing is used to resolve collisions.  What is the loading density when the first collision occurs? @[](3)\n\nA. 0.27\nB. 0.45\nC. 0.64\nD. 0.73",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "901",
+    "description": "Insert {18, 23, 11, 20, 2, 7, 27, 33, 42, 15} one by one into an initially empty hash table of size 11 with the hash function $$H(Key) = Key\\%11$$, and linear probing is used to resolve collisions.  What is the loading density when the first collision occurs?",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826504",
+    "label": "2-6",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "14",
+          "0",
+          "17",
+          "1"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Suppose that the range of a hash table is [0, 18], and the hash ",
+    "content": "Suppose that the range of a hash table is [0, 18], and the hash function is H(Key)=Key%17. If linear probing is used to resolve collisions, then after inserting { 16, 32, 14, 34, 48 } one by one into the hash table, the index of 48 is:   @[](2)\n\nA. 14\nB. 0\nC. 17\nD. 1\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "1215307735477207040",
+    "description": "Suppose that the range of a hash table is [0, 18], and the hash function is H(Key)=Key%17. If linear probing is used to resolve collisions, then after inserting { 16, 32, 14, 34, 48 } one by one into the hash table, the index of 48 is:",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2064012354846826505",
+    "label": "7-1",
+    "score": 15,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 8,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "11\n33 1 13 12 34 38 27 22 32 -1 21\n",
+            "output": "1 13 12 21 33 34 38 27 22 32\n"
+          },
+          {
+            "name": "",
+            "input": "11\n33 1 13 12 34 38 27 22 32 -1 21\n",
+            "output": "1 13 12 21 33 34 38 27 22 32\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Hashing - Hard Version",
+    "content": "Given a hash table of size $$N$$, we can define a hash function $$H(x) = x\\%N$$.  Suppose that the linear probing is used to solve collisions, we can easily obtain the status of the hash table with a given sequence of input numbers.\n\nHowever, now you are asked to solve the reversed problem: reconstruct the input sequence from the given status of the hash table.  Whenever there are multiple choices, the smallest number is always taken.\n\n### Input Specification:\n\nEach input file contains one test case.  For each test case, the first line contains a positive integer $$N$$ ($$\\le 1000$$), which is the size of the hash table.  The next line contains $$N$$ integers, separated by a space.  A negative integer represents an empty cell in the hash table.  It is guaranteed that all the non-negative integers are distinct in the table.\n\n### Output Specification:\n\nFor each test case, print a line that contains the input sequence, with the numbers separated by a space.  Notice that there must be no extra space at the end of each line.\n\n### Sample Input:\n```in\n11\n33 1 13 12 34 38 27 22 32 -1 21\n```\n\n### Sample Output:\n```out\n1 13 12 21 33 34 38 27 22 32\n```",
+    "type": "PROGRAMMING",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2064012354783911936",
+    "problemId": "332",
+    "description": "Given a hash table of size $$N$$, we can define a hash function $$H(x) = x\\%N$$.  Suppose that the linear probing is used to solve collisions, we can easily obtain the status of the hash table with a given sequence of input numbers.\n\nHowever, now you are asked to solve the reversed problem: reconstruct the input sequence from the given status of the hash table.  Whenever there are multiple choices, the smallest number is always taken.\n\n### Input Specification:\n\nEach input file contains one test case.  For each test case, the first line contains a positive integer $$N$$ ($$\\le 1000$$), which is the size of the hash table.  The next line contains $$N$$ integers, separated by a space.  A negative integer represents an empty cell in the hash table.  It is guaranteed that all the non-negative integers are distinct in the table.\n\n### Output Specification:\n\nFor each test case, print a line that contains the input sequence, with the numbers separated by a space.  Notice that there must be no extra space at the end of each line.\n\n### Sample Input:\n```in\n11\n33 1 13 12 34 38 27 22 32 -1 21\n```\n\n### Sample Output:\n```out\n1 13 12 21 33 34 38 27 22 32\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

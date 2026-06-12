@@ -1,0 +1,315 @@
+[
+  {
+    "id": "2038517446849196032",
+    "label": "1-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In a binary search tree, the keys on the same level from left to",
+    "content": "In a binary search tree, the keys on the same level from left to right must be in sorted (non-decreasing) order.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "662",
+    "description": "In a binary search tree, the keys on the same level from left to right must be in sorted (non-decreasing) order.\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196033",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a binary search tree with 20 integer keys which include 4,",
+    "content": "Given a binary search tree with 20 integer keys which include 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent. ~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "干红华",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "1081054305688641536",
+    "description": "Given a binary search tree with 20 integer keys which include 4, 5, and 6, if 4 and 6 are on the same level, then 5 must be their parent. ",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196034",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The time complexity of searching in a binary search tree is the ",
+    "content": "The time complexity of searching in a binary search tree is the same as that of binary search.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "1119",
+    "description": "The time complexity of searching in a binary search tree is the same as that of binary search.\n",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196035",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "$$x_1 < x_2 < x_5$$",
+          "$$x_1 < x_4 < x_5$$",
+          "$$x_3 < x_5 < x_4$$",
+          "$$x_4 < x_3 < x_5$$"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a binary search tree as shown in the following figure.  Wh",
+    "content": "Given a binary search tree as shown in the following figure.  Which of the following relationships is correct with respect to the given tree? @[](2)\n![fGRE17-6.JPG](~/c303e1c2-3dff-4e7b-8386-b2af45a52e02.JPG)\n\nA. $$x_1 < x_2 < x_5$$\nB. $$x_1 < x_4 < x_5$$\nC. $$x_3 < x_5 < x_4$$\nD. $$x_4 < x_3 < x_5$$\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "954571338651004928",
+    "description": "Given a binary search tree as shown in the following figure.  Which of the following relationships is correct with respect to the given tree?\n![fGRE17-6.JPG](~/c303e1c2-3dff-4e7b-8386-b2af45a52e02.JPG)",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196036",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "`83 67 91 98 20 75`",
+          "`83 67 75 91 20 98`",
+          "`83 91 75 67 20 98`",
+          "`83 91 98 67 75 20`"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the structure of a binary search tree (as shown in the fig",
+    "content": "Given the structure of a binary search tree (as shown in the figure), which one of the following insertion sequences is impossible? @[](3)\n\n![206.jpg](~/84984823-130d-462a-ad9e-ee6457b1ce56.jpg)\n\nA. `83 67 91 98 20 75`\nB. `83 67 75 91 20 98`\nC. `83 91 75 67 20 98`\nD. `83 91 98 67 75 20`\n\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "干红华",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "1081588095834071040",
+    "description": "Given the structure of a binary search tree (as shown in the figure), which one of the following insertion sequences is impossible?\n\n![206.jpg](~/84984823-130d-462a-ad9e-ee6457b1ce56.jpg)",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196037",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "One possible preorder traversal sequence of the resulting tree may be { 2, 15, 10, 12, 21 }",
+          "One possible preorder traversal sequence of the resulting tree may be { 10, 2, 15, 12, 21 }",
+          "One possible preorder traversal sequence of the resulting tree may be { 15, 10, 2, 12, 21 }",
+          "It is possible that the new root may have 2 children"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a binary search tree with its preorder traversal sequence ",
+    "content": "Given a binary search tree with its preorder traversal sequence { 8, 2, 15, 10, 12, 21 }.  If 8 is deleted from the tree, which one of the following statements is FALSE?   @[](2)\n\nA. One possible preprder traversal sequence of the resulting tree may be { 2, 15, 10, 12, 21 }\nB. One possible preprder traversal sequence of the resulting tree may be { 10, 2, 15, 12, 21 }\nC. One possible preprder traversal sequence of the resulting tree may be { 15, 10, 2, 12, 21 }\nD. It is possible that the new root may have 2 children\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "1214174301123985408",
+    "description": "Given a binary search tree with its preorder traversal sequence { 8, 2, 15, 10, 12, 21 }.  If 8 is deleted from the tree, which one of the following statements is FALSE?",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196038",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "![](~/282)",
+          "![](~/283)",
+          "![](~/284)",
+          "![](~/285)"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Among the following binary trees, which one can possibly be the ",
+    "content": "Among the following binary trees, which one can possibly be the decision tree (the external nodes are excluded) for binary search? @[](4)\n\nA.  ![](~/282)\nB.  ![](~/283)\nC.  ![](~/284)\nD.  ![](~/285)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研试卷",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "4967",
+    "description": "Among the following binary trees, which one can possibly be the decision tree (the external nodes are excluded) for binary search?",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196039",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "preorder traversal",
+          "postorder traversal",
+          "inorder traversal",
+          "level-order traversal"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "For a binary search tree, in which order of traversal that we ca",
+    "content": "For a binary search tree, in which order of traversal that we can obtain a non-decreasing sequence? @[](1)\n\nA. preorder traversal\nB. postorder traversal\nC. inorder traversal\nD. level-order traversal",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "777",
+    "description": "For a binary search tree, in which order of traversal that we can obtain a non-decreasing sequence?",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446849196040",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "125.",
+          "110.",
+          "50.",
+          "The in-order successor does not exist for 75."
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Consider the following operations performed on an initially empt",
+    "content": "这是一个单选题的样例。答案为C，分值为2分。",
+    "type": "MULTIPLE_CHOICE",
+    "author": "朱建科",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "1933704950982852608",
+    "description": "Consider the following operations performed on an initially empty Binary Search Tree (BST):\nInsert: 100, 50, 150, 25, 75, 125, 175\nDelete: 100 (replaced with its in-order successor) \nInsert: 110\nAfter these operations, which node will be the in-order successor of 75 in the final BST?",
+    "problemPoolIndex": 6,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2038517446853390336",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "x < k1",
+          "x > k2",
+          "k1 < x < k3",
+          "k3 < x < k2"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The following figure shows a binary search tree, with k1, k2 and",
+    "content": "The following figure shows a binary search tree, with k1, k2 and k3 being the keys saved at the corresponding nodes.  In the subtree T, the key x of any node must satisfy the inequality \n\n![插图7.jpg](~/1b0e6d01-0205-4f49-8f63-024797be79e7.jpg)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2038517446832418816",
+    "problemId": "1749096968862990336",
+    "description": "The following figure shows a binary search tree, with k1, k2 and k3 being the keys saved at the corresponding nodes.  In the subtree T, the key x of any node must satisfy the inequality \n\n![插图7.jpg](~/1b0e6d01-0205-4f49-8f63-024797be79e7.jpg)",
+    "problemPoolIndex": 7,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

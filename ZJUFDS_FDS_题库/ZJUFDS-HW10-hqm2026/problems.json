@@ -1,0 +1,361 @@
+[
+  {
+    "id": "2053739441904046080",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "(v1,v4)",
+          "(v1,v2)",
+          "(v4,v6)",
+          "uncertain"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "To find the minimum spanning tree with Kruskal's algorithm for t",
+    "content": "To find the minimum spanning tree with Kruskal's algorithm for the following graph. Which edge will be added in the final step?   @[](2)\n \n![图1.jpg](~/7df4db2a-db40-4897-a5c4-e3bbcea6a505.jpg)\n\nA. (v1,v4)       \nB. (v1,v2)     \nC. (v4,v6)       \nD. uncertain\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "1214578641294794752",
+    "description": "To find the minimum spanning tree with Kruskal's algorithm for the following graph. Which edge will be added in the final step?\n\n![图1.jpg](~/7df4db2a-db40-4897-a5c4-e3bbcea6a505.jpg)",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053739441904046081",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "must be unique",
+          "must not be unique",
+          "exists but may not be unique",
+          "may not exist"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The minimum spanning tree of any weighted graph \\_\\_\\_\\_",
+    "content": "The minimum spanning tree of any weighted graph \\_\\_\\_\\_\n@[](3)\n\nA. must be unique\nB. must not be unique\nC. exists but may not be unique\nD. may not exist",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "1276177194336899072",
+    "description": "The minimum spanning tree of any weighted graph \\_\\_\\_\\_\n",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053739441904046082",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "Start from vertex V6 as the first vertex, the third vertex must be v7.",
+          "Start from vertex V4 as the first vertex, the third vertex must be v1.",
+          "Start from vertex V5 as the first vertex, the third vertex must be v4.",
+          "Start from vertex V2 as the first vertex, the third vertex must be v3."
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given an undirected weighted graph as shown below, its minimum s",
+    "content": "Given an undirected weighted graph as shown below, its minimum spanning tree is to grow by Prim's algorithm with greedy strategies. Which of the following statement is **correct**?![image.png](~/cf263db0-ff54-4641-8991-16e49cd3b57e.png)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "1802013158941470720",
+    "description": "Given an undirected weighted graph as shown below, its minimum spanning tree is to grow by Prim's algorithm with greedy strategies. Which of the following statement is **correct**?![image.png](~/cf263db0-ff54-4641-8991-16e49cd3b57e.png)",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053739441904046083",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "104",
+          "123",
+          "120",
+          "97"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "The maximum flow in the network of the given Figure is:",
+    "content": "The maximum flow in the network of the given Figure is: @[](3)\n\n\n![](~/265)\n\nA. 104\nB. 123\nC. 120\nD. 97",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "4850",
+    "description": "The maximum flow in the network of the given Figure is:\n\n![](~/265)",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053739441904046084",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "the capacity of (v1, v2) is 2",
+          "the capacity of (v1, v2) is 3",
+          "the capacity of (v1, v2) is 5",
+          "the capacity of (v2, v1) is 5"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "When solving the maximum flow problem for graph $$G$$, if partia",
+    "content": "When solving the maximum flow problem for graph $$G$$, if partial states of the $$G_f$$ ( will be the maximum flow when the algorithm terminates) and $$G_r$$ (residual graph) are shown as the following, what must be the capacity of (v1, v2) or of (v2,v1) in the original graph $$G$$?   @[](2)\n\n![图2.jpg](~/0a7602fb-2b90-4808-9daa-af2115cdc170.jpg)\n\nA. the capacity of (v1, v2) is 2\nB. the capacity of (v1, v2) is 3\nC. the capacity of (v1, v2) is 5\nD. the capacity of (v2, v1) is 5\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "1214581204962451456",
+    "description": "When solving the maximum flow problem for graph $$G$$, if partial states of the $$G_f$$ ( will be the maximum flow when the algorithm terminates) and $$G_r$$ (residual graph) are shown as the following, what must be the capacity of (v1, v2) or of (v2,v1) in the original graph $$G$$?\n\n![图2.jpg](~/0a7602fb-2b90-4808-9daa-af2115cdc170.jpg)",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053739441904046085",
+    "label": "7-1",
+    "score": 10,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 150,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Universal Travel Sites",
+    "content": "After finishing her tour around the Earth, CYLL is now planning a universal travel sites development project.  After a careful investigation, she has a list of capacities of all the satellite transportation stations in hand.  To estimate a budget, she must know the minimum capacity that a planet station must have to guarantee that every space vessel can dock and download its passengers on arrival.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line contains the names of the source and the destination planets, and a positive integer `N` ($$\\le$$500).  Then `N` lines follow, each in the format: `source[i] destination[i] capacity[i]` where `source[i]` and `destination[i]` are the names of the satellites and the two involved planets, and `capacity[i]` $$>$$ 0 is the maximum number of passengers that can be transported at one pass from `source[i]` to `destination[i]`.  Each name is a string of 3 uppercase characters chosen from {A-Z}, e.g., ZJU.\n\nNote that the satellite transportation stations have no accommodation facilities for the passengers.  Therefore none of the passengers can stay.  Such a station will not allow arrivals of space vessels that contain more than its own capacity.  It is guaranteed that the list contains neither the routes to the source planet nor that from the destination planet.\n\n### Output Specification:\n\nFor each test case, just print in one line the minimum capacity that a planet station must have to guarantee that every space vessel can dock and download its passengers on arrival.\n\n### Sample Input:\n```in\nEAR MAR 11\nEAR AAA 300\nEAR BBB 400\nAAA BBB 100\nAAA CCC 400\nAAA MAR 300\nBBB DDD 400\nAAA DDD 400\nDDD AAA 100\nCCC MAR 400\nDDD CCC 200\nDDD MAR 300\n```\n\n### Sample Output:\n```out\n700\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "566",
+    "description": "After finishing her tour around the Earth, CYLL is now planning a universal travel sites development project.  After a careful investigation, she has a list of capacities of all the satellite transportation stations in hand.  To estimate a budget, she must know the minimum capacity that a planet station must have to guarantee that every space vessel can dock and download its passengers on arrival.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line contains the names of the source and the destination planets, and a positive integer `N` ($$\\le$$500).  Then `N` lines follow, each in the format: `source[i] destination[i] capacity[i]` where `source[i]` and `destination[i]` are the names of the satellites and the two involved planets, and `capacity[i]` $$>$$ 0 is the maximum number of passengers that can be transported at one pass from `source[i]` to `destination[i]`.  Each name is a string of 3 uppercase characters chosen from {A-Z}, e.g., ZJU.\n\nNote that the satellite transportation stations have no accommodation facilities for the passengers.  Therefore none of the passengers can stay.  Such a station will not allow arrivals of space vessels that contain more than its own capacity.  It is guaranteed that the list contains neither the routes to the source planet nor that from the destination planet.\n\n### Output Specification:\n\nFor each test case, just print in one line the minimum capacity that a planet station must have to guarantee that every space vessel can dock and download its passengers on arrival.\n\n### Sample Input:\n```in\nEAR MAR 11\nEAR AAA 300\nEAR BBB 400\nAAA BBB 100\nAAA CCC 400\nAAA MAR 300\nBBB DDD 400\nAAA DDD 400\nDDD AAA 100\nCCC MAR 400\nDDD CCC 200\nDDD MAR 300\n```\n\n### Sample Output:\n```out\n700\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2053739441904046086",
+    "label": "7-2",
+    "score": 10,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "6": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "7": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "5 7\n1 2 6\n5 1 1\n2 3 4\n3 4 3\n4 1 7\n2 4 2\n4 5 5\n",
+            "output": "11\nYes\n"
+          },
+          {
+            "name": "",
+            "input": "4 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n",
+            "output": "4\nNo\n"
+          },
+          {
+            "name": "",
+            "input": "5 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n",
+            "output": "No MST\n2\n"
+          },
+          {
+            "name": "",
+            "input": "5 7\n1 2 6\n5 1 1\n2 3 4\n3 4 3\n4 1 7\n2 4 2\n4 5 5\n",
+            "output": "11\nYes\n"
+          },
+          {
+            "name": "",
+            "input": "4 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n",
+            "output": "4\nNo\n"
+          },
+          {
+            "name": "",
+            "input": "5 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n",
+            "output": "No MST\n2\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Uniqueness of MST",
+    "content": "Given any weighted undirected graph, there exists at least one minimum spanning tree (MST) if the graph is connected. Sometimes the MST may not be unique though. Here you are supposed to calculate the minimum total weight of the MST, and also tell if it is unique or not.\n\n### Input Specification:\n\nEach input file contains one test case. Each case starts with a line containing 2 numbers N ($$\\le$$ 500), and M, which are the total number of vertices, and the number of edges, respectively. Then M lines follow, each describes an edge by 3 integers:\n```\nV1 V2 Weight\n```\nwhere `V1` and `V2` are the two ends of the edge (the vertices are numbered from 1 to N), and `Weight` is the positive weight on that edge. It is guaranteed that the total weight of the graph will not exceed $$2^{30}$$.\n\n### Output Specification:\n\nFor each test case, first print in a line the total weight of the minimum spanning tree if there exists one, or else print `No MST` instead. Then if the MST exists, print in the next line `Yes` if the tree is unique, or `No` otherwise. There there is no MST, print the number of connected components instead.\n\n### Sample Input 1:\n```in\n5 7\n1 2 6\n5 1 1\n2 3 4\n3 4 3\n4 1 7\n2 4 2\n4 5 5\n```\n\n### Sample Output 1:\n```out\n11\nYes\n```\n\n### Sample Input 2:\n```in\n4 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n```\n\n### Sample Output 2:\n```out\n4\nNo\n```\n\n### Sample Input 3:\n```in\n5 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n```\n\n### Sample Output 3:\n```out\nNo MST\n2\n```\n",
+    "type": "PROGRAMMING",
+    "author": "CHEN, Yue",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2053739441883074560",
+    "problemId": "10669",
+    "description": "Given any weighted undirected graph, there exists at least one minimum spanning tree (MST) if the graph is connected. Sometimes the MST may not be unique though. Here you are supposed to calculate the minimum total weight of the MST, and also tell if it is unique or not.\n\n### Input Specification:\n\nEach input file contains one test case. Each case starts with a line containing 2 numbers N ($$\\le$$ 500), and M, which are the total number of vertices, and the number of edges, respectively. Then M lines follow, each describes an edge by 3 integers:\n```\nV1 V2 Weight\n```\nwhere `V1` and `V2` are the two ends of the edge (the vertices are numbered from 1 to N), and `Weight` is the positive weight on that edge. It is guaranteed that the total weight of the graph will not exceed $$2^{30}$$.\n\n### Output Specification:\n\nFor each test case, first print in a line the total weight of the minimum spanning tree if there exists one, or else print `No MST` instead. Then if the MST exists, print in the next line `Yes` if the tree is unique, or `No` otherwise. There there is no MST, print the number of connected components instead.\n\n### Sample Input 1:\n```in\n5 7\n1 2 6\n5 1 1\n2 3 4\n3 4 3\n4 1 7\n2 4 2\n4 5 5\n```\n\n### Sample Output 1:\n```out\n11\nYes\n```\n\n### Sample Input 2:\n```in\n4 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n```\n\n### Sample Output 2:\n```out\n4\nNo\n```\n\n### Sample Input 3:\n```in\n5 5\n1 2 1\n2 3 1\n3 4 2\n4 1 2\n3 1 3\n```\n\n### Sample Output 3:\n```out\nNo MST\n2\n```\n",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

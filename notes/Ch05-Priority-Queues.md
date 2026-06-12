@@ -1,5 +1,4 @@
-# 第 5 章：优先队列（堆）
-## Chapter 5: Priority Queues (Heaps)
+# 第5章：优先队列 (Chapter 5: Priority Queues)
 
 ## 目录（Table of Contents）
 

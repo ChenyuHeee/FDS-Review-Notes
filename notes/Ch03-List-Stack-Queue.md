@@ -1,4 +1,4 @@
-# 第 3 章：线性表、栈与队列 (Chapter 3: Lists, Stacks, and Queues)
+# 第3章：线性表、栈与队列 (Chapter 3: Lists, Stacks, and Queues)
 
 ## §1 抽象数据类型 (ADT, Abstract Data Type)
 

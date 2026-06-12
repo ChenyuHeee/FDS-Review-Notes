@@ -1,4 +1,4 @@
-# 第4章：二叉树与搜索树 复习笔记 (Chapter 4: Binary Trees & Search Trees)
+# 第4章：二叉树与搜索树 (Chapter 4: Binary Trees & Search Trees)
 
 ---
 

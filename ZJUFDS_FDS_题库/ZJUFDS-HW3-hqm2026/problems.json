@@ -1,0 +1,303 @@
+[
+  {
+    "id": "2033553893231398912",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "In most restaurants, we follow one principle called \"First come,",
+    "content": "In most restaurants, we follow one principle called \"First come, first served\". This principle can be implemented by a stack.\n~@[](2)",
+    "type": "TRUE_OR_FALSE",
+    "author": "fengyan",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "1350008230308077568",
+    "description": "In most restaurants, we follow one principle called \"First come, first served\". This principle can be implemented by a stack.",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398913",
+    "label": "",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "When $$n$$ elements are pushed into a stack, they may be popped ",
+    "content": "When $$n$$ elements are pushed into a stack, they may be popped in a different order.  But if they are inserted into a queue, they will always be deleted in the same order as the insertions.",
+    "type": "TRUE_OR_FALSE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "1410249445595127808",
+    "description": "When $$n$$ elements are pushed into a stack, they may be popped in a different order.  But if they are inserted into a queue, they will always be deleted in the same order as the insertions.",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398914",
+    "label": "2-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "1",
+          "3",
+          "5",
+          "6"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Push 5 characters `ooops` onto a stack.  In how many different w",
+    "content": "Push 5 characters `ooops` onto a stack.  In how many different ways that we can pop these characters and still obtain `ooops`? @[](2)\n\nA. 1\nB. 3 \nC. 5\nD. 6",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "738",
+    "description": "Push 5 characters `ooops` onto a stack.  In how many different ways that we can pop these characters and still obtain `ooops`?",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398915",
+    "label": "2-2",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "`1->2->3`",
+          "`2->3->4`",
+          "`4->1->2`",
+          "the solution is not unique"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Represent a queue by a singly linked list.  Given the current st",
+    "content": "Represent a queue by a singly linked list.  Given the current status of the linked list as `1->2->3` where `x->y` means `y` is linked after `x`.  Now if `4` is enqueued and then a dequeue is done, the resulting status must be: @[](1)\n\nA. `1->2->3`\nB. `2->3->4`\nC. `4->1->2`\nD. the solution is not unique",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "751",
+    "description": "Represent a queue by a singly linked list.  Given the current status of the linked list as `1->2->3` where `x->y` means `y` is linked after `x`.  Now if `4` is enqueued and then a dequeue is done, the resulting status must be:",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398916",
+    "label": "2-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2 and 0",
+          "2 and 2",
+          "2 and 4",
+          "2 and 6"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Suppose that an array of size 6 is used to store a circular queu",
+    "content": "Suppose that an array of size 6 is used to store a circular queue, and the values of `front` and `rear` are 0 and 4, respectively.  Now after 2 dequeues and 2 enqueues, what will the values of `front` and `rear` be?\n @[](2)\n\nA. 2 and 0\nB. 2 and 2\nC. 2 and 4\nD. 2 and 6",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "753",
+    "description": "Suppose that an array of size 6 is used to store a circular queue, and the values of `front` and `rear` are 0 and 4, respectively.  Now after 2 dequeues and 2 enqueues, what will the values of `front` and `rear` be?",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398917",
+    "label": "2-4",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "-15",
+          "15",
+          "-20",
+          "20"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Suppose that all the integer operands are stored in the stack $$",
+    "content": "Suppose that all the integer operands are stored in the stack $$S_1$$, and all the operators in the other stack $$S_2$$.  The function `F()` does the following operations sequentially:\n\n- (1) Pop two operands `a` and `b` from $$S_1$$;\n- (2) Pop one operator `op` from $$S_2$$;\n- (3) Calculate `b op a`; and\n- (4) Push the result back to $$S_1$$.\n\nNow given { 5, 8, 3, 2 } in $$S_1$$ (where 2 is at the top), and { `*`, `-`, `+` } in $$S_2$$ (where `+` is at the top).  What is remained at the top of $$S_1$$ after `F()` is executed 3 times? @[](2)\n\nA. -15\nB. 15\nC. -20\nD. 20\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "954570235872014336",
+    "description": "Suppose that all the integer operands are stored in the stack $$S_1$$, and all the operators in the other stack $$S_2$$.  The function `F()` does the following operations sequentially:\n\n- (1) Pop two operands `a` and `b` from $$S_1$$;\n- (2) Pop one operator `op` from $$S_2$$;\n- (3) Calculate `b op a`; and\n- (4) Push the result back to $$S_1$$.\n\nNow given { 5, 8, 3, 2 } in $$S_1$$ (where 2 is at the top), and { `*`, `-`, `+` } in $$S_2$$ (where `+` is at the top).  What is remained at the top of $$S_1$$ after `F()` is executed 3 times?",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398918",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "2, 6, 5, 4, 7, 3, 1",
+          "1, 2, 3, 6, 7, 4, 5",
+          "3, 6, 5, 4, 7, 1, 2",
+          "1, 4, 7, 6, 5, 3, 2"
+        ],
+        "maxDisplayChoicesPerLine": 4
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out",
+    "content": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible?  **Note: making 4 consecutive pops are NOT allowed in this stack.**",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "1806234697832620032",
+    "description": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible?  **Note: making 4 consecutive pops are NOT allowed in this stack.**",
+    "problemPoolIndex": 5,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553893231398919",
+    "label": "",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO",
+            "output": "20 5\n32 1\n11 3\nERROR\n100 5"
+          },
+          {
+            "name": "",
+            "input": "10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO",
+            "output": "20 5\n32 1\n11 3\nERROR\n100 5"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [
+          {
+            "compiler": "JAVAC",
+            "timeLimit": 600,
+            "memoryLimit": 262144
+          }
+        ],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Queue Using Two Stacks",
+    "content": "A queue (FIFO structure) can be implemented by two stacks (LIFO structure) in the following way:\n\n1. Start from two empty stacks $s_1$ and $s_2$.\n2. When element $e$ is enqueued, it is actually pushed onto $s_1$.\n3. When we are supposed to dequeue, $s_2$ is checked first.  If $s_2$ is empty, everything in $s_1$ will be transferred to $s_2$ by popping from $s_1$ and immediately pushing onto $s_2$.  Then we just pop from $s_2$ -- the top element of $s_2$ must be the first one to enter $s_1$ thus is the first element that was enqueued.\n\nAssume that each operation of push or pop takes 1 unit of time.  You job is to tell the time taken for each dequeue.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line gives a positive integer $N$ ($\\le 10^3$), which are the number of operations. Then $N$ lines follow, each gives an operation in the format\n\n```\nOperation Element\n```\n\nwhere `Operation` being `I` represents enqueue and `O` represents dequeue.  For each `I`, `Element` is a positive integer that is no more than $10^6$.  No `Element` is given for `O` operations.\\\nIt is guaranteed that there is at least one `O` operation.\n\n### Output Specification:\n\nFor each dequeue operation, print in a line the dequeued element and the unites of time taken to do this dequeue.  The numbers in a line must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.\\\nIn case that the queue is empty when dequeue is called, output in a line `ERROR` instead.\n\n### Sample Input:\n\n```in\n10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO\n```\n\n### Sample Output:\n\n```out\n20 5\n32 1\n11 3\nERROR\n100 5\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553893218816000",
+    "problemId": "1662692810614894592",
+    "description": "A queue (FIFO structure) can be implemented by two stacks (LIFO structure) in the following way:\n\n1. Start from two empty stacks $s_1$ and $s_2$.\n2. When element $e$ is enqueued, it is actually pushed onto $s_1$.\n3. When we are supposed to dequeue, $s_2$ is checked first.  If $s_2$ is empty, everything in $s_1$ will be transferred to $s_2$ by popping from $s_1$ and immediately pushing onto $s_2$.  Then we just pop from $s_2$ -- the top element of $s_2$ must be the first one to enter $s_1$ thus is the first element that was enqueued.\n\nAssume that each operation of push or pop takes 1 unit of time.  You job is to tell the time taken for each dequeue.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line gives a positive integer $N$ ($\\le 10^3$), which are the number of operations. Then $N$ lines follow, each gives an operation in the format\n\n```\nOperation Element\n```\n\nwhere `Operation` being `I` represents enqueue and `O` represents dequeue.  For each `I`, `Element` is a positive integer that is no more than $10^6$.  No `Element` is given for `O` operations.\\\nIt is guaranteed that there is at least one `O` operation.\n\n### Output Specification:\n\nFor each dequeue operation, print in a line the dequeued element and the unites of time taken to do this dequeue.  The numbers in a line must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.\\\nIn case that the queue is empty when dequeue is called, output in a line `ERROR` instead.\n\n### Sample Input:\n\n```in\n10\nI 20\nI 32\nO\nI 11\nO\nO\nO\nI 100\nI 66\nO\n```\n\n### Sample Output:\n\n```out\n20 5\n32 1\n11 3\nERROR\n100 5\n```",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

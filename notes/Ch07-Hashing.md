@@ -1,4 +1,4 @@
-# Chapter 7: Hashing (哈希)
+# 第7章：哈希 (Chapter 7: Hashing)
 
 > **Search by Formula (公式查找)** — 不通过比较 (comparison)，而是通过一个函数直接计算出存储位置。
 

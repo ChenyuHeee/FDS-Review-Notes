@@ -1,0 +1,198 @@
+[
+  {
+    "id": "2033553481531101184",
+    "label": "",
+    "score": 20,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 200,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 8,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "6": {
+            "hint": "",
+            "showHint": false,
+            "score": 4,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "2 5 17\n9 5 6 7 8 3 8 9 5 9 8 3 4 7 5 6 9",
+            "output": "4 9\n8 3 7 5 6"
+          },
+          {
+            "name": "",
+            "input": "3 5 10\n9 5 6 7 8 3 8 9 5 9",
+            "output": "7 3 8 5 9\n-"
+          },
+          {
+            "name": "",
+            "input": "2 5 17\n9 5 6 7 8 3 8 9 5 9 8 3 4 7 5 6 9",
+            "output": "4 9\n8 3 7 5 6"
+          },
+          {
+            "name": "",
+            "input": "3 5 10\n9 5 6 7 8 3 8 9 5 9",
+            "output": "7 3 8 5 9\n-"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [
+          {
+            "compiler": "JAVAC",
+            "timeLimit": 900,
+            "memoryLimit": 262144
+          }
+        ],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "LRU-K",
+    "content": "**Least Recently Used (LRU)** cache scheme is to remove the least recently used frame (the one hasn't been used for the longest amount of time) when the cache is full and a new page is referenced which is not there in cache.\n\nLRU-K is a variant of the LRU algorithm, where K represents the number of recent uses.  LRU can be considered as LRU-1.  Unlike LRU, the LRU-K requires the maintenance of two different queues (for historical access and cache). The data in the historical access queue is not moved to the cache queue until the data is hit K times. \n\nFor example, assuming that the length of both queues is 5, and the memory is initialized to be empty.  LRU-2 is used to process the data sequence in order: 9，5，6，7，8，3，8，9，5，9，8，3，4，7，5，6.  The changes of the historical access queue and the cache queue are shown in the following table: \n\n|Data Access|Historical Aaccess Queue|Cache Queue|\n|- |- |- |\n|9,5,6,7,8| 9,5,6,7,8| Empty |\n|3| 5,6,7,8,3 | Empty |\n|8| 5,6,7,3 | 8|\n|9| 5,6,7,3,9| 8|\n|5| 6,7,3,9| 8,5|\n|9| 6,7,3|8,5,9|\n|8| 6,7,3|5,9,8|\n|3| 6,7| 5,9,8,3|\n|4| 6,7,4|5,9,8,3|\n|7| 6,4|5,9,8,3,7|\n|5| 6,4|9,8,3,7,5|\n|6| 4| 8,3,7,5,6|\n\nYour job is to implement this LRU-K cache scheme.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line gives 3 positive integers: $$K$$ ($$\\le 5$$), $$N$$ ($$\\le 10^4$$) and $$M$$ ($$\\le 10^5$$) which are the number of hits for cache, the size of the queues (assuming both queues have the same size) and the number of referenced page ID's. Then $$M$$ referenced page ID's are given in the next line.  A page ID is a number in the range $$[1, 2\\times 10^4]$$. All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, output in the first line the page ID's in the historical access queue, and in the second line, those in the cache queue.  The ID's are ordered from front to rear of each queue.  All the numbers in a line must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.  In case that a queue is empty, output `-` in a line instead.\n\n### Sample Input 1:\n```in\n2 5 17\n9 5 6 7 8 3 8 9 5 9 8 3 4 7 5 6 9\n```\n\n### Sample Output 1:\n```out\n4 9\n8 3 7 5 6\n```\n\n### Sample Input 2:\n```in\n3 5 10\n9 5 6 7 8 3 8 9 5 9\n```\n\n### Sample Output 2:\n```out\n7 3 8 5 9\n-\n```\n\n\n",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553481518518272",
+    "problemId": "1627580146238705664",
+    "description": "**Least Recently Used (LRU)** cache scheme is to remove the least recently used frame (the one hasn't been used for the longest amount of time) when the cache is full and a new page is referenced which is not there in cache.\n\nLRU-K is a variant of the LRU algorithm, where K represents the number of recent uses.  LRU can be considered as LRU-1.  Unlike LRU, the LRU-K requires the maintenance of two different queues (for historical access and cache). The data in the historical access queue is not moved to the cache queue until the data is hit K times. \n\nFor example, assuming that the length of both queues is 5, and the memory is initialized to be empty.  LRU-2 is used to process the data sequence in order: 9，5，6，7，8，3，8，9，5，9，8，3，4，7，5，6.  The changes of the historical access queue and the cache queue are shown in the following table: \n\n|Data Access|Historical Aaccess Queue|Cache Queue|\n|- |- |- |\n|9,5,6,7,8| 9,5,6,7,8| Empty |\n|3| 5,6,7,8,3 | Empty |\n|8| 5,6,7,3 | 8|\n|9| 5,6,7,3,9| 8|\n|5| 6,7,3,9| 8,5|\n|9| 6,7,3|8,5,9|\n|8| 6,7,3|5,9,8|\n|3| 6,7| 5,9,8,3|\n|4| 6,7,4|5,9,8,3|\n|7| 6,4|5,9,8,3,7|\n|5| 6,4|9,8,3,7,5|\n|6| 4| 8,3,7,5,6|\n\nYour job is to implement this LRU-K cache scheme.\n\n### Input Specification:\n\nEach input file contains one test case. For each case, the first line gives 3 positive integers: $$K$$ ($$\\le 5$$), $$N$$ ($$\\le 10^4$$) and $$M$$ ($$\\le 10^5$$) which are the number of hits for cache, the size of the queues (assuming both queues have the same size) and the number of referenced page ID's. Then $$M$$ referenced page ID's are given in the next line.  A page ID is a number in the range $$[1, 2\\times 10^4]$$. All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, output in the first line the page ID's in the historical access queue, and in the second line, those in the cache queue.  The ID's are ordered from front to rear of each queue.  All the numbers in a line must be separated by 1 space, and there must be no extra space at the beginning or the end of the line.  In case that a queue is empty, output `-` in a line instead.\n\n### Sample Input 1:\n```in\n2 5 17\n9 5 6 7 8 3 8 9 5 9 8 3 4 7 5 6 9\n```\n\n### Sample Output 1:\n```out\n4 9\n8 3 7 5 6\n```\n\n### Sample Input 2:\n```in\n3 5 10\n9 5 6 7 8 3 8 9 5 9\n```\n\n### Sample Output 2:\n```out\n7 3 8 5 9\n-\n```\n\n\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2033553481531101185",
+    "label": "",
+    "score": 20,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 300,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 10,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "5": {
+            "hint": "",
+            "showHint": false,
+            "score": 4,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "13 3\n81 94 11 96 12 99 17 35 28 58 41 75 15\n",
+            "output": "11 81 94 96 99\n12 17 28 35 41 58 75\n15\n"
+          },
+          {
+            "name": "",
+            "input": "13 3\n81 94 11 96 12 99 17 35 28 58 41 75 15\n",
+            "output": "11 81 94 96 99\n12 17 28 35 41 58 75\n15\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Replacement Selection",
+    "content": "When the input is much too large to fit into memory, we have to do **external sorting** instead of internal sorting.  One of the key steps in external sorting is to generate sets of sorted records (also called **runs**) with limited internal memory.  The simplest method is to read as many records as possible into the memory, and sort them internally, then write the resulting run back to some tape.  The size of each run is the same as the capacity of the internal memory.\n\n**Replacement Selection** sorting algorithm was described in 1965 by Donald Knuth.  Notice that as soon as the first record is written to an output tape, the memory it used becomes available for another record.  Assume that we are sorting in ascending order, if the next record is not smaller than the record we have just output, then it can be included in the run.\n\nFor example, suppose that we have a set of input { 81, 94, 11, 96, 12, 99, 35 }, and our memory can sort 3 records only.  By the simplest method we will obtain three runs: { 11, 81, 94 }, { 12, 96, 99 } and { 35 }.  According to the replacement selection algorithm, we would read and sort the first 3 records { 81, 94, 11 } and output 11 as the smallest one.  Then one space is available so 96 is read in and will join the first run since it is larger than 11. Now we have { 81, 94, 96 }.  After 81 is out, 12 comes in but it must belong to the next run since it is smaller than 81.  Hence we have { 94, 96, 12 } where 12 will stay since it belongs to the next run.  When 94 is out and 99 is in, since 99 is larger than 94, it must belong to the **first run**.  Eventually we will obtain two runs: the first one contains { 11, 81, 94, 96, 99 } and the second one contains { 12, 35 }.\n\nYour job is to implement this replacement selection algorithm.\n\n### Input Specification:\n\nEach input file contains several test cases. The first line gives two positive integers $$N$$ ($$\\le 10^5$$) and $$M$$ ($$< N/2$$), which are the total number of records to be sorted, and the capacity of the internal memory. Then $$N$$ numbers are given in the next line, all in the range of **int**. All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print in each line a run (in ascending order) generated by the replacement selection algorithm.  All the numbers in a line must be separated by exactly 1 space, and there must be no extra space at the beginning or the end of the line.\n\n### Sample Input:\n```in\n13 3\n81 94 11 96 12 99 17 35 28 58 41 75 15\n```\n\n### Sample Output:\n```out\n11 81 94 96 99\n12 17 28 35 41 58 75\n15\n```\n",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2033553481518518272",
+    "problemId": "1220335699731042304",
+    "description": "When the input is much too large to fit into memory, we have to do **external sorting** instead of internal sorting.  One of the key steps in external sorting is to generate sets of sorted records (also called **runs**) with limited internal memory.  The simplest method is to read as many records as possible into the memory, and sort them internally, then write the resulting run back to some tape.  The size of each run is the same as the capacity of the internal memory.\n\n**Replacement Selection** sorting algorithm was described in 1965 by Donald Knuth.  Notice that as soon as the first record is written to an output tape, the memory it used becomes available for another record.  Assume that we are sorting in ascending order, if the next record is not smaller than the record we have just output, then it can be included in the run.\n\nFor example, suppose that we have a set of input { 81, 94, 11, 96, 12, 99, 35 }, and our memory can sort 3 records only.  By the simplest method we will obtain three runs: { 11, 81, 94 }, { 12, 96, 99 } and { 35 }.  According to the replacement selection algorithm, we would read and sort the first 3 records { 81, 94, 11 } and output 11 as the smallest one.  Then one space is available so 96 is read in and will join the first run since it is larger than 11. Now we have { 81, 94, 96 }.  After 81 is out, 12 comes in but it must belong to the next run since it is smaller than 81.  Hence we have { 94, 96, 12 } where 12 will stay since it belongs to the next run.  When 94 is out and 99 is in, since 99 is larger than 94, it must belong to the **first run**.  Eventually we will obtain two runs: the first one contains { 11, 81, 94, 96, 99 } and the second one contains { 12, 35 }.\n\nYour job is to implement this replacement selection algorithm.\n\n### Input Specification:\n\nEach input file contains several test cases. The first line gives two positive integers $$N$$ ($$\\le 10^5$$) and $$M$$ ($$< N/2$$), which are the total number of records to be sorted, and the capacity of the internal memory. Then $$N$$ numbers are given in the next line, all in the range of **int**. All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print in each line a run (in ascending order) generated by the replacement selection algorithm.  All the numbers in a line must be separated by exactly 1 space, and there must be no extra space at the beginning or the end of the line.\n\n### Sample Input:\n```in\n13 3\n81 94 11 96 12 99 17 35 28 58 41 75 15\n```\n\n### Sample Output:\n```out\n11 81 94 96 99\n12 17 28 35 41 58 75\n15\n```\n",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

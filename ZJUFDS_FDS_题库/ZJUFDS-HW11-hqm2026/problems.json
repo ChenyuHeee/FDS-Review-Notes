@@ -1,0 +1,134 @@
+[
+  {
+    "id": "2056274859035930632",
+    "label": "",
+    "score": 2,
+    "problemConfig": {
+      "fillInTheBlankForProgrammingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "blankLength": 17,
+        "scores": [
+          1,
+          1
+        ],
+        "cases": {
+          "0a": {
+            "hint": "",
+            "showHint": false,
+            "score": 10,
+            "isPublic": false
+          }
+        },
+        "blanks": [
+          {
+            "index": 284,
+            "multipleLine": false,
+            "length": 17,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          },
+          {
+            "index": 326,
+            "multipleLine": false,
+            "length": 10,
+            "choices": {},
+            "maxDisplayChoicesPerLine": 0
+          }
+        ],
+        "tools": []
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Insertion Sort",
+    "content": "The function is to sort `N` elements in non-decreasing order by Insertion Sort.\n以下函数的功能是将 `N` 个元素用插入排序算法按**非递减**顺序排序。\n\n\n```c++\nvoid InsertionSort( ElementType A[ ], int N ) \n{\n    int P, i;\n    ElementType Tmp;\n     \n    for ( P=1; P<N; P++ ) {\n        Tmp = A[P];\n        for ( i=P;  ; i-- )\n            A[i] = A[i-1];\n       ;\n    }\n}\n```\n",
+    "type": "FILL_IN_THE_BLANK_FOR_PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2056274859014959104",
+    "problemId": "1410940514192658432",
+    "description": "The function is to sort `N` elements in non-decreasing order by Insertion Sort.\n以下函数的功能是将 `N` 个元素用插入排序算法按**非递减**顺序排序。\n\n\n```c++\nvoid InsertionSort( ElementType A[ ], int N ) \n{\n    int P, i;\n    ElementType Tmp;\n     \n    for ( P=1; P<N; P++ ) {\n        Tmp = A[P];\n        for ( i=P;  ; i-- )\n            A[i] = A[i-1];\n       ;\n    }\n}\n```\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2056274859035930633",
+    "label": "6-1",
+    "score": 10,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 3,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "4 5\n0 1\n1 2\n2 0\n3 1\n3 2\n",
+            "output": "3 \n1 2 0 \n"
+          },
+          {
+            "name": "",
+            "input": "4 5\n0 1\n1 2\n2 0\n3 1\n3 2\n",
+            "output": "3 \n1 2 0 \n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Strongly Connected Components",
+    "content": "Write a program to find the strongly connected components in a digraph.\n\n### Format of functions:\n```c++\nvoid StronglyConnectedComponents( Graph G, void (*visit)(Vertex V) );\n```\nwhere `Graph` is defined as the following:\n\n```c++\ntypedef struct VNode *PtrToVNode;\nstruct VNode {\n    Vertex Vert;\n    PtrToVNode Next;\n};\ntypedef struct GNode *Graph;\nstruct GNode {\n    int NumOfVertices;\n    int NumOfEdges;\n    PtrToVNode *Array;\n};\n```\nHere `void (*visit)(Vertex V)` is a function parameter that is passed into `StronglyConnectedComponents` to handle (print with a certain format) each vertex that is visited.  The function `StronglyConnectedComponents` is supposed to print a return after each component is found.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\n#define MaxVertices 10  /* maximum number of vertices */\ntypedef int Vertex;     /* vertices are numbered from 0 to MaxVertices-1 */\ntypedef struct VNode *PtrToVNode;\nstruct VNode {\n    Vertex Vert;\n    PtrToVNode Next;\n};\ntypedef struct GNode *Graph;\nstruct GNode {\n    int NumOfVertices;\n    int NumOfEdges;\n    PtrToVNode *Array;\n};\n\nGraph ReadG(); /* details omitted */\n\nvoid PrintV( Vertex V )\n{\n   printf(\"%d \", V);\n}\n\nvoid StronglyConnectedComponents( Graph G, void (*visit)(Vertex V) );\n\nint main()\n{\n    Graph G = ReadG();\n    StronglyConnectedComponents( G, PrintV );\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input (for the graph shown in the figure): \n![](~/39)\n```in\n4 5\n0 1\n1 2\n2 0\n3 1\n3 2\n\n```\n\n### Sample Output:\n```out\n3 \n1 2 0 \n\n```\n\nNote: The output order does not matter.  That is, a solution like\n```\n0 1 2 \n3 \n```\nis also considered correct.",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2056274859014959104",
+    "problemId": "342",
+    "description": "Write a program to find the strongly connected components in a digraph.\n\n### Format of functions:\n```c++\nvoid StronglyConnectedComponents( Graph G, void (*visit)(Vertex V) );\n```\nwhere `Graph` is defined as the following:\n\n```c++\ntypedef struct VNode *PtrToVNode;\nstruct VNode {\n    Vertex Vert;\n    PtrToVNode Next;\n};\ntypedef struct GNode *Graph;\nstruct GNode {\n    int NumOfVertices;\n    int NumOfEdges;\n    PtrToVNode *Array;\n};\n```\nHere `void (*visit)(Vertex V)` is a function parameter that is passed into `StronglyConnectedComponents` to handle (print with a certain format) each vertex that is visited.  The function `StronglyConnectedComponents` is supposed to print a return after each component is found.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\n#define MaxVertices 10  /* maximum number of vertices */\ntypedef int Vertex;     /* vertices are numbered from 0 to MaxVertices-1 */\ntypedef struct VNode *PtrToVNode;\nstruct VNode {\n    Vertex Vert;\n    PtrToVNode Next;\n};\ntypedef struct GNode *Graph;\nstruct GNode {\n    int NumOfVertices;\n    int NumOfEdges;\n    PtrToVNode *Array;\n};\n\nGraph ReadG(); /* details omitted */\n\nvoid PrintV( Vertex V )\n{\n   printf(\"%d \", V);\n}\n\nvoid StronglyConnectedComponents( Graph G, void (*visit)(Vertex V) );\n\nint main()\n{\n    Graph G = ReadG();\n    StronglyConnectedComponents( G, PrintV );\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Input (for the graph shown in the figure): \n![](~/39)\n```in\n4 5\n0 1\n1 2\n2 0\n3 1\n3 2\n\n```\n\n### Sample Output:\n```out\n3 \n1 2 0 \n\n```\n\nNote: The output order does not matter.  That is, a solution like\n```\n0 1 2 \n3 \n```\nis also considered correct.",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]

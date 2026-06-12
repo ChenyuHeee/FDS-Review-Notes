@@ -1,4 +1,4 @@
-# Chapter 9: Graph Algorithms (图算法)
+# 第9章：图算法 (Chapter 9: Graph Algorithms)
 
 ---
 

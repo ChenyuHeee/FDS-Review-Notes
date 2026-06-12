@@ -1,0 +1,401 @@
+[
+  {
+    "id": "2036096858203971584",
+    "label": "1-1",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "It is always possible to represent a tree by a one-dimensional i",
+    "content": "It is always possible to represent a tree by a one-dimensional integer array.  ~@[](1)",
+    "type": "TRUE_OR_FALSE",
+    "author": "徐镜春",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "1214200391167066112",
+    "description": "It is always possible to represent a tree by a one-dimensional integer array.  ",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971585",
+    "label": "1-2",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "There exists a binary tree with 2016 nodes in total, and with 16",
+    "content": "There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.\n~@[](3)",
+    "type": "TRUE_OR_FALSE",
+    "author": "何钦铭",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "2123",
+    "description": "There exists a binary tree with 2016 nodes in total, and with 16 nodes having only one child.\n",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971586",
+    "label": "2-1",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given a tree of degree 3. Suppose that there are 3 nodes of degr",
+    "content": "Given a tree of degree 3. Suppose that there are 3 nodes of degree 2 and 2 nodes of degree 3. Then the number of leaf nodes must be \\_\\_\\_\\_.\n\n\n@[](3)\n\nA. 5\nB. 6\nC. 7\nD. 8",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "1276070620947795968",
+    "description": "Given a tree of degree 3. Suppose that there are 3 nodes of degree 2 and 2 nodes of degree 3. Then the number of leaf nodes must be \\_\\_\\_\\_.\n\n\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971587",
+    "label": "2-2",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "Pre-order traversal",
+          "In-order traversal",
+          "Post-order traversal",
+          "Level-order traversal"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "If a general tree $$T$$ is converted into a binary tree $$BT$$, ",
+    "content": "If a general tree $$T$$ is converted into a binary tree $$BT$$, then which of the following $$BT$$ traversals gives the same sequence as that of the post-order traversal of $$T$$?  @[](2)\n\nA. Pre-order traversal\nB. In-order traversal\nC. Post-order traversal\nD. Level-order traversal\n",
+    "type": "MULTIPLE_CHOICE",
+    "author": "考研真题",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "1085194100983660544",
+    "description": "If a general tree $$T$$ is converted into a binary tree $$BT$$, then which of the following $$BT$$ traversals gives the same sequence as that of the post-order traversal of $$T$$?",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971588",
+    "label": "2-3",
+    "score": 2,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "D and G",
+          "E",
+          "B",
+          "A and H"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Given the shape of a binary tree shown by the figure below. If i",
+    "content": "Given the shape of a binary tree shown by the figure below. If its inorder traversal sequence is { E, A, D, B, F, H, C, G }, then the node on the same level of C must be:\n\n\n![未标题-2.jpg](~/19185355-2b08-4b74-9bb7-8262720437bd.jpg)\n\n\n@[](3)\n\nA. D and G\nB. E\nC. B\nD. A and H",
+    "type": "MULTIPLE_CHOICE",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "1276118603043172352",
+    "description": "Given the shape of a binary tree shown by the figure below. If its inorder traversal sequence is { E, A, D, B, F, H, C, G }, then the node on the same level of C must be:\n\n\n![未标题-2.jpg](~/19185355-2b08-4b74-9bb7-8262720437bd.jpg)\n\n\n",
+    "problemPoolIndex": 3,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971589",
+    "label": "2-4",
+    "score": 1,
+    "problemConfig": {
+      "solutionVisible": false,
+      "answerVisible": false,
+      "multipleChoiceProblemConfig": {
+        "choices": [
+          "\n![](~/64)",
+          "\n![](~/65)",
+          "\n![](~/66)",
+          "\n![](~/67)"
+        ],
+        "maxDisplayChoicesPerLine": 1
+      }
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Among the following threaded binary trees (the threads are repre",
+    "content": "Among the following threaded binary trees (the threads are represented by dotted curves), which one is the postorder threaded tree? @[](2)\n\nA. \n![](~/64)\nB. \n![](~/65)\nC. \n![](~/66)\nD. \n![](~/67)",
+    "type": "MULTIPLE_CHOICE",
+    "author": "DS课程组",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "799",
+    "description": "Among the following threaded binary trees (the threads are represented by dotted curves), which one is the postorder threaded tree?",
+    "problemPoolIndex": 4,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971590",
+    "label": "6-1",
+    "score": 6,
+    "problemConfig": {
+      "codeCompletionProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 2,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Isomorphic",
+    "content": "Two trees, `T1` and `T2`, are <b>isomorphic</b> if `T1` can be transformed into `T2` by swapping left and right children of (some of the) nodes in `T1`.  For instance, the two trees in Figure 1 are isomorphic because they are the same if the children of A, B, and G, but not the other nodes, are swapped.\nGive a polynomial time algorithm to decide if two trees are isomorphic.\n<center>\n![](~/37)<br>\nFigure 1</center>\n\n### Format of functions:\n```c++\nint Isomorphic( Tree T1, Tree T2 );\n```\nwhere `Tree` is defined as the following:\n\n```c++\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n```\nThe function is supposed to return 1 if `T1` and `T2` are indeed isomorphic, or 0 if not.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef char ElementType;\n\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n\nTree BuildTree(); /* details omitted */\n\nint Isomorphic( Tree T1, Tree T2 );\n\nint main()\n{\n    Tree T1, T2;\n    T1 = BuildTree();\n    T2 = BuildTree();\n    printf(“%d\\n”, Isomorphic(T1, T2));\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Output 1 (for the trees shown in Figure 1):\n```out\n1\n```\n\n### Sample Output 2 (for the trees shown in Figure 2):\n```\n0\n```\n<center>\n![](~/38)<br>\nFigure2</center>",
+    "type": "CODE_COMPLETION",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "GCC",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "339",
+    "description": "Two trees, `T1` and `T2`, are <b>isomorphic</b> if `T1` can be transformed into `T2` by swapping left and right children of (some of the) nodes in `T1`.  For instance, the two trees in Figure 1 are isomorphic because they are the same if the children of A, B, and G, but not the other nodes, are swapped.\nGive a polynomial time algorithm to decide if two trees are isomorphic.\n<center>\n![](~/37)<br>\nFigure 1</center>\n\n### Format of functions:\n```c++\nint Isomorphic( Tree T1, Tree T2 );\n```\nwhere `Tree` is defined as the following:\n\n```c++\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n```\nThe function is supposed to return 1 if `T1` and `T2` are indeed isomorphic, or 0 if not.\n\n### Sample program of judge:\n```c++\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef char ElementType;\n\ntypedef struct TreeNode *Tree;\nstruct TreeNode {\n    ElementType Element;\n    Tree  Left;\n    Tree  Right;\n};\n\nTree BuildTree(); /* details omitted */\n\nint Isomorphic( Tree T1, Tree T2 );\n\nint main()\n{\n    Tree T1, T2;\n    T1 = BuildTree();\n    T2 = BuildTree();\n    printf(“%d\\n”, Isomorphic(T1, T2));\n    return 0;\n}\n\n/* Your function will be put here */\n\n```\n\n### Sample Output 1 (for the trees shown in Figure 1):\n```out\n1\n```\n\n### Sample Output 2 (for the trees shown in Figure 2):\n```\n0\n```\n<center>\n![](~/38)<br>\nFigure2</center>",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971591",
+    "label": "7-1",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 5,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [
+          {
+            "name": "",
+            "input": "8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n",
+            "output": "1 11 5 8 17 12 20 15\n"
+          },
+          {
+            "name": "",
+            "input": "8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n",
+            "output": "1 11 5 8 17 12 20 15\n"
+          }
+        ],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "ZigZagging on a Tree",
+    "content": "Suppose that all the keys in a binary tree are distinct positive integers.  A unique binary tree can be determined by a given pair of postorder and inorder traversal sequences.  And it is a simple standard routine to print the numbers in level-order.  However, if you think the problem is too simple, then you are too naive.  This time you are supposed to print the numbers in \"zigzagging order\" -- that is, starting from the root, print the numbers level-by-level, alternating between left to right and right to left.  For example, for the following tree you must output: 1 11 5 8 17 12 20 15.\n\n![zigzag.jpg](~/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg)\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line gives a positive integer N ($$\\le$$30), the total number of nodes in the binary tree.  The second line gives the inorder sequence and the third line gives the postorder sequence.  All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print the zigzagging sequence of the tree in a line.  All the numbers in a line must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n```\n\n### Sample Output:\n```out\n1 11 5 8 17 12 20 15\n```\n",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "909743432282505216",
+    "description": "Suppose that all the keys in a binary tree are distinct positive integers.  A unique binary tree can be determined by a given pair of postorder and inorder traversal sequences.  And it is a simple standard routine to print the numbers in level-order.  However, if you think the problem is too simple, then you are too naive.  This time you are supposed to print the numbers in \"zigzagging order\" -- that is, starting from the root, print the numbers level-by-level, alternating between left to right and right to left.  For example, for the following tree you must output: 1 11 5 8 17 12 20 15.\n\n![zigzag.jpg](~/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg)\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line gives a positive integer N ($$\\le$$30), the total number of nodes in the binary tree.  The second line gives the inorder sequence and the third line gives the postorder sequence.  All the numbers in a line are separated by a space.\n\n### Output Specification:\n\nFor each test case, print the zigzagging sequence of the tree in a line.  All the numbers in a line must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n8\n12 11 20 17 1 15 8 5\n12 20 17 11 15 8 5 1\n```\n\n### Sample Output:\n```out\n1 11 5 8 17 12 20 15\n```\n",
+    "problemPoolIndex": 1,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  },
+  {
+    "id": "2036096858203971592",
+    "label": "",
+    "score": 8,
+    "problemConfig": {
+      "programmingProblemConfig": {
+        "timeLimit": 400,
+        "memoryLimit": 65536,
+        "codeSizeLimit": 16,
+        "cases": {
+          "0": {
+            "hint": "",
+            "showHint": false,
+            "score": 4,
+            "isPublic": false
+          },
+          "1": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "2": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "3": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          },
+          "4": {
+            "hint": "",
+            "showHint": false,
+            "score": 1,
+            "isPublic": false
+          }
+        },
+        "exampleTestDatas": [],
+        "testdataDescriptionCode": "",
+        "customizeLimits": [],
+        "stackSizeLimit": 8192,
+        "tools": [],
+        "ignorePresentationError": false,
+        "pathAsStdin": "",
+        "pathAsStdout": ""
+      },
+      "solutionVisible": false,
+      "answerVisible": false
+    },
+    "deadline": "1970-01-01T00:00:00Z",
+    "title": "Tree Traversals Again",
+    "content": "An inorder binary tree traversal can be implemented in a non-recursive way with a stack.  For example, suppose that when a 6-node binary tree (with the keys numbered from 1 to 6) is traversed, the stack operations are: push(1); push(2); push(3); pop(); pop(); push(4); pop(); pop(); push(5); push(6); pop(); pop().  Then a unique binary tree (shown in Figure 1) can be generated from this sequence of operations.  Your task is to give the postorder traversal sequence of this tree.\n\n<center>\n![](~/30)<br>\nFigure 1 </center>\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line contains a positive integer $$N$$ ($$\\le 30$$) which is the total number of nodes in a tree (and hence the nodes are numbered from 1 to $$N$$).  Then $$2N$$ lines follow, each describes a stack operation in the format: \"Push X\" where X is the index of the node being pushed onto the stack; or \"Pop\" meaning to pop one node from the stack.\n\n### Output Specification:\n\nFor each test case, print the postorder traversal sequence of the corresponding tree in one line.  A solution is guaranteed to exist.  All the numbers must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n6\nPush 1\nPush 2\nPush 3\nPop\nPop\nPush 4\nPop\nPop\nPush 5\nPush 6\nPop\nPop\n```\n\n### Sample Output:\n```out\n3 4 2 6 5 1\n```",
+    "type": "PROGRAMMING",
+    "author": "陈越",
+    "difficulty": 0,
+    "compiler": "NO_COMPILER",
+    "problemStatus": "REVIEWED",
+    "lastSubmissionId": "0",
+    "solution": "",
+    "problemSetId": "2036096858187194368",
+    "problemId": "307",
+    "description": "An inorder binary tree traversal can be implemented in a non-recursive way with a stack.  For example, suppose that when a 6-node binary tree (with the keys numbered from 1 to 6) is traversed, the stack operations are: push(1); push(2); push(3); pop(); pop(); push(4); pop(); pop(); push(5); push(6); pop(); pop().  Then a unique binary tree (shown in Figure 1) can be generated from this sequence of operations.  Your task is to give the postorder traversal sequence of this tree.\n\n<center>\n![](~/30)<br>\nFigure 1 </center>\n\n### Input Specification:\n\nEach input file contains one test case.  For each case, the first line contains a positive integer $$N$$ ($$\\le 30$$) which is the total number of nodes in a tree (and hence the nodes are numbered from 1 to $$N$$).  Then $$2N$$ lines follow, each describes a stack operation in the format: \"Push X\" where X is the index of the node being pushed onto the stack; or \"Pop\" meaning to pop one node from the stack.\n\n### Output Specification:\n\nFor each test case, print the postorder traversal sequence of the corresponding tree in one line.  A solution is guaranteed to exist.  All the numbers must be separated by exactly one space, and there must be no extra space at the end of the line.\n\n### Sample Input:\n```in\n6\nPush 1\nPush 2\nPush 3\nPop\nPop\nPush 4\nPop\nPop\nPush 5\nPush 6\nPop\nPop\n```\n\n### Sample Output:\n```out\n3 4 2 6 5 1\n```",
+    "problemPoolIndex": 2,
+    "indexInProblemPool": 1,
+    "authorOrganizationId": "1"
+  }
+]
