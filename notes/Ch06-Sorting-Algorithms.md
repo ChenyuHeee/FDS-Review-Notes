@@ -129,6 +129,8 @@ $(34,8), (34,32), (34,21), (64,51), (64,32), (64,21), (51,32), (51,21), (32,21)$
 11, 12, 15, 17, 28, 35, 41, 58, 75, 81, 94, 95, 96
 ```
 
+![Shellsort 追踪过程 (5-sort → 3-sort → 1-sort)](images/ch06-shellsort-trace.png)
+
 ### Shell's Increment Sequence (希尔原始增量序列)
 
 $$h_t = \lfloor N / 2 \rfloor, \quad h_k = \lfloor h_{k+1} / 2 \rfloor$$
@@ -231,6 +233,8 @@ void Heapsort(ElementType A[], int N)
 
 - **关键点**: Heapsort data start from position 0.
 - 建堆 (BuildHeap) 后，反复执行 DeleteMax，将最大值交换到数组末尾。
+
+![Heapsort 原地排序过程 (堆与数组对应关系)](images/ch06-heapsort-diagram.png)
 
 ### 定理
 
@@ -340,13 +344,7 @@ $$= O(N + N \log N) = O(N \log N)$$
 
 ### 迭代版本图示
 
-```
-[0] [1] [2] [3] ... [n-4] [n-3] [n-2] [n-1]
-   ...merge pairs of size 1...
-   ......merge pairs of size 2......
-   .........merge pairs of size 4.........
-   ............merge pairs of size 8............
-```
+![Mergesort 迭代版本示意图（逐步合并更大的有序块）](images/ch06-mergesort-iterative.png)
 
 ---
 
@@ -371,6 +369,8 @@ void Quicksort(ElementType A[], int N)
 - 最好情况: $T(N) = O(N \log N)$
 
 **分区图解**:
+
+![Quicksort 分区过程（将数组分为小于/大于 pivot 的两部分）](images/ch06-quicksort-partition.png)
 ```
 13, 43, 31, 57, 26, 0, 81, 92, 75, 65
 
@@ -543,6 +543,8 @@ table: [0, 1, 2, 3, 4, 5]  (初始状态)
 
 **重排过程**: 使用临时变量 `temp`，按照环的路径进行移动。
 
+![Table Sort 间接排序与物理重排过程](images/ch06-table-sort.png)
+
 最坏情况下有 $\lfloor N/2 \rfloor$ 个环，需要 $\lfloor 3N/2 \rfloor$ 次记录移动 (record moves)。
 
 $$T = O(mN)$$
@@ -560,21 +562,7 @@ $$T = O(mN)$$
 
 **决策树 (Decision Tree) 示例** — 对 R0, R1, R2 进行插入排序的决策树:
 
-```
-                    K0 <= K1?
-                   /        \
-                 T            F
-                /              \
-          K1 <= K2?          K0 <= K2?
-         /        \          /        \
-       T           F        T          F
-      /             \      /            \
-  [0,1,2]       K0 <= K2?  [1,0,2]    K1 <= K2?
-               /        \             /        \
-              T          F           T          F
-             /            \         /            \
-         [0,2,1]      [2,0,1]   [1,2,0]      [2,1,0]
-```
+![排序的决策树（比较排序下界证明）](images/ch06-decision-tree.png)
 
 **推理过程**:
 1. 排序 $N$ 个不同元素时，有 $N!$ 种不同的可能结果 (When sorting N distinct elements, there are N! different possible results.)

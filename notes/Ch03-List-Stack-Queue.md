@@ -43,6 +43,8 @@ $$
 - 地址 `array + i + 1` 存放 `item_{i+1}`
 - ...
 
+![顺序映射示意图](images/ch03-array.png)
+
 **性质：**
 - $\triangle$ **需要事先估计 MaxSize**（如果线性表增长超过数组大小，则需要扩容）。
 - $\checkmark$ **查找第 K 个元素时间为 $O(1)$**（直接索引访问）。
@@ -67,6 +69,8 @@ $$
 1011    LI      NULL
 ```
 **头指针 (Head Pointer)** `ptr = 0110`（指向 ZHAO）。
+
+![链表结构示意图](images/ch03-linkedlist.png)
 
 **C 语言中的初始化：**
 ```c
@@ -96,6 +100,8 @@ ptr = N1;
 
 **图示说明：** 在节点 `node`（指向 $a_i$）之后插入一个包含元素 `b` 的新节点 `temp`。
 
+![链表插入操作示意图](images/ch03-insert.png)
+
 **步骤：**
 ```c
 temp->next = node->next;  // 第1步：将 temp 指向 a_{i+1}
@@ -109,6 +115,8 @@ node->next = temp;        // 第2步：将 node 指向 temp
 #### 删除 — $O(1)$ 时间
 
 **图示说明：** 删除节点 `node`（包含 `b`）。我们需要 `pre` 指向 $a_i$（`node` 的前一个节点）。
+
+![链表删除操作示意图](images/ch03-delete.png)
 
 **步骤：**
 ```c
@@ -147,6 +155,9 @@ $$
 （这是正确连接的双向链表的不变性条件。）
 
 **图示说明 — 带头节点的双向循环链表：**
+
+![双向循环链表结构示意图](images/ch03-doublylist.png)
+
 ```
 H <-> item1 <-> item2 <-> item3 <-> ... (循环，回到 H)
 ```
@@ -210,6 +221,9 @@ $$
 ##### 表示法 2：链表 (Representation 2: Linked List)
 
 **图示说明：** 每一项表示为一个节点，包含：
+
+![多项式链表表示示意图](images/ch03-polynomial.png)
+
 ```
 [系数 | 指数 | Next ->]
 ```
@@ -248,6 +262,9 @@ int Array[40000][2500];
 ##### 表示法 2：多重表（十字链表）(Multilist / Orthogonal List)
 
 **图示说明：** 一种同时具有纵向和横向链接的链表结构：
+
+![多重表示例图](images/ch03-multilist.png)
+
 - 学生节点（S1, S2, S3, S4, S5）横向连接。
 - 课程节点（C1, C2, C3, C4）纵向连接。
 - 选课记录在两个方向上交叉链接。
@@ -296,6 +313,9 @@ CursorSpace[0].Next = p;
 ```
 
 **图示说明：**
+
+![游标实现示意图](images/ch03-cursor1.png)
+
 - `malloc` 前：索引 0 的 Next 指向第一个空闲节点（例如 2）。`malloc` 后：`p` 获得值 2，`CursorSpace[0].Next` 更新为 `CursorSpace[2].Next`（例如 5）。
 - `free(p)` 前：将索引 `p` 处的节点归还给空闲链表，具体做法是将其 Next 指向 `CursorSpace[0].Next` 所指向的内容，然后将 `CursorSpace[0].Next` 更新为 `p`。
 
@@ -326,6 +346,8 @@ ElementType Top(Stack S);
 void Pop(Stack S);
 ```
 
+![栈 ADT 示意图](images/ch03-stack-adt.png)
+
 **栈操作的图示说明：**
 - 元素被**压入 (Push)** 栈顶（例如，依次压入 1, 2, 3, 4, 5, 6）。
 - **弹出 (Pop)** 时，最近压入的元素最先被移除（LIFO）。
@@ -347,6 +369,8 @@ TmpCell->Next = S->Next;
 // 第2步：将头节点指向新节点
 S->Next = TmpCell;
 ```
+
+![栈 Push/Pop 操作示意图](images/ch03-stack-ops.png)
 
 **图示说明：**
 - `S` 是头节点（哑头）。
@@ -466,6 +490,8 @@ $$
 
 **结果：** $8$
 
+![后缀表达式求值过程图](images/ch03-postfix.png)
+
 **后缀表达式求值算法：**
 ```
 Stack s;
@@ -505,6 +531,8 @@ FinalResult = Pop(s);
 | d | a b c * + d | - | 操作数：直接输出 |
 | 结束 | a b c * + d - | | 弹出剩余运算符 |
 
+![中缀转后缀示例图 1](images/ch03-infix2postfix1.png)
+
 **关键观察：**
 - **操作数的顺序**在中缀和后缀中相同。
 - 在后缀表达式中，**优先级高的运算符出现在优先级低的运算符之前**。
@@ -527,6 +555,8 @@ FinalResult = Pop(s);
 | / | a b c + * | / | 运算符：* >= /？是，弹出 *；然后压入 / |
 | d | a b c + * d | / | 操作数：输出 |
 | 结束 | a b c + * d / | | 弹出剩余运算符 |
+
+![中缀转后缀示例图 2](images/ch03-infix2postfix2.png)
 
 **复杂度：** $T(N) = O(N)$
 
@@ -560,6 +590,8 @@ FinalResult = Pop(s);
   - **返回地址 (Return Address)**（函数返回后继续执行的位置）
   - **局部变量 (Local Variables)**（函数局部数据的存储空间）
 - 当函数返回时，该帧被弹出，控制权回到保存的返回地址。
+
+![函数调用栈帧示意图](images/ch03-function-calls.png)
 
 **递归 (Recursion)：**
 - 递归**总是**可以被完全消除（转化为**迭代 (Iteration)**）。
@@ -622,6 +654,8 @@ void Dequeue(Queue Q);                 // 出队 (Dequeue)：移除队首 (Front
 - 元素从队尾进入，从队首离开。
 - 就像现实生活中的队列（排队）：排在前面的人先被服务。
 
+![队列 ADT 示意图](images/ch03-queue-adt.png)
+
 ---
 
 ### 2. 队列的数组实现 (Array Implementation of Queue)
@@ -653,6 +687,8 @@ struct QueueRecord {
 9. **入队作业 7：** Front=2, Rear=6, `Array[6] = Job7`
 10. **入队作业 8：** Front=2, Rear=7 — 但如果 Capacity=8，Rear 现在等于 Capacity，需要**回绕 (Wrap-around)**！
 
+![队列数组实现示意图](images/ch03-queue-array.png)
+
 ---
 
 ### 循环队列 (Circular Queue)
@@ -660,6 +696,9 @@ struct QueueRecord {
 为了避免 Front 前移后 Front 之前的空间被浪费，队列被实现为**循环数组 (Circular Array)**。
 
 **图示说明：**
+
+![循环队列示意图](images/ch03-circular-queue.png)
+
 ```
 循环数组，索引 [0], [1], [2], [3], [4], [5]
 - 初始状态：Rear 和 Front 都在 [0]（空队列）

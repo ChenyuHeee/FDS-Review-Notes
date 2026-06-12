@@ -235,13 +235,7 @@ void Topsort( Graph G )
 |--------|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | Indegree | 0 | 1 | 2 | 3 | 1 | 3 | 2 |
 
-**执行过程**（使用队列）:
-
-| 步骤 (Step) | 出队 (Dequeue) | Counter | 更新邻接点入度 | 入队 (Enqueue) |
-|:----:|:-------:|:-------:|:--------------:|:----:|
-| 1 | v1 | 1 | v2: 1→0, v4: 3→2 | v2 |
-| 2 | v2 | 2 | v4: 2→1, v5: 1→0 | v5 |
-| 3 | v5 | 3 | v7: 2→1 | (none) |
+![拓扑排序示例图（含初始入度与队列执行过程）](images/ch09-topological-sort.png)
 
 **结果**: 队列为空，但 Counter=3 < NumVertex=7。剩余顶点 v3, v4, v6, v7 入度均大于 0，说明图中存在环（cycle），不是一个可行的 AOV 网络。
 
@@ -374,6 +368,8 @@ void Unweighted( Table T )
 | v7 | v5 | (已设置) | - |
 | v5 | - | - | - |
 
+![无权最短路径 BFS 追踪（队列实现 + 表结构）](images/ch09-bfs-trace.png)
+
 **最终表 (Final Table)**:
 
 | 顶点 (Vertex) | Dist | Path |
@@ -477,6 +473,8 @@ void Dijkstra( Table T )
 | v5 | T | 3 | v4 |
 | v6 | T | 8 | v3 |
 | v7 | T | 5 | v4 |
+
+![Dijkstra 算法追踪（含图结构、初始表与逐步更新）](images/ch09-dijkstra-trace.png)
 
 **最短路径 (Shortest Paths)**:
 - $v_1 \to v_1$: 0
@@ -657,6 +655,8 @@ $$Slack(v, w) = LC[w] - EC[v] - cost(v, w)$$
 | a10 | v7→v8 | 20-16-4 = **0** |
 | a11 | v6→v7(虚) | 16-16-0 = **0** |
 
+![AOE 网络示例（EC/LC 计算与关键路径）](images/ch09-aoe-network.png)
+
 **关键路径 (Critical Path)**: 路径中所有边的 Slack = 0 的路径。本例中关键路径为：
 $$v_0 \xrightarrow{a_0} v_1 \xrightarrow{a_3} v_4 \xrightarrow{a_6} v_6 \xrightarrow{a_{11}} v_7 \xrightarrow{a_{10}} v_8$$
 项目总工期 = EC[8] = LC[8] = **20**。
@@ -733,6 +733,8 @@ d --> b (2), d --> t (3)
 
 **关键思想 (Key Idea)**:
 For each edge $(v, w)$ with flow $f_{v,w}$ in $G_f$, add an **edge $(w, v)$ with flow $f_{v,w}$** in $G_r$.
+
+![网络流的残余图（含反向边允许撤销之前的流量分配）](images/ch09-network-flow-residual.png)
 
 在残余图中，对于流量图 $G_f$ 中每条有流量 $f_{v,w}$ 的边 $(v, w)$，添加一条**反向边** (reverse edge) $(w, v)$，容量为 $f_{v,w}$。
 
@@ -835,6 +837,8 @@ The **min-cost flow problem** is to find, among all maximum flows, the **one flo
 - $v_4 \to v_3 (2), v_5 (7), v_6 (8), v_7 (4)$
 - $v_5 \to v_7 (6)$
 - $v_6 \to v_7 (1)$
+
+![Prim 算法示例图（从 $v_1$ 开始生长 MST）](images/ch09-prim-graph.png)
 
 Prim 算法从 $v_1$ 开始，逐步选择最小权重的边连接新顶点到树中。
 
@@ -942,16 +946,7 @@ void ListComponents( Graph G )
 
 #### 实例 (Example)
 
-**连通图**:
-```
-0 - 1 - 7 - 8 - 9
-    |   |
-    2   6
-    |   |
-    3 - 5
-    |
-    4
-```
+![连通图及其双连通分量与关节点](images/ch09-biconnectivity.png)
 
 **双连通分量 (Biconnected Components)**:
 - 分量 1: 0-1-2-3-4-5-6 (通过 1-7 和 7-6 连接)
@@ -1009,6 +1004,8 @@ DFS 顺序（Num）:
 | 7 | 7 | 5 |
 | 8 | 9 | 8 |
 | 9 | 8 | 8 |
+
+![DFS 生成树、Num/Low 值与关节点判定](images/ch09-dfs-num-low.png)
 
 **DFS 生成树结构**（从顶点 3 开始 DFS）：
 
@@ -1074,11 +1071,7 @@ DFS 遍历图，同时跟踪：
 2. 对每个邻接表，维护一个指针指向最后扫描的边
 ```
 
-**执行示例**:
-```
-DFS 访问顺序: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12
-```
-（每个数字代表一个访问的顶点或边）
+![欧拉回路 DFS 执行追踪](images/ch09-euler-circuit.png)
 
 **时间复杂度**: $T = O(|E| + |V|)$
 

@@ -181,6 +181,8 @@ $$T(N) \ge c \cdot g(N)$$
 
 ### 增长率图示 (Growth Rate Diagram)（来自幻灯片）
 
+![常见函数增长率图示](images/ch02-growth-rate.png)
+
 图示（幻灯片 11）展示了常见函数的相对增长率：
 
 - **Log n** 增长最慢
@@ -238,7 +240,9 @@ $$\log^k N = O(N) \quad \text{对于任意常数 } k$$
 | 中 | 瞬间 | 中等 | 中等 | 慢 | 不可行 |
 | 大 | 瞬间 | 慢 | 慢 | 非常慢 | 不可能 |
 
-*（具体数值见幻灯片表格。关键结论是指数级算法会很快变得不可用，而对数级算法即使面对极大输入也依然快速。）*
+![四种算法运行时间实测对比表](images/ch02-running-time-table.png)
+
+*（关键结论：指数级算法会很快变得不可用，而对数级算法即使面对极大输入也依然快速。）*
 
 ---
 
@@ -501,7 +505,7 @@ int MaxSubsequenceSum( const int A[], int N )
 
 #### 算法 (Illustration)（图示说明）
 
-图示（幻灯片 6）使用三个指针 `low`、`mid`、`high` 说明二分查找。
+![二分查找图示](images/ch02-binary-search.png)
 
 1. 设置 `low = 0`，`high = N-1`。
 2. 计算 `mid = (low + high) / 2`。

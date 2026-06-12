@@ -114,6 +114,8 @@ $$h = \lfloor \log N \rfloor$$
   8  9 10 11 12 13 14 15
 ```
 
+![完全二叉树编号与数组表示](images/ch05-complete-tree-array.png)
+
 #### 数组表示（Array Representation）
 
 完全二叉树可以使用数组高效存储。使用 `BT[n+1]`（`BT[0]` 不使用）。
@@ -207,10 +209,14 @@ PriorityQueue Initialize(int MaxElements)
      / \
     20  50
    / \
-  10  5
+    10  5
 ```
 
+![最小堆与最大堆结构图示](images/ch05-min-max-heap.png)
+
 ---
+
+### 3.3 堆的基本操作（Basic Heap Operations）
 
 ### 3.3 堆的基本操作（Basic Heap Operations）
 
@@ -235,6 +241,8 @@ PriorityQueue Initialize(int MaxElements)
      /  \
     15  18
 ```
+
+![Insert 上滤三种情况](images/ch05-insert-cases.png)
 
 - **Case 1**：插入 `21` — 21 与父节点 20 比较，20 < 21，直接放在末尾（无需上滤）
 - **Case 2**：插入 `17` — 17 < 20（上滤一层），然后 17 与父节点 10 比较，10 < 17，停止
@@ -276,6 +284,8 @@ void Insert(ElementType X, PriorityQueue H)
 3. 从根开始创建一个空穴，将 `LastElement` 重新插入
 
 **图示步骤**：
+
+![DeleteMin 下滤过程图示](images/ch05-deletemin.png)
 
 初始堆：
 ```
@@ -359,6 +369,8 @@ ElementType DeleteMin(PriorityQueue H)
   - 减少键值后，该节点的值变得更小，可能小于其父节点
   - 通过上滤将该节点移动到正确位置，以维持堆序
 
+![DecreaseKey 与 IncreaseKey 操作示意](images/ch05-decrease-increase-key.png)
+
 **图示说明**：
 ```
      [父节点]
@@ -418,6 +430,8 @@ Delete(P, H):
 **输入示例**：150, 80, 40, 30, 10, 70, 110, 100, 20, 90, 60, 50, 120, 140, 130
 
 **步骤**：从最后一个非叶节点开始执行下滤（PercolateDown），逐步向前推进。
+
+![BuildHeap 逐步下滤过程](images/ch05-buildheap.png)
 
 **详细演示**：
 
@@ -565,6 +579,8 @@ Delete(P, H):
 **d-堆（d-Heap）** 是所有节点都有 **d 个子节点** 的堆，是二叉堆的一种推广。
 
 ### 示例：3-heap
+
+![d-堆（3-heap）示例](images/ch05-dheap.png)
 
 ```
           1

@@ -21,6 +21,8 @@
 > - **族谱树 (Pedigree Tree)**：表示家族谱系的二叉树。
 > - **谱系树 (Lineal Tree)**：显示祖先世系。
 
+![树的术语图示](images/ch04-terminology.png)
+
 ---
 
 #### 基本术语 (Basic Terminology)
@@ -60,6 +62,8 @@
 - **树的高度/深度 (height/depth of a tree)**：height(root) = depth(最深的叶子节点)。
 - **节点的祖先 (ancestors)**：从该节点向上到根节点的路径上的所有节点。
 - **节点的后代 (descendants)**：其子树中的所有节点。
+
+![路径、深度与高度示意](images/ch04-path-depth-height.png)
 
 ---
 
@@ -103,6 +107,8 @@ E->F NULL G  H->I->J NULL
 K->L NULL   NULL  M NULL
 ```
 
+![FirstChild-NextSibling 表示法](images/ch04-firstchild-nextsibling.png)
+
 > **注意：** 由于树中孩子的顺序可以是任意的，因此这种表示方式**不唯一**。
 
 ---
@@ -140,6 +146,8 @@ B            B
       J                              J
 ```
 
+![45度旋转转换为二叉树](images/ch04-45degree-rotation.png)
+
 经过 45 度旋转后，树的结构被重新解释：第一个孩子变为**左孩子**，下一个兄弟变为**右孩子**，从而形成严格的二叉树表示。
 
 ---
@@ -157,6 +165,8 @@ B            B
   /                               \
   D                                 D
   ```
+
+![斜二叉树与完全二叉树图示](images/ch04-bst-types.png)
 
 - **完全二叉树 (Complete Binary Tree)**：所有叶子节点位于两个相邻的层上，且底层所有节点都尽可能靠左排列。
   ```
@@ -232,6 +242,8 @@ B            B
 8. 读取 `*` —— 弹出 (d+e)，弹出 c，创建 `*` 节点（左=c，右=(d+e)），压入
 9. 读取 `*` —— 弹出 c*(d+e)，弹出 (a+b)，创建 `*` 节点（左=(a+b)，右=c*(d+e)）
 
+![表达式树构建过程](images/ch04-expression-tree.png)
+
 最终树：
 ```
         *
@@ -272,6 +284,8 @@ void preorder(tree_ptr tree) {
           7
 ```
 先序遍历结果：1, 2, 3, 4, 5, 6, 7
+
+![三种遍历图示（先序、后序、层序）](images/ch04-traversals.png)
 
 ---
 
@@ -391,6 +405,8 @@ void iter_inorder(tree_ptr tree) {
 - **中序遍历** $\Rightarrow$ $A + B * C / D$（中缀表达式, infix expression）
 - **后序遍历** $\Rightarrow$ $A \; B \; C * D / +$（后缀表达式, postfix expression）
 - **先序遍历** $\Rightarrow$ $+ \; A / * \; B \; C \; D$（前缀表达式, prefix expression）
+
+![中序遍历及表达式树遍历](images/ch04-inorder-traversal.png)
 
 ---
 
@@ -532,6 +548,8 @@ typedef struct ThreadedTreeNode {
 - `D.Left`（线索）-> `/`（D 的中序前驱）
 - `D.Right`（线索）-> Head（D 的中序后继即遍历的终点）
 
+![线索二叉树结构](images/ch04-threaded-btree.png)
+
 这些线索使得无需使用栈即可进行中序遍历。
 
 ---
@@ -560,6 +578,8 @@ typedef struct ThreadedTreeNode {
          /
         65
 ```
+
+![BST 定义示例](images/ch04-bst-definition.png)
 
 ---
 
@@ -656,6 +676,8 @@ $T(N) = O(d)$
 
 **思路概要：**
 
+![BST 插入操作图示](images/ch04-bst-insert.png)
+
 初始 BST：
 ```
       30
@@ -736,6 +758,9 @@ $T(N) = O(d)$
 2. **从子树中删除替换节点**（这将属于情况 1 或情况 2）。
 
 **示例：从 BST 中删除 60**
+
+![BST 删除操作图示](images/ch04-bst-delete.png)
+
 ```
         40
        /  \
@@ -836,6 +861,8 @@ $T(N) = O(h)$，其中 $h$ 是树的高度。
    1   3 5   7
 ```
 高度 $h = 2$（最佳情况——平衡树, balanced tree）
+
+![BST 平均情况分析：平衡树与斜树对比](images/ch04-bst-average-case.png)
 
 **顺序 2：** `1, 2, 3, 4, 5, 6, 7`
 ```

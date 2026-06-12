@@ -59,6 +59,8 @@
 
 **哈希表结构图示 (Hash Table Structure)**：
 
+![哈希表结构（b 个桶，每个桶 s 个槽位）](images/ch07-hash-table-structure.png)
+
 ```
 ht[0]  → [ slot 0 | slot 1 | ... | slot s-1 ]
 ht[1]  → [ ... ]
@@ -212,6 +214,8 @@ HashTable H
                  ...
 ```
 
+![分离链接法结构示意图（链表数组）](images/ch07-separate-chaining.png)
+
 ### 操作实现 (Operation Implementations)
 
 #### 1. 创建空表 — InitializeTable
@@ -357,10 +361,9 @@ $$f(i) = i$$
 任何哈希到集群中的键，都需要多次探测才能解决冲突，从而**使集群变得更大**。
 
 **图示说明 (Illustration)**：
-```
-bucket:  0  1  2  3  4  5  6  7  8  9  ...
-键:     acos atoi    char define exp  ceil cos   float atol floor ctime
-```
+
+![线性探测示例表（Primary Clustering 现象）](images/ch07-linear-probing.png)
+
 随着插入变多，连续被占用的桶形成"集群 (cluster)"，即使 $\lambda$ 很小，最坏情况也可能变得**非常大**。
 
 ---
@@ -521,20 +524,7 @@ $$\text{hash}_2(x) = R - (x \;\%\; R)$$
 
 Rehashing 的流程：
 
-```
-原表 (已半满):
-[ a ][ b ][ c ][   ][ e ][   ][ g ]...
-
-    ↓ (构建新表，约 2 倍大)
-
-新表:
-[   ][   ][   ][   ][   ][   ][   ][   ][   ][   ][   ][   ]...
-
-    ↓ (逐一重新哈希)
-
-新表 (重新插入后):
-[ a ][   ][ b ][   ][ c ][   ][   ][ e ][   ][   ][ g ][   ]...
-```
+![Rehashing 流程（建新表 → 重新哈希）](images/ch07-rehashing-flow.png)
 
 ---
 
