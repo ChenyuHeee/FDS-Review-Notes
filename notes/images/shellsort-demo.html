@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Shellsort 可视化</title>
+<style>
+body{font-family:monospace;padding:20px;background:#1a1a2e;color:#eee;}
+h2{color:#e94560;}
+.row{display:flex;gap:4px;margin:8px 0;flex-wrap:wrap;}
+.cell{width:44px;height:44px;display:flex;align-items:center;
+justify-content:center;border-radius:4px;font-weight:bold;
+background:#16213e;border:2px solid #0f3460;transition:all 0.2s;}
+.cell.hl{background:#e94560;color:#fff;border-color:#ff6b81;transform:scale(1.15);}
+.cell.cmp{background:#f0a500;color:#000;border-color:#ffd700;}
+.cell.same{background:#533483;border-color:#7b68ee;}
+.cell.done{background:#0f3460;}
+.info{color:#aaa;margin:12px 0;}
+.btn{padding:10px 20px;margin:4px;border:none;border-radius:4px;
+cursor:pointer;font-size:14px;font-weight:bold;background:#e94560;color:#fff;}
+.btn:disabled{background:#555;cursor:default;}
+#desc{color:#ffd700;margin:10px 0;font-size:15px;min-height:20px;}
+</style>
+</head>
+<body>
+<h2>Shellsort 可视化</h2>
+<div class="row" id="arr"></div>
+<div id="desc"></div>
+<div class="info" id="info"></div>
+<button class="btn" onclick="reset()">重置</button>
+<button class="btn" id="b5" onclick="handle5()">开始 5-sort</button>
+<button class="btn" id="b3" onclick="handle3()" disabled>开始 3-sort</button>
+<button class="btn" id="b1" onclick="handle1()" disabled>开始 1-sort</button>
+
+<script>
+const orig=[81,94,11,96,12,35,17,95,28,58,41,75,15];
+let A=[...orig];
+let st={phase:'idle',gap:0,g:[],gIdx:0,sub:1,step:'shift',j:0,tmp:0};
+
+function R(hl,txt,info){
+  document.getElementById('arr').innerHTML=A.map((v,i)=>{
+    const c=hl&&hl[i]||'';
+    return `<div class="cell${c?` ${c}`:''}">${v}</div>`;
+  }).join('');
+  document.getElementById('desc').textContent=txt||'';
+  document.getElementById('info').textContent=info||'';
+}
+
+function reset(){
+  A=[...orig];st={phase:'idle',gap:0,g:[],gIdx:0,sub:1,step:'shift',j:0,tmp:0};
+  document.getElementById('b5').disabled=false;
+  document.getElementById('b5').textContent='开始 5-sort';
+  document.getElementById('b3').disabled=true;
+  document.getElementById('b3').textContent='开始 3-sort';
+  document.getElementById('b1').disabled=true;
+  document.getElementById('b1').textContent='开始 1-sort';
+  R({},'点击按钮开始');
+}
+
+// ===== 5-sort =====
+function handle5(){
+  if(st.phase==='5sort') do5Sort();
+  else start5();
+}
+function start5(){
+  A=[...orig];st={phase:'5sort',gap:5,g:[[],[],[],[],[]],gIdx:0,sub:1,step:'shift',j:0,tmp:0};
+  for(let i=0;i<13;i++)st.g[i%5].push(i);
+  document.getElementById('b5').textContent='下一步 (5-sort)';
+  document.getElementById('b3').disabled=true;
+  let g=st.g[0]; let hl=g.reduce((o,i)=>(o[i]='hl',o),{});
+  R(hl,`5-sort: h=5, 共5组。组0(黄色): 即将对 [${g.map(i=>A[i])}] 做插入排序`, 'h=5 | 组0');
+}
+function do5Sort(){
+  if(st.phase!=='5sort')return;
+  let g=st.g;
+
+  // All groups done?
+  if(st.gIdx>=5){
+    document.getElementById('b5').disabled=true;
+    document.getElementById('b3').disabled=false;
+    document.getElementById('b3').textContent='开始 3-sort';
+    st.phase='5done';
+    R({},'✅ 5-sort 完成！点击 "开始 3-sort"');
+    return;
+  }
+
+  let grp=g[st.gIdx];
+
+  // Current group done?
+  if(st.sub>=grp.length){
+    st.gIdx++; st.sub=1; st.step='shift';
+    if(st.gIdx>=5){
+      document.getElementById('b5').disabled=true;
+      document.getElementById('b3').disabled=false;
+      document.getElementById('b3').textContent='开始 3-sort';
+      st.phase='5done';
+      R({},'✅ 5-sort 完成！点击 "开始 3-sort"');
+      return;
+    }
+    let ng=g[st.gIdx]; let hl=ng.reduce((o,i)=>(o[i]='hl',o),{});
+    R(hl,`组${st.gIdx}(黄色): 即将对 [${ng.map(i=>A[i])}] 做插入排序`, `h=5 | 组${st.gIdx}`);
+    return;
+  }
+
+  // Init tmp for this sub in the group
+  if(st.step==='shift'){
+    st.tmp=A[grp[st.sub]];
+    st.j=st.sub;
+    st.step='show_cmp';
+    // fall through to show comparison
+  }
+
+  if(st.step==='show_cmp'){
+    // Highlight the two cells being compared
+    if(st.j>0 && A[grp[st.j-1]]>st.tmp){
+      let hl=grp.reduce((o,i)=>(o[i]='hl',o),{});
+      hl[grp[st.j-1]]='cmp';
+      hl[grp[st.j]]='cmp';
+      R(hl,`比较(橙色): A[${grp[st.j-1]}]=${A[grp[st.j-1]]} > ${st.tmp} → 右移`, `h=5 | 组${st.gIdx}`);
+      st.step='do_shift';
+      return;
+    } else {
+      // Done shifting, place tmp
+      A[grp[st.j]]=st.tmp;
+      let hl=grp.reduce((o,i)=>(o[i]='hl',o),{});
+      hl[grp[st.j]]='same';
+      R(hl,`放置: ${st.tmp} → 位置${grp[st.j]}(紫色)`, `h=5 | 组${st.gIdx}`);
+      st.sub++; st.step='shift';
+      return;
+    }
+  }
+
+  if(st.step==='do_shift'){
+    A[grp[st.j]]=A[grp[st.j-1]];
+    st.j--;
+    st.step='show_cmp';
+    let hl=grp.reduce((o,i)=>(o[i]='hl',o),{});
+    R(hl,`右移完成。继续比较...`, `h=5 | 组${st.gIdx}`);
+    return;
+  }
+}
+
+// ===== 3-sort =====
+function handle3(){
+  if(st.phase==='3sort') do3Sort();
+  else start3();
+}
+function start3(){
+  st={phase:'3sort',gap:3,g:[[],[],[]],gIdx:0,sub:1,step:'shift',j:0,tmp:0};
+  for(let i=0;i<13;i++)st.g[i%3].push(i);
+  document.getElementById('b3').textContent='下一步 (3-sort)';
+  document.getElementById('b1').disabled=true;
+  let g=st.g[0]; let hl=g.reduce((o,i)=>(o[i]='hl',o),{});
+  R(hl,`3-sort: h=3, 共3组。组0(黄色)`, `h=3 | 组0`);
+}
+function do3Sort(){
+  if(st.phase!=='3sort')return;
+  let g=st.g;
+  if(st.gIdx>=3){
+    document.getElementById('b3').disabled=true;
+    document.getElementById('b1').disabled=false;
+    document.getElementById('b1').textContent='开始 1-sort';
+    st.phase='3done';
+    R({},'✅ 3-sort 完成！点击 "开始 1-sort"');
+    return;
+  }
+  let grp=g[st.gIdx];
+  if(st.sub>=grp.length){
+    st.gIdx++; st.sub=1; st.step='shift';
+    if(st.gIdx>=3){
+      document.getElementById('b3').disabled=true;
+      document.getElementById('b1').disabled=false;
+      document.getElementById('b1').textContent='开始 1-sort';
+      st.phase='3done';
+      R({},'✅ 3-sort 完成！点击 "开始 1-sort"');
+      return;
+    }
+    let ng=g[st.gIdx]; let hl=ng.reduce((o,i)=>(o[i]='hl',o),{});
+    R(hl,`组${st.gIdx}(黄色)`, `h=3 | 组${st.gIdx}`);
+    return;
+  }
+  if(st.step==='shift'){st.tmp=A[grp[st.sub]];st.j=st.sub;st.step='show_cmp';}
+  if(st.step==='show_cmp'){
+    if(st.j>0&&A[grp[st.j-1]]>st.tmp){
+      let hl=grp.reduce((o,i)=>(o[i]='hl',o),{});
+      hl[grp[st.j-1]]='cmp';hl[grp[st.j]]='cmp';
+      R(hl,`比较(橙色): A[${grp[st.j-1]}]=${A[grp[st.j-1]]} > ${st.tmp} → 右移`, `h=3 | 组${st.gIdx}`);
+      st.step='do_shift';
+      return;
+    }
+    A[grp[st.j]]=st.tmp;
+    let hl=grp.reduce((o,i)=>(o[i]='hl',o),{});
+    hl[grp[st.j]]='same';
+    R(hl,`放置: ${st.tmp} → 位置${grp[st.j]}(紫色)`, `h=3 | 组${st.gIdx}`);
+    st.sub++;st.step='shift';
+    return;
+  }
+  if(st.step==='do_shift'){A[grp[st.j]]=A[grp[st.j-1]];st.j--;st.step='show_cmp';
+    let hl=grp.reduce((o,i)=>(o[i]='hl',o),{});R(hl,'右移完成。继续比较...',`h=3 | 组${st.gIdx}`);}
+}
+
+// ===== 1-sort =====
+function handle1(){
+  if(st.phase==='1sort') do1Sort();
+  else start1();
+}
+function start1(){
+  st={phase:'1sort',gap:1,i:1,j:0,tmp:0,step:'shift'};
+  document.getElementById('b1').textContent='下一步 (1-sort)';
+  R({},'1-sort: h=1 = 普通插入排序', 'h=1');
+}
+function do1Sort(){
+  if(st.phase!=='1sort')return;
+  if(st.i>=13){document.getElementById('b1').disabled=true;R({},'✅ 排序完成！');return;}
+
+  if(st.step==='shift'){st.tmp=A[st.i];st.j=st.i;st.step='show_cmp';}
+
+  if(st.step==='show_cmp'){
+    if(st.j>0&&A[st.j-1]>st.tmp){
+      let hl={};hl[st.j-1]='cmp';hl[st.j]='cmp';
+      R(hl,`比较(橙色): A[${st.j-1}]=${A[st.j-1]} > ${st.tmp} → 右移`, 'h=1');
+      st.step='do_shift';
+      return;
+    }
+    A[st.j]=st.tmp;
+    let hl={};hl[st.j]='same';
+    R(hl,`放置: ${st.tmp} → 位置${st.j}(紫色)`, `h=1 | i=${st.i}`);
+    st.i++;st.step='shift';
+    return;
+  }
+  if(st.step==='do_shift'){A[st.j]=A[st.j-1];st.j--;st.step='show_cmp';
+    let hl={};R(hl,'右移完成。继续比较...','h=1');}
+}
+
+R({},'');
+</script>
+</body>
+</html>
