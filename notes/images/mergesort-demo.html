@@ -38,7 +38,8 @@ let st={phase:'idle',chunks:null,mergeIdx:0,mergeL:null,mergeR:null,
 
 function showAll(){
   if(!st.chunks){document.getElementById('tree').innerHTML='';return;}
-  let html=`<div class="round">第 ${st.round} 轮合并</div>`;
+  let html='';
+  if(st.phase==='merge')html+=`<div class="round">第 ${st.round} 轮合并</div>`;
   st.chunks.forEach((ch,i)=>{
     let cls='';
     if(st.mergeL&&i===st.mergeIdx)cls='hl';
