@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>归并排序 可视化</title>
+<style>
+body{font-family:monospace;padding:20px;background:#1a1a2e;color:#eee;}
+h2{color:#00d2ff;}
+.row{display:flex;gap:3px;margin:6px 0;flex-wrap:wrap;align-items:end;}
+.cell{width:38px;height:38px;display:flex;align-items:center;
+justify-content:center;border-radius:3px;font-weight:bold;font-size:13px;
+background:#16213e;border:2px solid #0f3460;transition:all 0.25s;}
+.cell.hl{background:#00d2ff;color:#000;border-color:#00ffff;transform:scale(1.12);}
+.cell.sel{background:#ff6b6b;color:#fff;border-color:#ff9999;}
+.cell.done{background:#1dd1a1;color:#000;border-color:#10ac84;}
+.label{color:#aaa;font-size:12px;margin-top:8px;}
+.btn{padding:10px 20px;margin:4px 8px 4px 0;border:none;border-radius:4px;
+cursor:pointer;font-size:14px;font-weight:bold;background:#00d2ff;color:#000;}
+.btn:disabled{background:#555;color:#999;cursor:default;}
+#desc{color:#ffd700;margin:10px 0;min-height:40px;}
+.info{color:#aaa;font-size:13px;}
+.merge-box{border:2px dashed #555;padding:8px;margin:6px 0;border-radius:6px;min-height:50px;display:inline-block;}
+.stage{color:#00d2ff;font-size:13px;}
+</style>
+</head>
+<body>
+<h2>归并排序 (Merge Sort) 可视化</h2>
+<div id="tree"></div>
+<div id="desc"></div>
+<div class="info" id="info"></div>
+<button class="btn" id="bSplit" onclick="handleSplit()">开始 拆分 (Divide)</button>
+<button class="btn" id="bMerge" onclick="handleMerge()" disabled>开始 合并 (Merge)</button>
+<button class="btn" id="bStep" onclick="handleStep()" disabled>下一步</button>
+<button class="btn" onclick="reset()">重置</button>
+
+<script>
+const orig=[38,27,43,3,9,82,10];
+let A=[...orig];
+let st={phase:'idle',chunks:null,mergeIdx:0,mergeL:null,mergeR:null,
+        mi:0,mj:0,mk:0,tmp:null,tmpIdx:0};
+
+// Build full split tree
+function buildChunks(arr,idx){
+  if(arr.length<=1)return {val:arr,idx:idx,children:[]};
+  const m=Math.floor(arr.length/2);
+  return{
+    val:arr,idx:idx,
+    left:buildChunks(arr.slice(0,m),idx),
+    right:buildChunks(arr.slice(m),idx+m)
+  };
+}
+
+function renderTree(root,x,y,level){
+  if(!root)return;
+  const vals=root.val.map(v=>`<span class="cell">${v}</span>`).join('');
+  const left=Math.floor(root.val.length/2);
+  const s=`<div style="position:absolute;left:${x}px;top:${y}px;text-align:center;">${vals}</div>`;
+  if(root.left){
+    renderTree(root.left,x-80+left*10,y+55,level+1);
+  }
+  if(root.right){
+    renderTree(root.right,x+80+(root.val.length-left)*5,y+55,level+1);
+  }
+  return s;
+}
+
+function R(chunks){
+  let c=chunks||st.chunks;
+  if(!c){document.getElementById('tree').innerHTML='';return;}
+  // Display chunks as rows
+  let html='<div class="stage">当前分解状态：</div>';
+  c.forEach((ch,i)=>{
+    let cls='';
+    if(st.mergeL&&i===st.mergeIdx)cls='hl';
+    if(st.mergeR&&i===st.mergeIdx+1)cls='sel';
+    const vals=ch.map(v=>`<span class="cell${cls?` ${cls}`:''}">${v}</span>`).join('');
+    html+=`<div class="row"><span style="color:#888;width:30px;">#${i}</span>${vals}</div>`;
+  });
+  document.getElementById('tree').innerHTML=html;
+}
+
+function handleSplit(){
+  if(st.phase==='idle'){
+    st.phase='split';st.chunks=[A];st.splitSize=1;
+    R();
+    document.getElementById('desc').textContent='拆分: 点击"下一步"逐步拆分子数组';
+    document.getElementById('bSplit').textContent='下一步 (拆分)';
+    document.getElementById('bMerge').disabled=true;
+    document.getElementById('bStep').disabled=false;
+    return;
+  }
+  if(st.phase==='split'){
+    // Find first chunk with size > 1 and split it
+    let found=false;
+    let newChunks=[];
+    for(let i=0;i<st.chunks.length;i++){
+      let ch=st.chunks[i];
+      if(!found&&ch.length>1){
+        let m=Math.floor(ch.length/2);
+        newChunks.push(ch.slice(0,m));
+        newChunks.push(ch.slice(m));
+        found=true;
+      } else {
+        newChunks.push(ch);
+      }
+    }
+    st.chunks=newChunks;
+    R();
+    if(!found){
+      document.getElementById('desc').textContent='✅ 拆分完成！都到单元素了。点击"开始 合并"';
+      document.getElementById('bSplit').disabled=true;
+      document.getElementById('bMerge').disabled=false;
+      document.getElementById('bMerge').textContent='开始 合并';
+      document.getElementById('bStep').disabled=true;
+      st.phase='splitDone';
+    } else {
+      document.getElementById('desc').textContent='拆分: 继续拆...';
+    }
+    return;
+  }
+}
+
+function handleMerge(){
+  if(st.phase==='splitDone'||st.phase==='mergeSelected'){
+    // Start merging from left to right
+    st.phase='merge';st.mergeIdx=0;
+    st.tmp=[];st.mi=0;st.mj=0;st.mk=0;
+    st.mergeL=st.chunks[0];st.mergeR=st.chunks[1];
+    st.tmp=new Array(st.mergeL.length+st.mergeR.length);
+    st.tmpIdx=0;st.mi=0;st.mj=0;
+    document.getElementById('bMerge').textContent='下一步 (合并)';
+    document.getElementById('bStep').disabled=true;
+    document.getElementById('bSplit').disabled=true;
+    showMergeStart();
+    return;
+  }
+  if(st.phase==='merge'){
+    doMergeStep();
+    return;
+  }
+}
+
+function showMergeStart(){
+  let L=st.mergeL,R=st.mergeR;
+  R(null);
+  document.getElementById('desc').innerHTML=
+    `<span style="color:#00d2ff">合并</span> [${L}] (蓝色) 和 <span style="color:#ff6b6b">[${R}]</span> (红色)`+
+    `<br>结果: [${st.tmp.slice(0,st.tmpIdx)}]`;
+  let html='<div class="stage">当前分解状态：</div>';
+  st.chunks.forEach((ch,i)=>{
+    let cls='';
+    if(i===st.mergeIdx)cls='hl';
+    if(i===st.mergeIdx+1)cls='sel';
+    const vals=ch.map(v=>`<span class="cell${cls?` ${cls}`:''}">${v}</span>`).join('');
+    html+=`<div class="row"><span style="color:#888;width:30px;">#${i}</span>${vals}</div>`;
+  });
+  document.getElementById('tree').innerHTML=html;
+}
+
+function doMergeStep(){
+  let L=st.mergeL,R=st.mergeR;
+  let tmp=st.tmp,i=st.mi,j=st.mj,k=st.tmpIdx;
+
+  // Both exhausted?
+  if(i>=L.length&&j>=R.length){
+    // Merge done, replace two chunks with merged result
+    st.chunks.splice(st.mergeIdx,2,tmp);
+    R();
+    st.mergeIdx++;
+    if(st.mergeIdx>=st.chunks.length-1){
+      document.getElementById('desc').textContent='✅ 归并排序完成！';
+      document.getElementById('bMerge').disabled=true;
+      st.phase='done';
+      return;
+    }
+    // Start next pair
+    st.mergeL=st.chunks[st.mergeIdx];st.mergeR=st.chunks[st.mergeIdx+1];
+    st.tmp=new Array(st.mergeL.length+st.mergeR.length);
+    st.mi=0;st.mj=0;st.tmpIdx=0;
+    showMergeStart();
+    return;
+  }
+
+  if(i>=L.length){
+    // L exhausted, take from R
+    tmp[k]=R[j];st.tmpIdx=k+1;st.mj=j+1;
+    R(null);
+    document.getElementById('desc').innerHTML=
+      `左边已空，取右边 <span style="color:#ff6b6b">${R[j]}</span> → 结果: [${tmp.slice(0,k+1)}]`;
+  } else if(j>=R.length){
+    // R exhausted, take from L
+    tmp[k]=L[i];st.tmpIdx=k+1;st.mi=i+1;
+    R(null);
+    document.getElementById('desc').innerHTML=
+      `右边已空，取左边 <span style="color:#00d2ff">${L[i]}</span> → 结果: [${tmp.slice(0,k+1)}]`;
+  } else if(L[i]<=R[j]){
+    // L is smaller
+    tmp[k]=L[i];st.tmpIdx=k+1;st.mi=i+1;
+    R(null);
+    document.getElementById('desc').innerHTML=
+      `<span style="color:#00d2ff">${L[i]}</span> ≤ <span style="color:#ff6b6b">${R[j]}</span>，取左边 → 结果: [${tmp.slice(0,k+1)}]`;
+  } else {
+    // R is smaller
+    tmp[k]=R[j];st.tmpIdx=k+1;st.mj=j+1;
+    R(null);
+    document.getElementById('desc').innerHTML=
+      `<span style="color:#ff6b6b">${R[j]}</span> < <span style="color:#00d2ff">${L[i]}</span>，取右边 → 结果: [${tmp.slice(0,k+1)}]`;
+  }
+  showMergeStart();
+}
+
+function handleStep(){
+  if(st.phase==='split')handleSplit();
+  else if(st.phase==='merge')handleMerge();
+}
+
+function reset(){
+  A=[...orig];
+  st={phase:'idle',chunks:null,mergeIdx:0,mergeL:null,mergeR:null,
+      mi:0,mj:0,mk:0,tmp:null,tmpIdx:0};
+  document.getElementById('tree').innerHTML='';
+  document.getElementById('desc').textContent='';
+  document.getElementById('bSplit').disabled=false;
+  document.getElementById('bSplit').textContent='开始 拆分 (Divide)';
+  document.getElementById('bMerge').disabled=true;
+  document.getElementById('bMerge').textContent='开始 合并 (Merge)';
+  document.getElementById('bStep').disabled=true;
+}
+
+R(null);
+</script>
+</body>
+</html>

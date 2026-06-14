@@ -251,6 +251,8 @@ void Heapsort(ElementType A[], int N)
 
 ## §6 Mergesort 归并排序
 
+> [点击打开归并排序交互式演示](images/mergesort-demo.html) — 逐步感受拆分 (Divide) 和合并 (Merge) 的过程
+
 ### 1. 合并两个有序列表 (Merge Two Sorted Lists)
 
 ```
