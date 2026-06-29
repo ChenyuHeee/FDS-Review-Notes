@@ -1,0 +1,234 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,geometry,xcolor,listings,tcolorbox,multicol,enumitem}
+\geometry{margin=1.2cm,top=1cm,bottom=0.8cm}
+\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}\setlength{\itemsep}{0pt}
+\setlist{nosep,leftmargin=*}
+
+\lstset{language=C,basicstyle=\ttfamily\scriptsize,keywordstyle=\color{blue}\bfseries,
+  numbers=none,frame=single,breaklines=true,showspaces=false,tabsize=2,
+  aboveskip=2pt,belowskip=2pt}
+
+\newtcolorbox{keybox}[1][]{colback=yellow!3!white,colframe=yellow!70!black,
+  title=\textbf{考点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+\newtcolorbox{bugbox}[1][]{colback=red!3!white,colframe=red!60!black,
+  title=\textbf{易错点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+
+\title{\textbf{优先队列：堆 (Heap)}}
+\author{}\date{}
+
+\begin{document}
+\maketitle\vspace{-8pt}
+
+\section*{堆的两条性质}
+
+\textbf{1. 结构性质：} 完全二叉树。\\
+\textbf{2. 堆序性质：} 最小堆 — 父 $\le$ 所有孩子；最大堆 — 父 $\ge$ 所有孩子。
+
+\section*{数组存储（索引从 1 开始）}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{关系} & \textbf{公式} & \textbf{例子} \\
+\hline
+Parent(i) & $\lfloor i/2 \rfloor$ & parent(4)=2 \\
+Left(i) & $2i$ & left(2)=4 \\
+Right(i) & $2i+1$ & right(2)=5 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{data[0] 作 sentinel}（存极小值 MinData），自动终止上滤循环。
+
+\begin{keybox}
+\textbf{这三个公式只用于数组实现的堆！} 不适用于 BST、链表等其他结构。\\
+\textbf{注意区分：} 原地堆排序用索引从0开始（left=2i+1, right=2i+2）。
+\end{keybox}
+
+\begin{multicols}{2}
+
+% ====== 复杂度 ======
+\section*{5种实现的复杂度对比}
+
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{实现} & \textbf{Insert} & \textbf{DeleteMin} \\
+\hline
+无序数组 & $\Theta(1)$ & $\Theta(N)$ \\
+无序链表 & $\Theta(1)$ & $\Theta(N)$ \\
+有序数组 & $O(N)$ & $\Theta(1)$ \\
+有序链表 & $O(N)$ & $\Theta(1)$ \\
+BST(平衡) & $O(\log N)$ & $O(\log N)$ \\
+\textbf{二叉堆} & $\mathbf{O(\log N)}$ & $\mathbf{O(\log N)}$ \\
+\hline
+\end{tabular}
+
+\section*{初始化}
+
+\begin{lstlisting}
+PriorityQueue Init(int Max) {
+    PriorityQueue H = malloc(sizeof(HeapStruct));
+    H->Elements = malloc((Max+1)*sizeof(ElementType));
+    H->Capacity = Max; H->Size = 0;
+    H->Elements[0] = MinData;  // sentinel
+    return H;
+}
+\end{lstlisting}
+
+% ====== Insert ======
+\section*{Insert — 上滤 (Percolate Up)}
+
+\textbf{思想：} 新元素放在末尾（保持完全二叉树），然后和父节点比，小的往上冒。
+
+\begin{lstlisting}
+void insert(Heap* h, int x) {
+    if(h->size >= MAX-1) return;
+    int i = ++(h->size);                  // 先+后取！
+    // 父节点比x大就下沉，空穴上移
+    while(i>1 && h->data[i/2] > x) {
+        h->data[i] = h->data[i/2];        // 父下沉
+        i = i/2;                          // i上移
+    }
+    h->data[i] = x;                       // 放好
+}
+// T(N) = O(log N)
+\end{lstlisting}
+
+\textbf{手算示例：} 初始堆 [3,6,5,9,10]，Insert(2)。\\
+2放data[6] → 跟data[3]=5比，5>2，5下沉到6，i=3。\\
+跟data[1]=3比，3>2，3下沉到3，i=1。到根，2放data[1]。\\
+结果：[2,6,3,9,10,5]。
+
+\begin{bugbox}
+\texttt{int i = h->size++} 后自增拿的是旧值。必须 \texttt{++(h->size)}。\\
+循环里写成 \texttt{data[i/2]=x} 做了交换 → 应该只下沉，最后才放。\\
+忘了循环外的 \texttt{h->data[i]=x}。
+\end{bugbox}
+
+% ====== DeleteMin ======
+\section*{DeleteMin — 下滤 (Percolate Down)}
+
+\textbf{思想：} 取走根（最小），最后元素补到根，然后跟较小孩子比，大的往下沉。
+
+\begin{lstlisting}
+int deleteMin(Heap* h) {
+    if(isEmpty(h)) return -1;
+    int min = h->data[1];                 // 最小值
+    int x = h->data[h->size--];           // 最后一个元素
+    int i=1, child;
+    while(2*i <= h->size) {               // 有左孩子
+        child = 2*i;
+        // 如果右孩子存在且更小，选右
+        if(child < h->size && h->data[child+1] < h->data[child])
+            child++;
+        if(x <= h->data[child]) break;    // 放好了
+        h->data[i] = h->data[child];      // 孩子上移
+        i = child;
+    }
+    h->data[i] = x;                       // 放好
+    return min;
+}
+// T(N) = O(log N)
+\end{lstlisting}
+
+\textbf{手算示例：} 堆 [2,6,3,9,10,5]，DeleteMin。\\
+取走2，x=5。i=1，child=2(左) vs 3(右)，3更小。5>3，3上移到1，i=3。\\
+i=3，child=6(左)，2*i=6 > size=5，无孩子，停。5放在3。\\
+结果：[3,6,5,9,10]。
+
+\begin{bugbox}
+大小比较反了：最小堆找较小孩子，最大堆找较大孩子。\\
+\texttt{child!=h->size} 条件漏了 → 可能访问越界。\\
+忘了最后 \texttt{h->data[i]=x}。
+\end{bugbox}
+
+\columnbreak
+
+% ====== 其他操作 ======
+\section*{其他堆操作}
+
+\begin{itemize}
+\item \textbf{DecreaseKey(P, $\Delta$, H)：} 减小某键值 $\to$ 上滤。提高进程优先级。
+\item \textbf{IncreaseKey(P, $\Delta$, H)：} 增大某键值 $\to$ 下滤。降低CPU占用。
+\item \textbf{Delete(P, H)：} DecreaseKey(P, $\infty$, H) 使其到根 + DeleteMin(H)。
+\item \textbf{BuildHeap(H)：} Floyd自底向上建堆 $O(N)$。
+\end{itemize}
+
+% ====== BuildHeap ======
+\section*{BuildHeap — Floyd 法 $O(N)$}
+
+\textbf{思想：} 从最后一个非叶节点(N/2)开始，往前逐个下滤。叶子不用处理。
+
+\begin{lstlisting}
+void percDown(Heap* h, int i) {
+    int x = h->data[i], child;
+    while(2*i <= h->size) {
+        child = 2*i;
+        if(child < h->size && h->data[child+1] < h->data[child])
+            child++;
+        if(x <= h->data[child]) break;
+        h->data[i] = h->data[child];
+        i = child;
+    }
+    h->data[i] = x;
+}
+
+void buildHeap(Heap* h, int arr[], int N) {
+    for(int i=0; i<N; i++) h->data[i+1] = arr[i];
+    h->size = N;
+    for(int j = N/2; j >= 1; j--)          // 从最后一个非叶到根
+        percDown(h, j);
+}
+// T(N) = O(N) — 不是 O(N log N)！
+\end{lstlisting}
+
+\begin{keybox}
+\textbf{为什么 BuildHeap 是 $O(N)$ 不是 $O(N\log N)$？}
+
+\textbf{定理：} 完美二叉树中所有节点高度和 = $2^{h+1}-1-(h+1) \approx N$。\\
+大部分节点在底层(叶子)几乎不下沉，总工作量接近 $N$ 而非 $N\log N$。
+\end{keybox}
+
+\textbf{手算示例：} arr=[4,2,7,1,3,6,5], N=7。N/2=3。\\
+下滤 data[3]=7：7 和 5 换 $\to$ [4,2,5,1,3,6,7]。\\
+下滤 data[2]=2：跟孩子1和3比，1 \char`\< 2 $\to$ 2和1换 $\to$ [4,1,5,2,3,6,7]。\\
+下滤 data[1]=4：跟1和5比，1 \char`\< 4 $\to$ 4和1换 $\to$ [1,4,5,2,3,6,7]。再跟2和3比，2 \char`\< 4 $\to$ 4和2换 $\to$ [1,2,5,4,3,6,7]。
+
+\begin{bugbox}
+\texttt{for(j=N/2; j>1; j--)} 漏了根 j=1。应为 \texttt{j>=1}。\\
+拷数组写了 \texttt{arr+i}（指针地址）→ 应 \texttt{arr[i]}。\\
+\texttt{h->size} 用 for 循环 ++ → 直接 \texttt{h->size=N}。\\
+Floyd 写成 while(j!=1)+j/=2+percDown两下 → 应是简单 for。
+\end{bugbox}
+
+% ====== d-堆 ======
+\section*{d-堆}
+
+每个节点有 d 个孩子。DeleteMin 需 d-1 次比较选最小 → $O(d\log_d N)$。
+
+\textbf{索引关系：} parent=$\lfloor(i+d-2)/d\rfloor$，\\
+children= $d(i-1)+2, d(i-1)+3, \dots, di+1$。
+
+\textbf{大d的优缺点：}
+\begin{itemize}
+\item [+] 树更矮，外存场景（磁盘I/O少）
+\item [--] \texttt{*d / /d} 不是位运算（对比 \texttt{*2 / /2} 是移位）
+\item [--] DeleteMin 比较次数 $d-1$ 增多
+\end{itemize}
+
+\section*{应用：找第k大元素}
+
+\begin{tabular}{|l|c|}
+\hline
+\textbf{方法} & \textbf{复杂度} \\
+\hline
+排序取第k & $O(N\log N)$ \\
+大小k的最小堆 & $O(N\log k)$ \\
+BuildHeap + k次DeleteMax & $O(N + k\log N)$ \\
+QuickSelect & 平均$O(N)$，最坏$O(N^2)$ \\
+\hline
+\end{tabular}
+
+\end{multicols}
+\end{document}

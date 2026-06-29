@@ -1,0 +1,280 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,geometry,xcolor,listings,tcolorbox,multicol,enumitem}
+\geometry{margin=1.2cm,top=1cm,bottom=0.8cm}
+\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}\setlength{\itemsep}{0pt}
+\setlist{nosep,leftmargin=*}
+
+\lstset{language=C,basicstyle=\ttfamily\scriptsize,keywordstyle=\color{blue}\bfseries,
+  numbers=none,frame=single,breaklines=true,showspaces=false,tabsize=2,
+  aboveskip=2pt,belowskip=2pt}
+
+\newtcolorbox{keybox}[1][]{colback=yellow!3!white,colframe=yellow!70!black,
+  title=\textbf{考点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+\newtcolorbox{bugbox}[1][]{colback=red!3!white,colframe=red!60!black,
+  title=\textbf{易错点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+
+\title{\textbf{二叉树 + 二叉搜索树 (BST)}}
+\author{}\date{}
+
+\begin{document}
+\maketitle\vspace{-8pt}
+
+\begin{multicols}{2}
+
+% ====== 术语 ======
+\section*{1. 树的术语}
+
+\begin{tabular}{|l|l|}
+\hline
+\textbf{术语} & \textbf{定义} \\
+\hline
+Degree(节点的度) & 该节点的直接孩子数 \\
+Degree of Tree & 所有节点度的最大值 \\
+Parent/Child/Sibling & 父/子/兄弟 \\
+Leaf/Leaf & 度为0的节点（没有孩子） \\
+Path & 节点序列 $n_1,n_2,\dots,n_k$ \\
+Path Length & 路径上的\textbf{边数}（不是节点数） \\
+Depth & 从根向下的边数，根=0 \\
+Height & 到最深叶子的边数，叶子=0 \\
+Ancestor & 从节点到根的路径上所有节点 \\
+Descendant & 该节点子树中所有节点 \\
+\hline
+\end{tabular}
+
+\begin{keybox}
+\textbf{深度 $\neq$ 高度：} 深度从上往下，高度从下往上。\\
+\textbf{叶子 $\neq$ 孩子：} 叶子是度=0的节点，孩子是有父节点的节点。\\
+\textbf{路径长度 = 边数（不是节点数）}
+\end{keybox}
+
+% ====== 二叉树性质 ======
+\section*{2. 二叉树三性质}
+
+\begin{enumerate}
+\item 第 $i$ 层最多 $2^{i-1}$ 个节点 ($i\ge 1$)
+\item 深度 $k$ 的树最多 $2^{k}-1$ 个节点
+\item \textbf{$n_0 = n_2 + 1$}（叶子数 = 度2节点数+1）
+\end{enumerate}
+
+\textbf{性质3证明：} $n=n_0+n_1+n_2$，$B=n_1+2n_2$，$n=B+1$。代入得证。\\
+\textbf{空链接数：} $n$ 个节点的二叉树有 $n+1$ 个 NULL 链接。
+
+\subsection*{二叉树类型}
+
+\textbf{斜二叉树：} 全左或全右 → 最坏深度 $O(N)$。\\
+\textbf{完全二叉树：} 除最底层，其他全满。最底层从左到右连续。
+
+\subsection*{表达式树}
+
+叶子=操作数，内部节点=运算符。\\
+后缀表达式 → 表达式树：用栈构建。读到操作数 push，读到运算符 pop 两个当孩子再 push。
+
+\textbf{三种遍历对应：} 中序→中缀，后序→后缀，先序→前缀。
+
+\columnbreak
+
+% ====== 遍历 ======
+\section*{3. 四大遍历（考试必默写）}
+
+\begin{lstlisting}
+// 先序：根→左→右
+void preorder(TreeNode* r) {
+    if(!r) return;
+    printf("%d ",r->data);
+    preorder(r->left);
+    preorder(r->right);
+}
+
+// 中序：左→根→右
+void inorder(TreeNode* r) {
+    if(!r) return;
+    inorder(r->left);
+    printf("%d ",r->data);
+    inorder(r->right);
+}
+
+// 后序：左→右→根
+void postorder(TreeNode* r) {
+    if(!r) return;
+    postorder(r->left);
+    postorder(r->right);
+    printf("%d ",r->data);
+}
+\end{lstlisting}
+
+\textbf{关键：} 三种递归只差 printf 的位置。
+
+\subsection*{中序遍历 — 迭代版}
+
+\begin{lstlisting}
+void iterInorder(TreeNode* r) {
+    Stack S; init(&S);
+    for(;;){  // 也可 while(t||!isEmpty(&S))
+        for(; r; r=r->left) push(&S,r);
+        if(isEmpty(&S)) break;
+        r=pop(&S); visit(r);
+        r=r->right;
+    }
+}
+\end{lstlisting}
+
+\subsection*{层序遍历 — 用队列}
+
+\begin{lstlisting}
+void levelorder(TreeNode* r) {
+    if(!r)return; Queue q; init(&q);
+    enqueue(&q,r);
+    while(!isEmpty(&q)){
+        TreeNode* t=dequeue(&q);
+        visit(t);
+        if(t->left) enqueue(&q,t->left);
+        if(t->right) enqueue(&q,t->right);
+    }
+}
+\end{lstlisting}
+
+\subsection*{遍历结果速记}
+
+\begin{center}\small
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{遍历} & \textbf{顺序} & \textbf{用途} \\
+\hline
+先序 (Pre) & 根→左→右 & 目录列表 \\
+后序 (Post) & 左→右→根 & 目录大小、表达式求值 \\
+中序 (In) & 左→根→右 & BST 输出有序序列 \\
+层序 & BFS & 逐层遍历 \\
+\hline
+\end{tabular}
+\end{center}
+
+% ====== 线索二叉树 ======
+\section*{4. 线索二叉树}
+
+\textbf{动机：} $n$ 个节点的二叉树有 $n+1$ 个 NULL。用来指向中序前驱/后继。
+
+\textbf{规则：}
+\begin{enumerate}
+\item Tree上->Left=NULL → 指向中序前驱
+\item Tree上->Right=NULL → 指向中序后继
+\item 加头节点，无悬空线程
+\end{enumerate}
+
+节点结构：\texttt{data, left, right, leftThread, rightThread}
+
+% ====== BST ======
+\section*{5. 二叉搜索树 (BST)}
+
+\textbf{定义：} 左子树所有值 < 根 < 右子树所有值。键值互异（或可处理重复）。
+
+\subsection*{Find — $O(h)$}
+
+\begin{lstlisting}
+TreeNode* find(TreeNode* r, int x) {
+    if(!r) return NULL;
+    if(x<r->data) return find(r->left,x);
+    if(x>r->data) return find(r->right,x);
+    return r;
+}
+// 迭代版：while(r){if(x<r->data)r=r->left;else if...else return r;}
+\end{lstlisting}
+
+\subsection*{FindMin / FindMax — 一直左 / 一直右}
+
+\begin{lstlisting}
+TreeNode* findMin(TreeNode* r) {
+    if(!r)return NULL;
+    if(!r->left)return r;
+    return findMin(r->left);
+}
+TreeNode* findMax(TreeNode* r) {
+    if(!r)return NULL;
+    while(r->right) r=r->right;
+    return r;
+}
+\end{lstlisting}
+
+\subsection*{Insert — 在NULL处创建新节点}
+
+\begin{lstlisting}
+TreeNode* insert(TreeNode* r, int x) {
+    if(!r) {
+        TreeNode* n=(TreeNode*)malloc(sizeof(TreeNode));
+        n->data=x; n->left=n->right=NULL;
+        return n;
+    }
+    if(x<r->data) r->left=insert(r->left,x);
+    else if(x>r->data) r->right=insert(r->right,x);
+    return r;
+}
+\end{lstlisting}
+
+\begin{bugbox}
+r为NULL时直接 \texttt{r->data=x} → 段错误。必须先malloc。\\
+忘了 \texttt{root->left=insert(...)} 来接返回值。
+\end{bugbox}
+
+\subsection*{Delete — 三情况}
+
+\begin{lstlisting}
+TreeNode* delete(TreeNode* r, int x) {
+    if(!r)return NULL;
+    if(x<r->data) r->left=delete(r->left,x);
+    else if(x>r->data) r->right=delete(r->right,x);
+    else { // 找到了！
+        // Case 1+2: 0或1个孩子
+        if(!r->left){TreeNode*t=r->right;free(r);return t;}
+        if(!r->right){TreeNode*t=r->left;free(r);return t;}
+        // Case 3: 两个孩子 → 找替身
+        TreeNode* min=findMin(r->right);     // 右子树最小
+        r->data=min->data;
+        r->right=delete(r->right,min->data); // 递归删替身
+    }
+    return r;
+}
+\end{lstlisting}
+
+\begin{keybox}
+\textbf{Case 3 核心：} 找左子树最大 或 右子树最小 替换值，然后删替身（替身必是 Case 1 或 2）。\\
+\textbf{不要找整棵树的最大！} 应该找左子树的最大。
+\end{keybox}
+
+\begin{bugbox}
+忘了 free。\\
+Case 2 的 left/right 写反（只有一个左孩子却返回了右孩子）。\\
+\texttt{findMax(r)} 找整棵树最大值 → 应 \texttt{findMax(r->left)}。\\
+\texttt{delete(max,max->data)} 参数错误 → 应 \texttt{r->left=delete(r->left,max->data)}。
+\end{bugbox}
+
+\subsection*{平均情况分析}
+
+BST的深度取决于插入顺序。\\
+随机插入 → 平均深度 $O(\log N)$；升序/降序插入 → 深度 $O(N)$（退化为链表）。
+
+\subsection*{懒惰删除}
+
+加 flag 标记删除，不真正 free。\\
+好处：不用 malloc 就能重插入。坏处：dead node 太多影响效率。
+
+\end{multicols}
+
+\section*{二叉树操作复杂度}
+
+{\small
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{操作} & \textbf{时间复杂度} & \textbf{备注} \\
+\hline
+Find / FindMin / FindMax & $O(h)$ & h=树高 \\
+Insert & $O(h)$ & 在 NULL 处创建 \\
+Delete & $O(h)$ & Case 3 转 Case 1/2 \\
+四种递归遍历 & $O(N)$ & 每个节点访问一次 \\
+层序遍历 & $O(N)$ & 用队列 \\
+BST 随机插入平均深度 & $O(\log N)$ & \\
+BST 最坏深度 & $O(N)$ & 有序插入 \\
+\hline
+\end{tabular}
+}
+
+\end{document}

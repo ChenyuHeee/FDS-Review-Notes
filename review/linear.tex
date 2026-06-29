@@ -1,0 +1,329 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,geometry,xcolor,listings,tcolorbox,multicol,enumitem}
+\geometry{margin=1.2cm,top=1cm,bottom=0.8cm}
+\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}\setlength{\itemsep}{0pt}
+\setlist{nosep,leftmargin=*}
+
+\lstset{language=C,basicstyle=\ttfamily\scriptsize,keywordstyle=\color{blue}\bfseries,
+  numbers=none,frame=single,breaklines=true,showspaces=false,tabsize=2,
+  aboveskip=2pt,belowskip=2pt}
+
+\newtcolorbox{keybox}[1][]{colback=yellow!3!white,colframe=yellow!70!black,
+  title=\textbf{考点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+\newtcolorbox{bugbox}[1][]{colback=red!3!white,colframe=red!60!black,
+  title=\textbf{易错点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+
+\title{\textbf{线性结构：链表 · 栈 · 队列}}
+\author{}\date{}
+
+\begin{document}
+\maketitle\vspace{-8pt}
+
+\section*{链表 (Linked List)}
+
+\textbf{核心思想：} 不需要连续内存。每个节点存数据 + 下一节点的指针。\\
+\textbf{对比数组：} 数组 $O(1)$ 查找但 $O(N)$ 插入/删除；链表 $O(N)$ 查找但 $O(1)$ 插入/删除。
+
+\begin{multicols}{2}
+
+\subsection*{节点结构}
+
+\begin{lstlisting}
+typedef struct node {
+    int data;
+    struct node *next;
+} Node;
+\end{lstlisting}
+
+\subsection*{创建节点}
+
+\begin{lstlisting}
+Node* createNode(int x) {
+    Node* p = (Node*)malloc(sizeof(Node));
+    p->data = x;
+    p->next = NULL;    // 必须初始化为NULL！
+    return p;
+}
+\end{lstlisting}
+
+\subsection*{建链：串3个节点}
+
+\begin{lstlisting}
+Node* head = createNode(10);
+head->next = createNode(20);
+head->next->next = createNode(30);
+// 10 -> 20 -> 30 -> NULL
+\end{lstlisting}
+
+\subsection*{遍历 (Traversal)}
+
+\begin{lstlisting}
+void printList(Node* head) {
+    Node* p = head;           // 用临时指针
+    while (p != NULL) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+}
+\end{lstlisting}
+
+\begin{bugbox}
+\texttt{Node* p;} 只管声明不管分配 → 野指针。\\
+遍历用 head 直接移动 → head 丢了再也找不到链表头。
+\end{bugbox}
+
+\subsection*{插入 (Insert)}
+
+\textbf{在 node 后面插入：} 注意顺序！先连新节点的 next，再改 node 的 next。
+
+\begin{lstlisting}
+void insertAfter(Node* node, int x) {
+    Node* p = createNode(x);     // 先建节点
+    p->next = node->next;        // ① 新连后
+    node->next = p;              // ② 前连新
+    // 顺序反了链表会断！
+}
+\end{lstlisting}
+
+\textbf{头部插入：} 需要改 head 本身，传 \texttt{Node**}
+
+\begin{lstlisting}
+void insertHead(Node** head, int x) {
+    Node* p = createNode(x);
+    p->next = *head;
+    *head = p;           // 改main里的head
+}
+\end{lstlisting}
+
+\begin{bugbox}
+插中间时先 \texttt{node->next=p} 后 \texttt{p->next=node->next} → p 指向自己形成环！\\
+头部插入用 \texttt{Node*} 传参 → 改不了 main 的 head。
+\end{bugbox}
+
+\subsection*{删除 (Delete)}
+
+删第一个值为 x 的节点。分两情况：删头 vs 删中间。\textbf{一定要 free！}
+
+\begin{lstlisting}
+void deleteNode(Node** head, int x) {
+    // Case 1: 删头节点
+    if ((*head)->data == x) {     // 注意括号！
+        Node* tmp = *head;
+        *head = (*head)->next;
+        free(tmp); return;
+    }
+    // Case 2: 删中间节点
+    Node* p = *head;
+    while (p->next && p->next->data != x)
+        p = p->next;              // 必须判p->next非NULL
+    if (p->next == NULL) return;  // 没找到
+    Node* tmp = p->next;
+    p->next = p->next->next;      // 绕过被删节点
+    free(tmp);
+}
+\end{lstlisting}
+
+\begin{bugbox}
+\texttt{*head->data} 优先级错 → \texttt{*(head->data)}，应为 \texttt{(*head)->data}。\\
+NULL 检查放在 \texttt{p->next->data} 后面 → 先崩了才判断。\\
+忘了 free。\\
+\texttt{x} 不存在时 \texttt{p->next->next} 段错误。
+\end{bugbox}
+
+\subsection*{双向循环链表}
+
+\begin{lstlisting}
+typedef struct node {
+    struct node *llink;  // 指向前一个
+    int item;
+    struct node *rlink;  // 指向后一个
+} Node;
+\end{lstlisting}
+
+性质: $\text{ptr} = \text{ptr}\to\text{llink}\to\text{rlink} = \text{ptr}\to\text{rlink}\to\text{llink}$
+
+\subsection*{多项式 ADT}
+
+链表表示：$\langle e_i, a_i \rangle$ 按指数降序。\\
+系数数组浪费空间（稀疏多项式），链表节省空间。
+
+\subsection*{游标实现 (无指针)}
+
+全局数组 \texttt{CursorSpace[]}，索引 0 是自由链表头。\\
+\texttt{malloc:} \texttt{p=CursorSpace[0].Next; CursorSpace[0].Next=CursorSpace[p].Next;}\\
+\texttt{free:} \texttt{CursorSpace[p].Next=CursorSpace[0].Next; CursorSpace[0].Next=p;}
+
+\columnbreak
+
+\section*{栈 (Stack) — LIFO}
+
+\textbf{后进先出。} 操作：Push(入栈)、Pop(出栈)、Top(查看栈顶)。
+
+\subsection*{数组实现}
+
+\begin{lstlisting}
+#define MAX 100
+typedef struct { int data[MAX]; int top; } Stack;
+void init(Stack* s) { s->top = -1; }
+void push(Stack* s, int x) {
+    if(s->top>=MAX-1)return;
+    s->data[++(s->top)] = x;       // 先+后放
+}
+int pop(Stack* s) {
+    if(s->top==-1) return -1;
+    return s->data[(s->top)--];     // 先取后-
+}
+int isEmpty(Stack* s) { return s->top==-1; }
+\end{lstlisting}
+
+\begin{bugbox}
+push 忘判满，pop 忘判空。\\
+\texttt{data[s->top++] = x} 后自增错 → \texttt{data[-1]}。
+\end{bugbox}
+
+\subsection*{栈应用一：后缀表达式求值}
+
+遇到数字 push，运算符 pop 两个、算完 push 回去。\\
+例：\texttt{6 2 / 3 - 4 2 * +} = 8。
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{扫描} & \textbf{操作} & \textbf{栈} \\
+\hline
+6 & push 6 & [6] \\
+2 & push 2 & [6,2] \\
+/ & pop2,pop6→6/2=3,push & [3] \\
+3 & push 3 & [3,3] \\
+- & pop3,pop3→3-3=0,push & [0] \\
+4 & push 4 & [0,4] \\
+2 & push 2 & [0,4,2] \\
+* & pop2,pop4→4*2=8,push & [0,8] \\
++ & pop8,pop0→0+8=8,push & [8] \\
+\hline
+\end{tabular}
+
+\subsection*{栈应用二：中缀转后缀}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{运算符} & \textbf{栈内 ISP} & \textbf{栈外 ICP} \\
+\hline
+\tt ( & 0 & 6 \\
+\tt + - & 3 & 2 \\
+\tt * / & 5 & 4 \\
+\tt ) & — & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+规则：ICP > ISP 入栈，否则弹栈直到条件满足。
+
+\begin{lstlisting}
+void infixToPostfix() {
+    Stack s; init(&s); char ch;
+    while((ch=getchar())!='\n'){
+        if(ch==' ')continue;
+        if(ch>='0'&&ch<='9') printf("%c",ch);
+        else if(ch=='(') push(&s,ch);
+        else if(ch==')'){
+            while(top(&s)!='(') printf("%c",pop(&s));
+            pop(&s);  // 弹掉(
+        } else { // + - * /
+            while(!isEmpty(&s)&&isp(top(&s))>=icp(ch))
+                printf("%c",pop(&s));
+            push(&s,ch);
+        }
+    }
+    while(!isEmpty(&s)) printf("%c",pop(&s));
+}
+\end{lstlisting}
+
+\begin{bugbox}
+忘了弹掉 \texttt{(}。忘了最后弹空栈。\\
+只写 \texttt{push(ch)} 没有 \texttt{\&s}。
+\end{bugbox}
+
+\textbf{手算示例：} \texttt{(1+2)*3-4/(5+6)} \\
+$\to$ \texttt{1 2 + 3 * 4 5 6 + / -}
+
+\subsection*{栈应用三：函数调用}
+
+每次函数调用创建\textbf{栈帧 (Stack Frame)}：返回地址、局部变量、旧帧指针。递归层数太深 $\to$ 栈溢出。
+
+\textbf{尾递归消除：} 尾递归可转为迭代。例：\texttt{PrintList} 尾递归 → while 循环。
+
+\section*{队列 (Queue) — FIFO}
+
+\textbf{先进先出。} Enqueue(入队尾)、Dequeue(出队首)。
+
+\subsection*{简单数组队列}
+
+\begin{lstlisting}
+typedef struct { int data[MAX]; int front,rear; } Queue;
+void init(Queue* q) { q->front=0; q->rear=-1; }
+void enq(Queue* q,int x) { q->data[++(q->rear)]=x; }
+int deq(Queue* q) {
+    if(q->front>q->rear)return -1;   // 判空
+    return q->data[(q->front)++];
+}
+\end{lstlisting}
+
+\textbf{缺点：} front 前面的空间永远浪费。
+
+\subsection*{循环队列}
+
+数组当环用。front=rear 为空，\texttt{(rear+1)\%MAX==front} 为满。\\
+\textbf{浪费一个格子}区分空/满，最多存 MAX-1 个。
+
+\begin{lstlisting}
+void init(Queue* q) { q->front=0; q->rear=0; }
+void enq(Queue* q, int x) {
+    if((q->rear+1)%MAX==q->front) return;  // 先判满
+    q->rear=(q->rear+1)%MAX;
+    q->data[q->rear]=x;
+}
+int deq(Queue* q) {
+    if(q->front==q->rear)return -1;        // 判空
+    int x=q->data[q->front];
+    q->front=(q->front+1)%MAX;
+    return x;                               // return放最后
+}
+\end{lstlisting}
+
+\begin{bugbox}
+\texttt{init} 写成 \texttt{rear=-1}（循环队列应为 0）。\\
+先移 rear 再判满 $\to$ 万一满的，rear 动了但数据没放。\\
+dequeue 里 return 后还有 \texttt{front++} → 永远不会执行。\\
+循环队列空用 \texttt{front>rear} → 应 \texttt{front==rear}。
+\end{bugbox}
+
+\subsection*{链表实现栈/队列}
+
+栈：链表头插头删（头作栈顶）— $O(1)$。\\
+队列：链表尾插头删（维护头尾指针）— $O(1)$。
+
+\subsection*{层序遍历用队列}
+
+二叉树的层序遍历：根入队 → 出队访问 → 左右孩子入队 → 重复。
+
+\end{multicols}
+
+\section*{线性结构复杂度总结}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{操作} & \textbf{数组} & \textbf{单向链表} & \textbf{双向链表} \\
+\hline
+查找第k个 & $O(1)$ & $O(N)$ & $O(N)$ \\
+头部插入 & $O(N)$ & $O(1)$ & $O(1)$ \\
+尾部插入 & $O(1)$(有size) & $O(N)$(无尾针) & $O(1)$ \\
+中间插入 & $O(N)$ & $O(1)$(已知前驱) & $O(1)$ \\
+删除 & $O(N)$ & $O(1)$(已知前驱) & $O(1)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
