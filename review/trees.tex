@@ -32,7 +32,7 @@
 Degree(节点的度) & 该节点的直接孩子数 \\
 Degree of Tree & 所有节点度的最大值 \\
 Parent/Child/Sibling & 父/子/兄弟 \\
-Leaf/Leaf & 度为0的节点（没有孩子） \\
+Leaf/Terminal & 度为0的节点（没有孩子） \\
 Path & 节点序列 $n_1,n_2,\dots,n_k$ \\
 Path Length & 路径上的\textbf{边数}（不是节点数） \\
 Depth & 从根向下的边数，根=0 \\
@@ -158,7 +158,7 @@ void levelorder(TreeNode* r) {
 \begin{enumerate}
 \item Tree上->Left=NULL → 指向中序前驱
 \item Tree上->Right=NULL → 指向中序后继
-\item 加头节点，无悬空线程
+\item 加头节点，无悬空线索
 \end{enumerate}
 
 节点结构：\texttt{data, left, right, leftThread, rightThread}

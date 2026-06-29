@@ -149,7 +149,7 @@ $T=O(|V|+|E|)$。朴素版每次扫描找入度0 $O(|V|^2)$。
 \begin{itemize}
 \item \textbf{EC[j]} = 事件 j 最早发生时间 = $\max_{i\to j}(EC[i]+C_{ij})$
 \item \textbf{LC[i]} = 事件 i 最晚发生时间 = $\min_{i\to j}(LC[j]-C_{ij})$
-\item \textbf{Slack} = LC - EC，=0 在\textbf{关键路径}上
+\item \textbf{边 $\langle i,j\rangle$ 的 Slack} = LC[j] - EC[i] - C_{ij}，=0 在\textbf{关键路径}上
 \end{itemize}
 
 % ====== 最短路径 ======
@@ -302,7 +302,7 @@ Low[v] = min{ Num[v],
 \subsection*{欧拉回路}
 
 \begin{itemize}
-\item 无向图欧拉回路 $\iff$ 所有顶点度数为偶数
+\item 无向图欧拉回路 $\iff$ 图连通 $\land$ 所有顶点度数为偶数
 \item 无向图欧拉路径 $\iff$ 恰两个顶点度数为奇数（起点/终点）
 \item 有向图欧拉回路 $\iff$ 每个点 in-degree = out-degree
 \end{itemize}
