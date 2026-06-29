@@ -1,0 +1,292 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,geometry,xcolor,listings,tcolorbox}
+\geometry{margin=2cm}
+\lstset{language=C,basicstyle=\ttfamily\small,frame=single,numbers=left,breaklines=true}
+\newtcolorbox{keybox}[1][]{colback=yellow!5!white,colframe=yellow!75!black,title=考点,#1}
+
+\title{FDS 复习 — 并查集 + 图论}
+\author{6月29日 冲刺}
+\date{}
+
+\begin{document}
+\maketitle
+
+\part{并查集 (Union-Find / Disjoint Set)}
+
+\section{核心问题}
+
+\begin{quote}
+给定 N 个元素，支持两种操作：
+\begin{itemize}
+\item \textbf{Find(x):} x 属于哪个集合？（找代表元）
+\item \textbf{Union(x,y):} 把 x 和 y 所在的两个集合合并
+\end{itemize}
+\end{quote}
+
+\textbf{应用：} 动态等价关系、Kruskal 最小生成树、连通分量检测。
+
+\section{数据结构}
+
+\begin{lstlisting}
+int S[MAX];   // S[root] = -size  (负数表示集合大小)
+              // S[child] = parent index (正数表示父节点)
+\end{lstlisting}
+
+\subsection{初始化}
+
+\begin{lstlisting}
+void init(int N) {
+    for (int i = 0; i < N; i++) S[i] = -1;  // 每个元素自成集合
+}
+\end{lstlisting}
+
+\subsection{Find — 路径压缩}
+
+\begin{lstlisting}
+int find(int x) {
+    if (S[x] < 0) return x;          // x 是根
+    return S[x] = find(S[x]);        // 爹变祖宗！压缩路径
+}
+\end{lstlisting}
+
+\textbf{效果：} 查找路径上所有节点直接指向根，后续查找几乎 $O(1)$。
+
+\subsection{Union — 按大小合并}
+
+\begin{lstlisting}
+void unionSet(int a, int b) {
+    a = find(a); b = find(b);
+    if (a == b) return;
+    if (S[a] > S[b]) { int t = a; a = b; b = t; }  // a 更大
+    S[a] += S[b];    // 更新大小 (负得更多)
+    S[b] = a;        // b 挂到 a
+}
+\end{lstlisting}
+
+\textbf{思路：} 总是把小的树挂到大的树下，树高不超过 $\lfloor \log_2 N\rfloor + 1$。
+
+\subsection{复杂度}
+
+\begin{keybox}
+\textbf{Union-by-Size + 路径压缩：}
+$$T(M, N) = O(M \cdot \alpha(M, N))$$
+$\alpha$ 是反 Ackermann 函数，$\alpha \leq 4$ 在实际数据范围内。
+
+\textbf{几乎就是常数时间！}
+\end{keybox}
+
+\begin{itemize}
+\item 仅 Union-by-Size：$T = O(N + M \log N)$
+\item 朴素 Union（不压缩、不按大小）：$\Theta(N^2)$ 最坏
+\end{itemize}
+
+\section{四个版本对比}
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{优化} & \textbf{Find} & \textbf{Union} \\
+\hline
+0. 朴素 & 一路走到根 & 随便挂 \\
+1. Union-by-Size & 朴素 Find & 小挂大 \\
+2. 路径压缩 & 爹变祖宗 & 随便挂 \\
+3. 两者都有 & 路径压缩 & 小挂大 \\
+\hline
+\end{tabular}
+
+版本 3 是标准写法。
+
+\begin{keybox}
+\textbf{路径压缩不能和 Union-by-Height 一起用！} 压缩会改变高度，所以改成 Union-by-Rank（秩 = 估计高度）。
+\end{keybox}
+
+\part{图论 (Graph)}
+
+\section{基本概念}
+
+\begin{itemize}
+\item $G = (V, E)$，$|V|$ 顶点数，$|E|$ 边数
+\item \textbf{无向图:} $(v_i, v_j) = (v_j, v_i)$
+\item \textbf{有向图:} $\langle v_i, v_j \rangle \neq \langle v_j, v_i \rangle$
+\item \textbf{DAG:} 有向无环图
+\item \textbf{握手定理:} $\sum degree(v) = 2|E|$
+\end{itemize}
+
+\section{图的表示}
+
+\subsection{邻接矩阵}
+\begin{itemize}
+\item $O(|V|^2)$ 空间
+\item 适合稠密图
+\item 判断两顶点是否相邻：$O(1)$
+\end{itemize}
+
+\subsection{邻接表}
+\begin{itemize}
+\item $O(|V| + |E|)$ 空间
+\item 适合稀疏图
+\item 遍历所有边：$O(|V| + |E|)$
+\end{itemize}
+
+\begin{keybox}
+\textbf{考试判断：} 稠密图用矩阵，稀疏图用表。
+\end{keybox}
+
+\section{拓扑排序}
+
+\textbf{目标：} 给 DAG 的顶点排一个线性顺序，满足所有边的方向（前驱在前）。
+
+\begin{enumerate}
+\item 计算所有顶点入度
+\item 入度 = 0 的进队列
+\item 出队 → 所有邻接入度 -1 → 减到 0 的进队
+\item 重复直到队列空
+\item 如果输出的顶点数 < |V| → 图中有环！
+\end{enumerate}
+
+\textbf{时间复杂度：} $O(|V| + |E|)$
+
+\begin{lstlisting}
+void topsort(Graph G) {
+    Queue Q;
+    for each V
+        if (Indegree[V] == 0) Enqueue(V, Q);
+    int cnt = 0;
+    while (!IsEmpty(Q)) {
+        V = Dequeue(Q);
+        TopNum[V] = ++cnt;
+        for each W adjacent to V
+            if (--Indegree[W] == 0) Enqueue(W, Q);
+    }
+    if (cnt < NumVertex) Error("Graph has a cycle");
+}
+\end{lstlisting}
+
+\section{最短路径}
+
+\subsection{无权最短路径 — BFS}
+
+BFS 就是无权图的最短路径算法。$O(|V| + |E|)$。
+
+\subsection{Dijkstra — 带权最短路径}
+
+\textbf{思想：} 贪心。每次选 Dist 最小的未处理顶点，松弛所有邻接点。
+
+\textbf{条件：不能有负权边！}
+
+\begin{lstlisting}
+void dijkstra(int graph[][MAX], int S, int N) {
+    int known[MAX] = {0};
+    int dist[MAX];
+    for (int i = 0; i < N; i++) dist[i] = INF;
+    dist[S] = 0;
+    for (;;) {
+        // 找未处理中距离最小的
+        int V = -1, minD = INF;
+        for (int i = 0; i < N; i++)
+            if (!known[i] && dist[i] < minD)
+                { minD = dist[i]; V = i; }
+        if (V == -1) break;
+        known[V] = 1;
+        // 松弛所有邻接点
+        for (int W = 0; W < N; W++)
+            if (graph[V][W] && !known[W])
+                if (dist[V] + graph[V][W] < dist[W])
+                    dist[W] = dist[V] + graph[V][W];
+    }
+}
+\end{lstlisting}
+
+\textbf{复杂度：} 朴素 $O(|V|^2)$，用堆优化 $O(|E| \log |V|)$。
+
+\subsection{负权边 — Bellman-Ford}
+
+每轮松弛所有边，共 $|V|-1$ 轮。$O(|V| \cdot |E|)$。
+
+\textbf{第 |V| 轮如果还能松弛 → 有负权环！}
+
+\subsection{全源最短路径 — Floyd-Warshall}
+
+\begin{lstlisting}
+for (int k = 0; k < N; k++)
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            if (dist[i][k] + dist[k][j] < dist[i][j])
+                dist[i][j] = dist[i][k] + dist[k][j];
+\end{lstlisting}
+
+$O(|V|^3)$。
+
+\section{最小生成树 (MST)}
+
+\subsection{Prim}
+
+\textbf{思想：} 类似 Dijkstra，但 Dist 是从当前树到各顶点的最短距离。
+
+\textbf{复杂度：} 朴素 $O(|V|^2)$，堆优化 $O(|E| \log |V|)$。
+
+\subsection{Kruskal}
+
+\textbf{思想：} 排序所有边 + Union-Find 判环。
+
+\begin{lstlisting}
+void kruskal(Graph G) {
+    T = {};
+    sort(edges by weight);
+    while (T has < |V|-1 edges) {
+        pick min edge (u,v);
+        if (find(u) != find(v)) {  // 不同集合 → 不成环
+            add to T;
+            union(u, v);
+        }
+    }
+}
+\end{lstlisting}
+
+\textbf{复杂度：} $O(|E| \log |E|) = O(|E| \log |V|)$。
+
+\begin{keybox}
+\textbf{Prim vs Kruskal:}
+\begin{itemize}
+\item Prim：类似 Dijkstra，适合\textbf{稠密图}
+\item Kruskal：排序边 + 并查集，适合\textbf{稀疏图}
+\end{itemize}
+\end{keybox}
+
+\section{AOE 网络与关键路径}
+
+\begin{itemize}
+\item \textbf{EC[j]} = 活动 j 的最早完成时间 = $\max_{i \to j}(EC[i] + C_{ij})$
+\item \textbf{LC[i]} = 活动 i 的最晚完成时间 = $\min_{i \to j}(LC[j] - C_{ij})$
+\item \textbf{Slack Time} = LC - EC，为 0 的边在\textbf{关键路径}上
+\end{itemize}
+
+\section{网络流 — Ford-Fulkerson}
+
+\textbf{核心技巧：残差图 + 反向边（撤销机制）。}
+
+\begin{enumerate}
+\item 在残差图中找一条增广路
+\item 增加正向边流量，减少反向边（等于增加残差）
+\item 重复直到不存在增广路
+\end{enumerate}
+
+\section{DFS 应用}
+
+\subsection{双连通分量与关节点}
+
+\begin{itemize}
+\item \texttt{Num[v]} = DFS 编号
+\item \texttt{Low[v]} = 通过回边能到达的最小 Num
+\item \textbf{关节点条件：} $Low[child] \ge Num[v]$，且 v 不是根 / v 是根且有 $\ge 2$ 个孩子
+\end{itemize}
+
+\subsection{欧拉回路}
+
+\begin{itemize}
+\item 无向图有欧拉回路 $\iff$ 所有顶点度数为偶数
+\item 无向图有欧拉路径 $\iff$ 恰好两个顶点度数为奇数
+\item 有向图有欧拉回路 $\iff$ 每个顶点入度 = 出度
+\end{itemize}
+
+\end{document}

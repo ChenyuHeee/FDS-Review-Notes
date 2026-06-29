@@ -1,0 +1,190 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,geometry,xcolor,listings,tcolorbox}
+\geometry{margin=2cm}
+\lstset{language=C,basicstyle=\ttfamily\small,frame=single,numbers=left,breaklines=true}
+
+\newtcolorbox{keybox}[1][]{colback=yellow!5!white,colframe=yellow!75!black,title=考点,#1}
+\newtcolorbox{bugbox}[1][]{colback=red!5!white,colframe=red!75!black,title=常见错误,#1}
+
+\title{FDS 复习 — 哈希表 (Hashing)}
+\author{6月29日 冲刺}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{核心思想}
+
+\textbf{不用比较，直接算出位置。}
+
+\begin{itemize}
+\item 查找：$O(1)$
+\item 插入：$O(1)$
+\item 跟数据量无关
+\end{itemize}
+
+\begin{keybox}
+基于比较的查找下界是 $O(\log N)$（二分查找）。哈希通过\textbf{不比较}突破了它。
+\end{keybox}
+
+\section{哈希表术语}
+
+\begin{tabular}{|c|c|}
+\hline
+\textbf{术语} & \textbf{含义} \\
+\hline
+\texttt{b (buckets)} & 桶的数量 \\
+\texttt{s (slots)} & 每个桶几个槽 \\
+\texttt{n} & 当前表中元素个数 \\
+\texttt{T} & 所有可能 key 的总数 \\
+\texttt{$\lambda = n/(s \cdot b)$} & 负载密度 (Loading Density) \\
+\hline
+\end{tabular}
+
+\begin{itemize}
+\item \textbf{冲突 (Collision)：} 两个不同 key 算出了同一个桶
+\item \textbf{溢出 (Overflow)：} key 算出的桶已经满了
+\item 当 s=1 时，冲突 = 溢出（同时发生）
+\end{itemize}
+
+\section{哈希函数}
+
+\textbf{要求：} 计算快 + 分布均匀（无偏）。
+
+\subsection{整数键}
+
+\begin{lstlisting}
+h(x) = x % TableSize
+\end{lstlisting}
+
+\begin{keybox}
+\textbf{TableSize 必须是质数！} 否则后几位相同的数扎堆。
+\end{keybox}
+
+\subsection{字符串键 — Hash3（推荐）}
+
+\begin{lstlisting}
+int hash(const char* key, int TableSize) {
+    unsigned int h = 0;
+    while (*key)
+        h = (h << 5) + *key++;   // h*32 + 下一字符
+    return h % TableSize;
+}
+\end{lstlisting}
+
+为什么用 32？$32=2^5$，移位比乘法快。
+
+\section{冲突解决方案一：分离链接法}
+
+\textbf{思想：} 每个桶挂一个链表。
+
+\begin{lstlisting}
+typedef struct Node { int key; struct Node* next; } Node;
+Node* table[T];
+
+void insert(int key) {
+    int h = key % T;
+    Node* node = malloc(sizeof(Node));
+    node->key = key;
+    node->next = table[h];  // 头插法
+    table[h] = node;
+}
+
+Node* find(int key) {
+    Node* p = table[key % T];
+    while (p && p->key != key) p = p->next;
+    return p;
+}
+\end{lstlisting}
+
+\textbf{特点：} 简单，但需要额外链表空间。
+
+\section{冲突解决方案二：开放地址法}
+
+\textbf{思想：} 冲突了就找下一个空位。
+
+\textbf{探测序列：} $h_i = (hash(key) + f(i)) \bmod \text{TableSize}$
+
+\subsection{线性探测 (Linear Probing)}
+
+\begin{lstlisting}
+f(i) = i        // 每次+1
+\end{lstlisting}
+
+\textbf{优点：简单} \quad \textbf{缺点：一次聚集 (Primary Clustering)}，冲突的人扎堆
+
+\subsection{二次探测 (Quadratic Probing)}
+
+\begin{lstlisting}
+f(i) = i^2      // +1, +4, +9, +16...
+\end{lstlisting}
+
+\begin{keybox}
+\textbf{定理：} 如果 \textbf{TableSize 是质数 且 表至少一半空}，二次探测一定能找到空位。
+
+\textbf{为什么？} 前 TableSize/2 个探测值 $i^2$ 模质数全是不同的。
+\end{keybox}
+
+\textbf{缺点：} 二次聚集 (Secondary Clustering) — 相同 hash 的人探测路径一样
+
+\subsection{双哈希 (Double Hashing)}
+
+\begin{lstlisting}
+f(i) = i * h2(key)   // 步长取决于第二个哈希函数
+\end{lstlisting}
+
+\textbf{推荐：} $h_2(x) = R - (x \% R)$，其中 R 是比 TableSize 小的质数（如 7）。
+
+\textbf{特点：} 基本消除聚集，但计算稍多。
+
+\subsection{代码框架（二次探测）}
+
+\begin{lstlisting}
+int find(int table[], int key, int T) {
+    int h = key % T;
+    for (int i = 0; i <= T/2; i++) {   // 最多探一半
+        int pos = (h + i*i) % T;
+        if (table[pos] == EMPTY) return -1;    // 没有
+        if (table[pos] == key)  return pos;    // 找到了
+    }
+    return -1;
+}
+\end{lstlisting}
+
+\section{再哈希 (Rehashing)}
+
+\textbf{为什么：} 负载密度太高 → 查找变慢。
+
+\textbf{怎么做：}
+\begin{enumerate}
+\item 建一个更大的表（约 2 倍，且是质数）
+\item 把旧表所有元素重新哈希插入新表
+\item 释放旧表
+\end{enumerate}
+
+\textbf{触发时机：}
+\begin{itemize}
+\item 插入失败（没空位了）
+\item 负载密度超过阈值（如 0.5）
+\item 查找性能严重下降
+\end{itemize}
+
+\begin{keybox}
+\textbf{摊还分析：} Rehashing 一次 $O(N)$，但摊还到每次插入是 $O(1)$。
+\end{keybox}
+
+\section{分离链接 vs 开放地址}
+
+\begin{tabular}{|c|c|c|}
+\hline
+& \textbf{分离链接} & \textbf{开放地址} \\
+\hline
+\textbf{实现} & 链表 & 纯数组 \\
+\textbf{空间} & 额外指针 & 无额外开销 \\
+\textbf{满后} & 无上限（链表可增长） & Rehashing \\
+\textbf{缓存} & 差（内存不连续） & 好（连续内存） \\
+\hline
+\end{tabular}
+
+\end{document}
