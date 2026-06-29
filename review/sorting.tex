@@ -1,293 +1,337 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[UTF8]{ctex}
 \usepackage{amsmath,amssymb}
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{tcolorbox}
-\geometry{margin=2cm}
+\usepackage{multicol}
+\usepackage{enumitem}
+\geometry{margin=1.2cm,top=1cm,bottom=0.8cm}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\itemsep}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+\setlist{nosep,leftmargin=*}
 
-\lstset{
-  language=C,
-  basicstyle=\ttfamily\small,
-  keywordstyle=\color{blue}\bfseries,
-  commentstyle=\color{gray},
-  numbers=left,
-  numberstyle=\tiny\color{gray},
-  frame=single,
-  breaklines=true,
-  showstringspaces=false,
-  tabsize=2
-}
+\lstset{language=C,basicstyle=\ttfamily\scriptsize,keywordstyle=\color{blue}\bfseries,
+  numbers=none,frame=single,breaklines=true,showstringspaces=false,tabsize=2,
+  aboveskip=2pt,belowskip=2pt}
 
-\newtcolorbox{bugbox}[1][]{colback=red!5!white,colframe=red!75!black,title=常见错误,#1}
-\newtcolorbox{keybox}[1][]{colback=yellow!5!white,colframe=yellow!75!black,title=考点,#1}
+\newtcolorbox{keybox}[1][]{colback=yellow!3!white,colframe=yellow!70!black,
+  title=\textbf{考点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
+\newtcolorbox{bugbox}[1][]{colback=red!3!white,colframe=red!60!black,
+  title=\textbf{易错点},fonttitle=\bfseries\small,size=small,top=2pt,bottom=2pt,#1}
 
-\title{FDS 复习 — 排序算法}
-\author{6月29日 冲刺}
+\title{\textbf{FDS 排序算法 — 考前速查}}
+\author{}
 \date{}
 
 \begin{document}
 \maketitle
-
-\section{排序算法总览}
-
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-\textbf{算法} & \textbf{平均} & \textbf{最坏} & \textbf{空间} & \textbf{稳定} & \textbf{比较} \\
-\hline
-插入排序 & $O(N^2)$ & $O(N^2)$ & $O(1)$ & 稳定 & 是 \\
-希尔排序 & $O(N^{3/2})$ & $O(N^2)$ & $O(1)$ & 不稳 & 是 \\
-堆排序 & $O(N\log N)$ & $O(N\log N)$ & $O(1)$ & 不稳 & 是 \\
-归并排序 & $O(N\log N)$ & $O(N\log N)$ & $O(N)$ & 稳定 & 是 \\
-快速排序 & $O(N\log N)$ & $O(N^2)$ & $O(\log N)$ & 不稳 & 是 \\
-桶排序 & $O(M+N)$ & — & $O(M)$ & 稳定 & 否 \\
-基数排序 & $O(P(N+B))$ & — & $O(N+B)$ & 稳定 & 否 \\
-\hline
-\end{tabular}
+\vspace{-10pt}
 
 \begin{keybox}
-\textbf{比较排序下界：} 任意基于比较的排序算法，最坏情况下至少需要 $\Omega(N\log N)$ 次比较。
-
-桶排和基数排不基于比较，因此能突破 $O(N\log N)$ 下界。
+\textbf{比较排序下界：} 任意基于比较的排序最坏 $\Omega(N\log N)$。\\
+\textbf{桶排/基数排不基于比较}，能突破下界。\textbf{决策树}证明：$N!$ 个叶子，深度至少 $\log N! = \Omega(N\log N)$。
 \end{keybox}
 
-\section{插入排序 (Insertion Sort)}
+% --- 总结表 ---
+\begin{center}
+\small
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{算法} & \textbf{平均} & \textbf{最坏} & \textbf{额外空间} & \textbf{稳定?} & \textbf{比较?} \\
+\hline
+插入 (Insertion) & $O(N^2)$ & $O(N^2)$ & $O(1)$ & 是 & 是 \\
+希尔 (Shell) & $O(N^{3/2})$ & $O(N^2)$ & $O(1)$ & 否 & 是 \\
+堆排 (Heap) & $O(N\log N)$ & $O(N\log N)$ & $O(1)$ & 否 & 是 \\
+归并 (Merge) & $O(N\log N)$ & $O(N\log N)$ & $O(N)$ & 是 & 是 \\
+快排 (Quick) & $O(N\log N)$ & $O(N^2)$ & $O(\log N)$ & 否 & 是 \\
+桶排 (Bucket) & $O(M+N)$ & — & $O(M)$ & 是 & 否 \\
+基数 (Radix) & $O(P(N+B))$ & $O(P(N+B))$ & $O(N+B)$ & 是 & 否 \\
+\hline
+\end{tabular}
+\end{center}
 
-\textbf{思想：} 像整理扑克牌，每次从后面取一张插入前面已排好的位置。
+% ====== 两栏布局 ======
+\begin{multicols}{2}
 
-\begin{lstlisting}
+% ===================== 插入排序 =====================
+\section*{1. 插入排序 (Insertion)}
+
+\textbf{思想：} 像整理扑克牌，每次从后面取一张插入前面已排好的位置。\\
+\textbf{核心：} 不是交换，是\textbf{右移 + 插入}。
+
+\begin{lstlisting}[language=C]
 void insertionSort(int A[], int N) {
     int i, j, tmp;
     for (i = 1; i < N; i++) {
         tmp = A[i];
         for (j = i; j > 0 && A[j-1] > tmp; j--)
             A[j] = A[j-1];        // 比tmp大的右移
-        A[j] = tmp;               // 插入到正确位置
+        A[j] = tmp;               // 插入
     }
 }
 \end{lstlisting}
 
-\textbf{复杂度：}
-\begin{itemize}
-\item 最好（已有序）：$O(N)$ — 内层循环一次不进
-\item 最坏（逆序）：$O(N^2)$
-\item 平均逆序数：$N(N-1)/4$
-\end{itemize}
+\textbf{复杂度：} 最好$O(N)$(已有序)/最坏$O(N^2)$(逆序)。\\
+\textbf{逆序数：} 平均 $N(N-1)/4$。每次相邻交换消除恰好 1 个逆序。
 
 \begin{bugbox}
-\begin{itemize}
-\item 第一次写成了 \texttt{tmp = A[i]} 后直接从头找位置，导致不比较大小
-\item 交换写成 \texttt{A[j]=A[j-1]} 忘了 \texttt{A[j-1]=A[j]} ——应该只是右移不是交换
-\end{itemize}
+\texttt{tmp=A[i]} 后从头开始找位置，而不是从 i 往前比。\\
+\texttt{for(int j=i;...)}  声明的 j 在外面 \texttt{A[j]=tmp} 用不了。
 \end{bugbox}
 
-\section{希尔排序 (Shellsort)}
+% ===================== 希尔排序 =====================
+\section*{2. 希尔排序 (Shellsort)}
 
-\textbf{思想：} 不等距的插入排序。先用大间隔跳着排，逐步缩小间隔，最后间隔1 = 普通插入排序。
+\textbf{思想：} 不等距的插入排序。gap 从 N/2 逐步缩到 1。
 
-\begin{lstlisting}
+\begin{lstlisting}[language=C]
 void shellSort(int A[], int N) {
     int gap, i, j, tmp;
-    for (gap = N/2; gap > 0; gap /= 2) {
+    for (gap = N/2; gap > 0; gap /= 2)
         for (i = gap; i < N; i++) {
             tmp = A[i];
-            for (j = i; j >= gap && A[j-gap] > tmp; j -= gap)
+            for (j=i; j>=gap && A[j-gap]>tmp; j-=gap)
                 A[j] = A[j-gap];
             A[j] = tmp;
         }
-    }
 }
 \end{lstlisting}
 
-\textbf{和插入排序的区别（只改3处）：}
-\begin{enumerate}
-\item 外套一层 \texttt{for(gap=N/2; gap>0; gap/=2)}
-\item \texttt{j-1} 变成 \texttt{j-gap}
-\item \texttt{j--} 变成 \texttt{j-=gap}
-\end{enumerate}
+\textbf{跟插入的区别（只改3处）：}
+(1) 外套 gap 循环 (2) \texttt{j-1} $\to$ \texttt{j-gap} (3) \texttt{j--} $\to$ \texttt{j-=gap}
+
+\textbf{Hibbard 增量：} $h_k=2^k-1$，最坏 $\Theta(N^{3/2})$。\\
+\textbf{Sedgewick 最优：} $\{1,5,19,41,109,\dots\}$。
 
 \begin{bugbox}
-\begin{itemize}
-\item \texttt{while(gap!=1)} 吞了 gap=1 这轮，最后一轮常规插入没跑
-\item \texttt{i += gap} 只处理了一组，其他组的全漏了
-\item 内层 for 里声明的 j 在外面 \texttt{A[j]=tmp} 用不了
-\end{itemize}
+\texttt{while(gap!=1)} 吞了 gap=1 这轮。\texttt{i+=gap} 只处理一组！\\
+\texttt{for(int j=i...)} j 作用域只在 for 里，外面用不了。
 \end{bugbox}
 
-\textbf{Hibbard 序列：} $h_k = 2^k - 1$，最坏 $\Theta(N^{3/2})$。
+% ===================== 堆排序 =====================
+\section*{3. 堆排序 (Heapsort)}
 
-\section{堆排序 (Heapsort)}
+\textbf{思想：} 原地最大堆。根(max)和末尾交换，堆缩小，下滤，重复。
 
-\textbf{思想：} 原地最大堆 + 反复取堆顶放到末尾。
+\textbf{索引从 0 开始！} left=2i+1, right=2i+2, parent=(i-1)/2。
 
-\begin{itemize}
-\item 索引从 0 开始！ left = 2i+1, right = 2i+2, parent = (i-1)/2
-\item 用\textbf{最大堆}：根是最大的，每次把根和末尾交换后下滤
-\end{itemize}
-
-\begin{lstlisting}
+\begin{lstlisting}[language=C]
 void percDown(int A[], int i, int N) {
     int child, tmp = A[i];
-    while (2*i + 1 < N) {            // 有左孩子
+    while (2*i+1 < N) {
         child = 2*i + 1;
-        if (child+1 < N && A[child+1] > A[child])  // 选较大孩子
-            child++;
-        if (tmp >= A[child]) break;   // 满足堆序
-        A[i] = A[child];              // 孩子上移
-        i = child;
+        if (child+1<N && A[child+1]>A[child]) child++;
+        if (tmp >= A[child]) break;
+        A[i] = A[child]; i = child;
     }
-    A[i] = tmp;                       // 放到最终位置
+    A[i] = tmp;
 }
 
 void heapSort(int A[], int N) {
-    int i;
-    for (i = N/2 - 1; i >= 0; i--)    // BuildMaxHeap: O(N)
+    for (int i = N/2-1; i >= 0; i--)  // BuildMaxHeap O(N)
         percDown(A, i, N);
-    for (i = N - 1; i > 0; i--) {     // 排序: O(N log N)
-        int tmp = A[0]; A[0] = A[i]; A[i] = tmp;
+    for (int i = N-1; i > 0; i--) {   // 排序 O(N log N)
+        int t=A[0]; A[0]=A[i]; A[i]=t;
         percDown(A, 0, i);
     }
 }
 \end{lstlisting}
 
+$T(N)=O(N\log N)$，原地，不稳定。
+
 \begin{bugbox}
-\begin{itemize}
-\item 忘了堆从 0 开始，孩子/父公式写成 \texttt{2*i} 和 \texttt{i/2}
-\item \texttt{j > 1} 漏了根，应该是 \texttt{j >= 1}（ADT版）或 \texttt{j >= 0}（原地版）
-\item \texttt{h->size} 和 \texttt{A[child]} 语法混用
-\end{itemize}
+用最小堆做原地排序（应该用最大堆）；忘了索引从0开始。
+\texttt{j>1} 漏了根；\texttt{i<N} 漏了最后一个元素。
 \end{bugbox}
 
-\textbf{复杂度：} BuildHeap $O(N)$ + $N$次DeleteMax $O(N\log N)$ = $O(N\log N)$
+% ===================== 归并排序 =====================
+\section*{4. 归并排序 (Mergesort)}
 
-\section{归并排序 (Mergesort)}
+\textbf{思想：} 分治法。递归拆分，再合并两个有序段。
 
-\textbf{思想：} 分治法。拆成两半递归排，再合并两个有序数组。
-
-\begin{lstlisting}
-void merge(int A[], int left, int mid, int right) {
-    int i = left, j = mid + 1, k = 0;
-    int n = right - left + 1;
-    int* tmp = (int*)malloc(n * sizeof(int));
-
-    while (i <= mid && j <= right) {
-        if (A[i] <= A[j]) tmp[k++] = A[i++];
-        else              tmp[k++] = A[j++];
-    }
-    while (i <= mid)   tmp[k++] = A[i++];
-    while (j <= right) tmp[k++] = A[j++];
-    for (int p = 0; p < n; p++)
-        A[left + p] = tmp[p];
-    free(tmp);
+\begin{lstlisting}[language=C]
+void merge(int A[], int l, int m, int r) {
+    int i=l, j=m+1, k=0, n=r-l+1;
+    int* T=(int*)malloc(n*sizeof(int));
+    while(i<=m && j<=r)
+        T[k++]=(A[i]<=A[j])?A[i++]:A[j++];
+    while(i<=m) T[k++]=A[i++];
+    while(j<=r) T[k++]=A[j++];
+    for(int p=0;p<n;p++) A[l+p]=T[p];
+    free(T);
 }
-
-void mergeSort(int A[], int left, int right) {
-    if (left >= right) return;
-    int mid = (left + right) / 2;
-    mergeSort(A, left, mid);
-    mergeSort(A, mid + 1, right);
-    merge(A, left, mid, right);
+void mergeSort(int A[], int l, int r) {
+    if (l>=r) return;
+    int m=(l+r)/2;
+    mergeSort(A,l,m); mergeSort(A,m+1,r);
+    merge(A,l,m,r);
 }
 \end{lstlisting}
 
+$T(N)=2T(N/2)+O(N) \to O(N\log N)$。\textbf{需要额外 $O(N)$ 空间}。\textbf{稳定}。
+
 \begin{bugbox}
-\begin{itemize}
-\item tmp 的 k 从 left 开始（应该是从0），拷回时搞混
-\item 忘了 free(tmp)
-\item n 声明在 malloc 后面，编译错误
-\end{itemize}
+tmp的k从left开始（应为0）；忘了free；n声明在malloc后面。
 \end{bugbox}
 
-\section{快速排序 (Quicksort)}
+% ===================== 快速排序 =====================
+\section*{5. 快速排序 (Quicksort)}
 
-\textbf{思想：} 选 pivot，小的放左，大的放右，递归。
+\textbf{思想：} 选 pivot，小的放左，大的放右，递归。\\
+\textbf{最关键的考试排序！}
 
-\begin{lstlisting}
-int partition(int A[], int left, int right) {
-    int pivot = A[right];         // 选最右边为pivot
-    int i = left;                 // i：小元素边界
-
-    for (int j = left; j < right; j++) {
+\begin{lstlisting}[language=C]
+int partition(int A[], int l, int r) {
+    int pivot = A[r], i = l;
+    for (int j=l; j<r; j++)
         if (A[j] < pivot) {
-            int tmp = A[i]; A[i] = A[j]; A[j] = tmp;
-            i++;
+            int t=A[i];A[i]=A[j];A[j]=t; i++;
         }
-    }
-    int tmp = A[i]; A[i] = A[right]; A[right] = tmp;
-    return i;                     // pivot最终位置
+    int t=A[i];A[i]=A[r];A[r]=t;
+    return i;
 }
-
-void quickSort(int A[], int left, int right) {
-    if (left >= right) return;
-    int p = partition(A, left, right);
-    quickSort(A, left, p - 1);
-    quickSort(A, p + 1, right);
+void quickSort(int A[], int l, int r) {
+    if (l>=r) return;
+    int p=partition(A,l,r);
+    quickSort(A,l,p-1); quickSort(A,p+1,r);
 }
 \end{lstlisting}
 
-\textbf{手算示例：} A = [5,2,6,1,4,9,3,7], pivot=7
+\textbf{手算：} [5,2,6,1,4,9,3,\textbf{7}], pivot=7。i 是小区域的边界，j 扫描。遇到比7小的就换到 i 处。最后 pivot 放 i 处。\\
+结果：\texttt{[5,2,6,1,4,3,7,9]}，pivot=7 位置 6。
+
+\textbf{Median-of-Three 优化：} 取 A[l], A[(l+r)/2], A[r] 的中值作 pivot。\\
+\textbf{最坏：} 每次 pivot 最小/最大 $\to O(N^2)$；\textbf{平均：} $O(N\log N)$。\\
+\textbf{不稳定。}
+
+\begin{bugbox}
+pivot 选 A[0] 遇到已排序数组直接退化 $O(N^2)$；忘了 swap pivot 到中间。
+\end{bugbox}
+
+% ===================== 表排序 =====================
+\section*{6. 表排序 (Table Sort)}
+
+\textbf{动机：} 大结构体移动代价高。只排索引表 T。
 
 \begin{verbatim}
-j=0: 5<7 → swap 5↔5  i=1  [5,2,6,1,4,9,3,7]
-j=1: 2<7 → swap 2↔2  i=2  [5,2,6,1,4,9,3,7]
-j=2: 6<7 → swap 6↔6  i=3  [5,2,6,1,4,9,3,7]
-j=3: 1<7 → swap 1↔1  i=4  [5,2,6,1,4,9,3,7]
-j=4: 4<7 → swap 4↔4  i=5  [5,2,6,1,4,9,3,7]
-j=5: 9<7? NO           i=5  [5,2,6,1,4,9,3,7]
-j=6: 3<7 → swap 9↔3  i=6  [5,2,6,1,4,3,9,7]
-最后 swap(7,9) → [5,2,6,1,4,3,7,9]
-pivot=7在位置6，左全<7，右全>7
+A = [f, d, a, b, e, c]
+T = [0, 1, 2, 3, 4, 5]  →  排序后 T = [2,3,5,1,4,0]
+T[0]=2 → A[2]=a (最小)
 \end{verbatim}
 
-\textbf{优化：} Median-of-Three — 取 left/mid/right 三元素的中值作为 pivot。
+\textbf{物理重排（置换环）：} 把 A 按 T 重排。每个环移动 (环长+1) 次。\\
+最坏 $\lfloor N/2\rfloor$ 个环，共 $\lfloor 3N/2\rfloor$ 次移动。$T=O(mN)$，m=结构体大小。
 
-\begin{keybox}
-\textbf{最坏情况：} 每次 pivot 选到最小或最大 → $O(N^2)$\\
-\textbf{平均：} $O(N\log N)$
-\end{keybox}
+\begin{lstlisting}[language=C]
+void rearrange(ElementType A[], int T[], int N) {
+    for (int i=0;i<N;i++)
+        if (T[i]!=i) {
+            ElementType tmp=A[i]; int j=i;
+            while(T[j]!=i){
+                A[j]=A[T[j]]; int next=T[j];
+                T[j]=j; j=next;
+            }
+            A[j]=tmp; T[j]=j;
+        }
+}
+\end{lstlisting}
 
-\section{基数排序 (Radix Sort — LSD)}
+% ===================== 桶排序 + 基数排序 =====================
+\section*{7. 桶排序 (Bucket Sort)}
 
-\textbf{思想：} 不比较，按每一位丢桶里排序。从最低位(LSD)到最高位(MSD)。
+\textbf{思想：} 不比较，按值分类投放。每个桶就是一个计数器。
 
-\textbf{示例：} [64,8,216,512,27,729,0,1,343,125]
+\begin{lstlisting}[language=C]
+// 例：给 N 个0~M分的学生成绩排序
+void bucketSort(int A[], int N, int M) {
+    int* count = (int*)calloc(M+1, sizeof(int));
+    for (int i=0; i<N; i++) count[A[i]]++;
+    for (int i=0,j=0; i<=M; i++)
+        while (count[i]-- > 0) A[j++] = i;
+    free(count);
+}
+\end{lstlisting}
+
+$T = O(M+N)$。M=桶数。\textbf{不基于比较}，突破 $O(N\log N)$。稳定。
+
+\section*{8. 基数排序 (Radix Sort — LSD)}
+
+\textbf{思想：} 从最低位(LSD)到最高位(MSD)，每轮按当前位入桶排序。
+
+\textbf{手算：} [64,8,216,512,27,729,0,1,343,125]
 
 \begin{verbatim}
-Pass1(个位): 0:[0] 1:[1] 2:[512] 3:[343] 4:[64] 5:[125] 6:[216] 7:[27] 8:[8] 9:[729]
+Pass1(个位): 0:[0] 1:[1] 2:[512] 3:[343] 4:[64] 5:[125]
+ 6:[216] 7:[27] 8:[8] 9:[729]
 → 0,1,512,343,64,125,216,27,8,729
 
-Pass2(十位): 0:[0,1,8] 1:[512,216] 2:[125,27,729] 3:[343] 6:[64]
+Pass2(十位): 0:[0,1,8] 1:[512,216] 2:[125,27,729]
+ 3:[343] 6:[64]
 → 0,1,8,512,216,125,27,729,343,64
 
-Pass3(百位): 0:[0,1,8,27,64] 1:[125] 2:[216] 3:[343] 5:[512] 7:[729]
+Pass3(百位): 1:[125] 2:[216] 3:[343] 5:[512] 7:[729]
+ 0:[0,1,8,27,64]
 → 0,1,8,27,64,125,216,343,512,729 ✓
 \end{verbatim}
 
-\textbf{复杂度：} $T = O(P \cdot (N + B))$，P=位数，B=基数。
+\begin{lstlisting}[language=C]
+// LSD Radix Sort, 假设10进制, maxDigits=最大位数
+void radixSort(int A[], int N, int maxDigits) {
+    int* bucket[10], cnt[10];
+    for (int d=0; d<maxDigits; d++) {
+        for (int i=0;i<10;i++) cnt[i]=0;
+        for (int i=0;i<N;i++)
+            cnt[(A[i]/exp)%10]++;
+        // 前缀和 → 各桶起始位置
+        for (int i=1;i<10;i++) cnt[i]+=cnt[i-1];
+        // 从后往前收集（保证稳定！）
+        for (int i=N-1;i>=0;i--) {
+            int d=(A[i]/exp)%10;
+            tmp[--cnt[d]]=A[i];
+        }
+        for (int i=0;i<N;i++) A[i]=tmp[i];
+        exp*=10;
+    }
+}
+\end{lstlisting}
 
-\section{表排序 (Table Sort)}
+$T=O(P\cdot(N+B))$，P=位数，B=基数(10)。\textbf{稳定，不基于比较。}
 
-\textbf{动机：} 排序大结构体时，移动代价高。只排序索引表。
+\textbf{MSD vs LSD：} MSD 从高到低（分治），LSD 从低到高（稳定）。\\
+卡片排序：LSD 从最不重要到最重要字段依次排。
 
-\begin{verbatim}
-原始: A = [f, d, a, b, e, c]
-T:    [0, 1, 2, 3, 4, 5]
-排序后: T = [2, 3, 5, 1, 4, 0]
-  T[0]=2 → A[2]=a (最小)
-\end{verbatim}
+% ===================== 考点 =====================
+\columnbreak
 
-\textbf{物理重排：} 利用置换环，最坏 $\lfloor 3N/2 \rfloor$ 次移动。
+\section*{决策树与排序下界}
 
 \begin{keybox}
-\textbf{考点：}
+\textbf{决策树证明 $\Omega(N\log N)$ 下界}
 \begin{itemize}
-\item 稳定 vs 不稳定（考试必问！）
-\item 各算法的最坏/平均/空间复杂度
-\item 为什么桶排/基数排能突破 $O(N\log N)$ —— 不基于比较
-\item 决策树 → 比较排序下界 $\Omega(N\log N)$
-\item 快排 pivot 选不好 → $O(N^2)$
+\item N 个元素有 $N!$ 种排列 $\to$ 决策树至少 $N!$ 个叶子
+\item 二叉树深度 $k$ 最多 $2^{k-1}$ 个叶子
+\item $N! \le 2^{k-1} \to k \ge \log N! + 1 = \Omega(N\log N)$
 \end{itemize}
+\textbf{3个元素插入排序决策树：} \\
+$N=3, N!=6$，深度 $k\ge 4$（至少 4 次比较）。
 \end{keybox}
+
+\section*{稳定性总结}
+
+\textbf{稳定：} 插入、归并、桶、基数。\\
+\textbf{不稳定：} 希尔、堆、快排。\\
+\textbf{口诀：} 稳定排队（插入归并桶基数），不稳定快跑（快希尔堆）。
+
+\section*{Additional: Replacement Selection}
+
+外部排序的预处理：用最小堆生成更长的初始顺串(run)。\\
+平均 run 长度 $=2M$（M=堆大小），比普通分块长一倍。
+
+\end{multicols}
 
 \end{document}
